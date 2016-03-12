@@ -1,8 +1,57 @@
 ﻿<Window x:Class="horizontal_prototype.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="JCR Entertainment" Height="748.5" Width="1280" Icon="Resources/Youtube_Icon.png">
     <Grid>
+        <Image x:Name="background_img" HorizontalAlignment="Left" Height="748" VerticalAlignment="Top" Width="1280" Source="Resources/bg.jpg" Margin="-8,0,0,-30" IsEnabled="False" MaxWidth="1280" MaxHeight="748.5" MinWidth="1280" MinHeight="748.5"/>
+
+        <Button x:Name="netflix_button" Background="Transparent" HorizontalAlignment="Left" Margin="1334,132,-348,0" VerticalAlignment="Top" Width="286" Height="110" Click="netflix_Click">
+            <Grid Height="110" Width="286">
+                <Image x:Name="netflix_img" Source="Resources/netflix.png"/>
+            </Grid>
+        </Button>
         
+        <Button x:Name="movies_button" Background="Transparent" HorizontalAlignment="Left" Margin="1330,-12,-344,0" VerticalAlignment="Top" Width="286" Height="110" Click="movies_Click">
+            <Grid Height="110" Width="286">
+                <Image x:Name="movies_img" Source="Resources/movies.png"/>
+            </Grid>
+        </Button>
+
+        <Button x:Name="tvshows_button" Background="Transparent" HorizontalAlignment="Left" Margin="1330,-153,-344,0" VerticalAlignment="Top" Width="286" Height="110" Click="tvshows_button_Click">
+            <Grid Height="110" Width="286">
+                <Image x:Name="tvshows_img" Source="Resources/tvshows.png" Stretch="Fill"/>
+            </Grid>
+        </Button>
+
+        <Button x:Name="favourites_button" Background="Transparent" HorizontalAlignment="Left" Margin="1334,328,-202,0" VerticalAlignment="Top" Width="140" Height="140" Click="favourites_button_Click">
+            <Grid Height="140" Width="140">
+                <Image x:Name="favourites_img" Source="Resources/favourites.png"/>
+            </Grid>
+        </Button>
+
+        <Button x:Name="music_button" Background="Transparent" HorizontalAlignment="Left" Margin="1480,328,-348,0" VerticalAlignment="Top" Width="140" Height="140" Click="music_button_Click">
+            <Grid Height="140" Width="140">
+                <Image x:Name="music_img" Source="Resources/music.png"/>
+            </Grid>
+        </Button>
+
+        <Button x:Name="settings_button" Background="Transparent" HorizontalAlignment="Left" Margin="1334,506,-202,0" VerticalAlignment="Top" Width="140" Height="140" Click="settings_button_Click">
+            <Grid Height="140" Width="140">
+                <Image x:Name="settings_img" Source="Resources/settings.png"/>
+            </Grid>
+        </Button>
+
+        <Button x:Name="spotify_button" Background="Transparent" HorizontalAlignment="Left" Margin="1480,506,-348,0" VerticalAlignment="Top" Width="140" Height="140" Click="spotify_button_Click">
+            <Grid Height="140" Width="140">
+                <Image x:Name="spotify_img" Source="Resources/spotify.png"/>
+            </Grid>
+        </Button>
+
+        <Button x:Name="youtube_button" Background="Transparent" HorizontalAlignment="Left" Margin="1334,676,-202,-98" VerticalAlignment="Top" Width="140" Height="140" Click="youtube_button_Click">
+            <Grid Height="140" Width="140">
+                <Image x:Name="youtube_img" Source="Resources/youtube.png" Stretch="UniformToFill"/>
+            </Grid>
+        </Button>
+
     </Grid>
 </Window>

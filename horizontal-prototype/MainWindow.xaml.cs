@@ -24,5 +24,25 @@ namespace horizontal_prototype
         {
             InitializeComponent();
         }
+
+        private void netflix_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void movies_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void favourites_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void music_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -93,6 +93,22 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\netflix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\favourites.png" />
+    <Resource Include="Resources\movies.png" />
+    <Resource Include="Resources\music.png" />
+    <Resource Include="Resources\settings.png" />
+    <Resource Include="Resources\spotify.png" />
+    <Resource Include="Resources\tvshows.png" />
+    <Resource Include="Resources\youtube.png" />
+    <Resource Include="Resources\Youtube_Icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
