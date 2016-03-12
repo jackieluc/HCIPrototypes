@@ -44,5 +44,32 @@ namespace horizontal_prototype
         {
 
         }
+
+        private void tvshows_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void settings_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void youtube_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void spotify_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Username_form_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+
     }
 }
