@@ -3,6 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="JCR Entertainment" Height="748.5" Width="1280" Icon="Resources/Youtube_Icon.png">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="935*"/>
+            <ColumnDefinition Width="339*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="Resources/bg.jpg"/>
         </Grid.Background>
@@ -15,7 +19,7 @@
             <Image x:Name="movies_img" Source="Resources/movies.png"/>
         </Button>
 
-        <Button x:Name="tvshows_button" Background="Transparent" HorizontalAlignment="Left" Margin="911,91,0,0" VerticalAlignment="Top" Width="286" Height="110" Click="tvshows_button_Click">
+        <Button x:Name="tvshows_button" Background="Transparent" HorizontalAlignment="Left" Margin="911,91,0,0" VerticalAlignment="Top" Width="286" Height="110" Click="tvshows_button_Click" Grid.ColumnSpan="2">
             <Image x:Name="tvshows_img" Source="Resources/tvshows.png" Stretch="Fill"/>
         </Button>
 
@@ -38,12 +42,27 @@
         <Button x:Name="youtube_button" Background="Transparent" HorizontalAlignment="Left" Margin="77,218,0,0" VerticalAlignment="Top" Width="140" Height="140" Click="youtube_button_Click">
             <Image x:Name="youtube_img" Source="Resources/youtube.png" Stretch="UniformToFill"/>
         </Button>
+        
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="414,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="JCR Entertainment" Foreground="White" FontWeight="Bold" Height="30" Width="213" FontSize="24"/>
         <Label x:Name="Login" Content="Login:" HorizontalAlignment="Left" Margin="665,12,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" FontSize="16"/>
         <TextBox x:Name="Username_form" HorizontalAlignment="Left" Height="23" Margin="720,18,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="157" TextChanged="Username_form_TextChanged"/>
-        <Label x:Name="Password" Content="Password:" HorizontalAlignment="Left" Margin="882,12,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="White"/>
-        <TextBox x:Name="Password_form" HorizontalAlignment="Left" Height="23" Margin="968,18,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="161" TextChanged="textBox1_TextChanged"/>
-        <Button x:Name="Login_button" Content="Login" HorizontalAlignment="Left" Margin="1147,18,0,0" VerticalAlignment="Top" Width="75" Click="Login_button_Click"/>
+        <Label x:Name="Password" Content="Password:" HorizontalAlignment="Left" Margin="882,12,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="White" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="Password_form" HorizontalAlignment="Left" Height="23" Margin="33.387,18,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="161" TextChanged="Password_form_TextChanged" Grid.Column="1"/>
+        <Button x:Name="Login_button" Content="Login" HorizontalAlignment="Left" Margin="212.387,18,0,0" VerticalAlignment="Top" Width="75" Click="Login_button_Click" Grid.Column="1"/>
+        
+        <Rectangle x:Name="movieList" Fill="#FF2E2E2E" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,91,0,0" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <Button x:Name="movieListBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,118,0,0" Click="closeMovieList" Visibility="Hidden"/>
+        
+        <Rectangle x:Name="tvshowList" Fill="#FF2E2E2E" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,91,0,0" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <Button x:Name="tvshowListBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,118,0,0" Click="closeTvList" Visibility="Hidden"/>
+        
+        <Rectangle x:Name="favoritesList" Fill="#FF2E2E2E" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,91,0,0" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <Button x:Name="favoritesListBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,118,0,0" Click="closeFavoritesList" Visibility="Hidden"/>
 
+        <Rectangle x:Name="musicList" Fill="#FF2E2E2E" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,91,0,0" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <Button x:Name="musicListBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,118,0,0" Visibility="Hidden" Click="closeMusicList"/>
+
+        <Rectangle x:Name="settings" Fill="#FF2E2E2E" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,91,0,0" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <Button x:Name="settingsBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,118,0,0" Visibility="Hidden" Click="closeSettings"/>
     </Grid>
 </Window>
