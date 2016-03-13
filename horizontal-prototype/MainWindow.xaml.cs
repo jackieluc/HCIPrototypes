@@ -162,5 +162,12 @@ namespace horizontal_prototype
             dataAndTime.Visibility = Visibility.Hidden;
             audioSettings.Visibility = Visibility.Hidden;
         }
+
+        private void textbox_clear(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            textBox.Text = String.Empty;
+            textBox.GotFocus -= textbox_clear;
+        }
     }
 }
