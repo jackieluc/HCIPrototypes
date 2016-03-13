@@ -8,13 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/favourites.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/movies.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/music.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/settings.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/spotify.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/tvshows.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/youtube.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/youtube_icon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/accounticon.png")]
 
 

@@ -82,5 +82,14 @@
         <Button x:Name="audioSettings" Content="Audio Settings" HorizontalAlignment="Left" VerticalAlignment="Top" Width="514" Margin="363,18,0,0" Height="54" BorderBrush="Black" Background="#FF3D3C3C" Foreground="#FF989191" FontSize="32" FontWeight="Bold" Visibility="Hidden" Grid.Row="4"/>
 
         <Label x:Name="date_time" Content="00/00/0000 00:00:00 PM" HorizontalAlignment="Left" Margin="77,19,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Initialized="initialize_date_time" Height="42" Width="268" Grid.RowSpan="2"/>
+
+        <Button x:Name="account_button" Background="Transparent" HorizontalAlignment="Left" Margin="145,10,0,0" VerticalAlignment="Top" Width="55" Height="51" Grid.Column="1" BorderThickness="0" Grid.RowSpan="2" Click="open_feed" Visibility="Hidden">
+            <Image x:Name="account_icon" Source="Resources/accountIcon.png" Stretch="UniformToFill" Height="44" Width="49" />
+        </Button>
+        <Rectangle x:Name="media_feed" HorizontalAlignment="Left" Height="534" Stroke="White" VerticalAlignment="Top" Width="1012" Margin="100,1,0,0" Grid.ColumnSpan="2" Fill="#FF2E2E2E" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden"/>
+        <Label x:Name="media_feed_title" Content="Social Media Feeds" HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="333" Margin="430,31,0,0" FontSize="36" Foreground="#FF989191" FontWeight="Bold" BorderBrush="#FF2E2E2E" Background="#FF2E2E2E" Grid.Row="2" Visibility="Hidden"/>
+
+        <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Left" Margin="212,8,0,0" VerticalAlignment="Top" Width="75" Click="logout_button_Click" Grid.Column="1" Height="22" Grid.Row="1" Visibility="Hidden"/>
+
     </Grid>
 </Window>

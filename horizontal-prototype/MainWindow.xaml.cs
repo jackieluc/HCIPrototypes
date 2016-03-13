@@ -21,6 +21,8 @@ namespace horizontal_prototype
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Boolean feed_open = true;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -122,6 +124,11 @@ namespace horizontal_prototype
             Password.Visibility = Visibility.Hidden;
             Password_form.Visibility = Visibility.Hidden;
             
+
+            //LOGIN LOGIC HERE. If not authorized, don't log in, otherwise login
+
+            account_button.Visibility = Visibility.Visible;
+            logout_button.Visibility = Visibility.Visible;
         }
 
         private void closeMovieList(object sender, RoutedEventArgs e)
@@ -168,6 +175,39 @@ namespace horizontal_prototype
             TextBox textBox = (TextBox)sender;
             textBox.Text = String.Empty;
             textBox.GotFocus -= textbox_clear;
+        }
+
+        private void open_feed(object sender, RoutedEventArgs e)
+        {
+            //Toggle open/close the social media feed
+            if (feed_open)
+            {
+                media_feed.Visibility = Visibility.Visible;
+                media_feed_title.Visibility = Visibility.Visible;
+
+                feed_open = false;
+            }
+            else if (!feed_open)
+            {
+                media_feed.Visibility = Visibility.Hidden;
+                media_feed_title.Visibility = Visibility.Hidden;
+
+                feed_open = true;
+            }
+        }
+
+        private void logout_button_Click(object sender, RoutedEventArgs e)
+        {
+            Login_button.Visibility = Visibility.Visible;
+            Login.Visibility = Visibility.Visible;
+            Username_form.Visibility = Visibility.Visible;
+            Password.Visibility = Visibility.Visible;
+            Password_form.Visibility = Visibility.Visible;
+
+            logout_button.Visibility = Visibility.Hidden;
+            account_button.Visibility = Visibility.Hidden;
+
+            //LOGOUT LOGIC HERE
         }
     }
 }
