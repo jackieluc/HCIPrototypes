@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace horizontal_prototype
 {
@@ -23,6 +24,17 @@ namespace horizontal_prototype
         public MainWindow()
         {
             InitializeComponent();
+
+            //initiate real-time timer
+            DispatcherTimer timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+            {
+                date_time.Content = DateTime.Now.ToString();
+            }, this.Dispatcher);
+        }
+
+        private void initialize_date_time(object sender, EventArgs e)
+        {
+            date_time.Content = DateTime.Now.ToString();
         }
 
         private void netflix_Click(object sender, RoutedEventArgs e)
