@@ -53,6 +53,8 @@ namespace horizontal_prototype
             movieList.Visibility = Visibility.Visible;
             movieListBack.Visibility = Visibility.Visible;
             movieTitle.Visibility = Visibility.Visible;
+            avengers_movies.Visibility = Visibility.Visible;
+            transformer_movies.Visibility = Visibility.Visible;
         }
 
         private void favourites_button_Click(object sender, RoutedEventArgs e)
@@ -60,6 +62,9 @@ namespace horizontal_prototype
             favoritesList.Visibility = Visibility.Visible;
             favoritesListBack.Visibility = Visibility.Visible;
             favoritesTitle.Visibility = Visibility.Visible;
+            deadmau5_favorites.Visibility = Visibility.Visible;
+            suits_favorites.Visibility = Visibility.Visible;
+            transformers_favorites.Visibility = Visibility.Visible;
         }
 
         private void music_button_Click(object sender, RoutedEventArgs e)
@@ -67,6 +72,9 @@ namespace horizontal_prototype
             musicList.Visibility = Visibility.Visible;
             musicListBack.Visibility = Visibility.Visible;
             musicTitle.Visibility = Visibility.Visible;
+            deadmau5_music.Visibility = Visibility.Visible;
+            selenagomez_music.Visibility = Visibility.Visible;
+            justinbieber_music.Visibility = Visibility.Visible;
         }
 
         private void tvshows_button_Click(object sender, RoutedEventArgs e)
@@ -74,6 +82,10 @@ namespace horizontal_prototype
             tvshowList.Visibility = Visibility.Visible;
             tvshowListBack.Visibility = Visibility.Visible;
             tvshowTitle.Visibility = Visibility.Visible;
+            naruto_tvshows.Visibility = Visibility.Visible;
+            suits_tvshows.Visibility = Visibility.Visible;
+            vampirediaries_tvshows.Visibility = Visibility.Visible;
+            pokemon_tvshows.Visibility = Visibility.Visible;
         }
 
         private void settings_button_Click(object sender, RoutedEventArgs e)
@@ -136,6 +148,8 @@ namespace horizontal_prototype
             movieList.Visibility = Visibility.Hidden;
             movieListBack.Visibility = Visibility.Hidden;
             movieTitle.Visibility = Visibility.Hidden;
+            avengers_movies.Visibility = Visibility.Hidden;
+            transformer_movies.Visibility = Visibility.Hidden;
         }
 
         private void closeTvList(object sender, RoutedEventArgs e)
@@ -143,6 +157,10 @@ namespace horizontal_prototype
             tvshowList.Visibility = Visibility.Hidden;
             tvshowListBack.Visibility = Visibility.Hidden;
             tvshowTitle.Visibility = Visibility.Hidden;
+            naruto_tvshows.Visibility = Visibility.Hidden;
+            suits_tvshows.Visibility = Visibility.Hidden;
+            vampirediaries_tvshows.Visibility = Visibility.Hidden;
+            pokemon_tvshows.Visibility = Visibility.Hidden;
         }
 
         private void closeFavoritesList(object sender, RoutedEventArgs e)
@@ -150,6 +168,9 @@ namespace horizontal_prototype
             favoritesList.Visibility = Visibility.Hidden;
             favoritesListBack.Visibility = Visibility.Hidden;
             favoritesTitle.Visibility = Visibility.Hidden;
+            deadmau5_favorites.Visibility = Visibility.Hidden;
+            suits_favorites.Visibility = Visibility.Hidden;
+            transformers_favorites.Visibility = Visibility.Hidden;
         }
 
         private void closeMusicList(object sender, RoutedEventArgs e)
@@ -157,6 +178,9 @@ namespace horizontal_prototype
             musicList.Visibility = Visibility.Hidden;
             musicListBack.Visibility = Visibility.Hidden;
             musicTitle.Visibility = Visibility.Hidden;
+            deadmau5_music.Visibility = Visibility.Hidden;
+            selenagomez_music.Visibility = Visibility.Hidden;
+            justinbieber_music.Visibility = Visibility.Hidden;
         }
 
         private void closeSettings(object sender, RoutedEventArgs e)
@@ -208,6 +232,66 @@ namespace horizontal_prototype
             account_button.Visibility = Visibility.Hidden;
 
             //LOGOUT LOGIC HERE
+        }
+
+        private void avengers_movies_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void transformer_movies_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void naruto_tvshows_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void suits_tvshows_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void vampirediaries_tvshows_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void pokemon_tvshows_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void deadmau5_favorites_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void suits_favorites_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void transformers_favorites_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void deadmau5_music_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void justinbieber_music_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void selenagomez_music_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

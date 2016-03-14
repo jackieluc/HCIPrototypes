@@ -112,6 +112,20 @@
   <ItemGroup>
     <Resource Include="Resources\accountIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\background-dark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\137-pokemon.jpg" />
+    <Resource Include="Resources\Deadmau5.jpg" />
+    <Resource Include="Resources\Justin Bieber.jpg" />
+    <Resource Include="Resources\Naruto.jpg" />
+    <Resource Include="Resources\newavengersposter.jpg" />
+    <Resource Include="Resources\Selena Gomez.jpg" />
+    <Resource Include="Resources\Suits.jpg" />
+    <Resource Include="Resources\transformers-movie-poster-2007.jpg" />
+    <Resource Include="Resources\vampire-diaries-version21-TV-series-poster.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

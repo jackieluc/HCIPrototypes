@@ -8,6 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/accounticon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("137-pokemon.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("deadmau5.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("justin%20bieber.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("naruto.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("newavengersposter.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("selena%20gomez.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("suits.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("transformers-movie-poster-2007.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("vampire-diaries-version21-tv-series-poster.jpg")]
 
 
