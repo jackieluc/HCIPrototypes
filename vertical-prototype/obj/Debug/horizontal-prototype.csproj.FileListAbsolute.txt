@@ -1,0 +1,40 @@
+c:\users\jackie\documents\visual studio 2013\Projects\horizontal-prototype\horizontal-prototype\bin\Debug\horizontal-prototype.exe.config
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.exe.config
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.exe
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.pdb
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\MainWindow.baml
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\MainWindow.g.cs
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\App.g.cs
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype_MarkupCompile.cache
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.g.resources
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal_prototype.Properties.Resources.resources
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.csproj.GenerateResource.Cache
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.exe
+D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.pdb
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.exe.config
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.exe
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.pdb
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.csprojResolveAssemblyReference.cache
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\obj\Debug\MainWindow.baml
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\obj\Debug\MainWindow.g.cs
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\obj\Debug\App.g.cs
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype_MarkupCompile.cache
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.g.resources
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal_prototype.Properties.Resources.resources
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.csproj.GenerateResource.Cache
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.exe
+Y:\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.pdb
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.exe.config
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.exe
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.pdb
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\obj\Debug\MainWindow.baml
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\obj\Debug\MainWindow.g.cs
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\obj\Debug\App.g.cs
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype_MarkupCompile.cache
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.g.resources
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal_prototype.Properties.Resources.resources
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.csproj.GenerateResource.Cache
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.exe
+C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.pdb
