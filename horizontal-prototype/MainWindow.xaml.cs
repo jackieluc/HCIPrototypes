@@ -22,9 +22,14 @@ namespace horizontal_prototype
     public partial class MainWindow : Window
     {
         private Boolean feed_open = true;
-        private Boolean tvshow_favorite = false;
-        private Boolean movies_favorite = false;
-        private Boolean music_favorite = false;
+        private Boolean john_tvshow_favorite = false;
+        private Boolean john_movies_favorite = false;
+        private Boolean john_music_favorite = false;
+        private Boolean alex_tvshow_favorite = false;
+        private Boolean alex_movies_favorite = false;
+        private Boolean alex_music_favorite = false;
+        private Boolean john_logged_on = false;
+        private Boolean alex_logged_on = false;
 
         public MainWindow()
         {
@@ -65,6 +70,33 @@ namespace horizontal_prototype
             favoritesList.Visibility = Visibility.Visible;
             favoritesListBack.Visibility = Visibility.Visible;
             favoritesTitle.Visibility = Visibility.Visible;
+
+            if (john_logged_on == true && john_movies_favorite == true)
+            {
+                avengers_favorites.Visibility = Visibility.Visible;
+            }
+            if (john_logged_on == true && john_tvshow_favorite == true)
+            {
+                suits_favorites.Visibility = Visibility.Visible;
+            }
+            if (john_logged_on == true && john_music_favorite == true)
+            {
+                bieber_favorites.Visibility = Visibility.Visible;
+            }
+
+            if (alex_logged_on == true && alex_tvshow_favorite == true)
+            {
+                suits_favorites.Visibility = Visibility.Visible;
+            }
+            if (alex_logged_on == true && alex_movies_favorite == true)
+            {
+                avengers_favorites.Visibility = Visibility.Visible;
+            }
+            if (alex_logged_on == true && alex_music_favorite == true)
+            {
+                bieber_favorites.Visibility = Visibility.Visible;
+            }
+
         }
 
         private void music_button_Click(object sender, RoutedEventArgs e)
@@ -128,19 +160,34 @@ namespace horizontal_prototype
         }
 
         private void Login_button_Click(object sender, RoutedEventArgs e)
-        {
-            
-            Login_button.Visibility = Visibility.Hidden;
-            Login.Visibility = Visibility.Hidden;
-            Username_form.Visibility = Visibility.Hidden;
-            Password.Visibility = Visibility.Hidden;
-            Password_form.Visibility = Visibility.Hidden;
-            
+        {    
+            if (Username_form.Text.Equals("john.smith@gmail.com") && Password_form.Password.Equals("JCREntertainment"))
+            {
+                john_logged_on = true;
 
-            //LOGIN LOGIC HERE. If not authorized, don't log in, otherwise login
+                Login_button.Visibility = Visibility.Hidden;
+                Login.Visibility = Visibility.Hidden;
+                Username_form.Visibility = Visibility.Hidden;
+                Password.Visibility = Visibility.Hidden;
+                Password_form.Visibility = Visibility.Hidden;
 
-            account_button.Visibility = Visibility.Visible;
-            logout_button.Visibility = Visibility.Visible;
+                account_button.Visibility = Visibility.Visible;
+                logout_button.Visibility = Visibility.Visible;
+            }
+
+            if (Username_form.Text.Equals("alex.wong@gmail.com") && Password_form.Password.Equals("CPSC481"))
+            {
+                alex_logged_on = true;
+
+                Login_button.Visibility = Visibility.Hidden;
+                Login.Visibility = Visibility.Hidden;
+                Username_form.Visibility = Visibility.Hidden;
+                Password.Visibility = Visibility.Hidden;
+                Password_form.Visibility = Visibility.Hidden;
+
+                account_button.Visibility = Visibility.Visible;
+                logout_button.Visibility = Visibility.Visible;
+            }
         }
 
         private void closeMovieList(object sender, RoutedEventArgs e)
@@ -231,7 +278,8 @@ namespace horizontal_prototype
             logout_button.Visibility = Visibility.Hidden;
             account_button.Visibility = Visibility.Hidden;
 
-            //LOGOUT LOGIC HERE
+            john_logged_on = false;
+            alex_logged_on = false;
         }
 
         private void avengers_movies_Click(object sender, RoutedEventArgs e)
@@ -372,7 +420,15 @@ namespace horizontal_prototype
 
         private void suitsFavorite(object sender, RoutedEventArgs e)
         {
+            if (john_logged_on == true)
+            {
+                john_tvshow_favorite = true;
+            }
 
+            if (alex_logged_on == true)
+            {
+                alex_tvshow_favorite = true;
+            }
         }
 
         private void suitsS1_Click(object sender, RoutedEventArgs e)
@@ -425,7 +481,15 @@ namespace horizontal_prototype
 
         private void avengersFavorite(object sender, RoutedEventArgs e)
         {
+            if (john_logged_on == true)
+            {
+                john_movies_favorite = true;
+            }
 
+            if (alex_logged_on == true)
+            {
+                alex_movies_favorite = true;
+            }
         }
 
         private void avengersPlay(object sender, RoutedEventArgs e)
@@ -459,7 +523,15 @@ namespace horizontal_prototype
 
         private void bieberFavorite(object sender, RoutedEventArgs e)
         {
+            if (john_logged_on == true)
+            {
+                john_music_favorite = true;
+            }
 
+            if (alex_logged_on == true)
+            {
+                alex_music_favorite = true;
+            }
         }
 
         private void bieberPlayAll(object sender, RoutedEventArgs e)
