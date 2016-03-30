@@ -1,18 +1,16 @@
-﻿<Window x:Class="horizontal_prototype.MainWindow"
+﻿<Window x:Name="JCR_Entertainment" x:Class="horizontal_prototype.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="JCR Entertainment" Height="748.5" Width="1280" Icon="Resources/Youtube_Icon.png">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="768" Width="1280" Icon="Resources/Youtube_Icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="138*"/>
-            <RowDefinition Height="170*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="124*"/>
+            <RowDefinition Height="171*"/>
             <RowDefinition Height="191*"/>
-            <RowDefinition Height="199*"/>
+            <RowDefinition Height="200*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="935*"/>
-            <ColumnDefinition Width="339*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="Resources/bg.jpg"/>
@@ -26,7 +24,7 @@
             <Image x:Name="movies_img" Source="Resources/movies.png"/>
         </Button>
 
-        <Button x:Name="tvshows_button" Background="Transparent" HorizontalAlignment="Left" Margin="911,1,0,0" VerticalAlignment="Top" Width="286" Height="110" Click="tvshows_button_Click" Grid.ColumnSpan="2" Grid.Row="2">
+        <Button x:Name="tvshows_button" Background="Transparent" HorizontalAlignment="Left" Margin="911,1,0,0" VerticalAlignment="Top" Width="286" Height="110" Click="tvshows_button_Click" Grid.Row="2">
             <Image x:Name="tvshows_img" Source="Resources/tvshows.png" Stretch="Fill"/>
         </Button>
 
@@ -50,188 +48,188 @@
             <Image x:Name="youtube_img" Source="Resources/youtube.png" Stretch="UniformToFill"/>
         </Button>
 
-        <Label x:Name="textBlock" HorizontalAlignment="Left" Margin="414,19,0,0" VerticalAlignment="Top" Content="JCR Entertainment" Foreground="White" FontWeight="Bold" Height="39" Width="229" FontSize="24" Grid.RowSpan="2"/>
+        <Label x:Name="textBlock" HorizontalAlignment="Left" Margin="414,0,0,0" VerticalAlignment="Top" Content="JCR Entertainment" Foreground="White" FontWeight="Bold" Height="39" Width="229" FontSize="24" Grid.Row="1"/>
         <Label x:Name="Login" Content="Login:" HorizontalAlignment="Left" Margin="670,2,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" FontSize="16" Height="31" Width="56" Grid.Row="1"/>
         <TextBox x:Name="Username_form" HorizontalAlignment="Left" Height="23" Margin="726,8,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="157" TextChanged="Username_form_TextChanged" Grid.Row="1" GotFocus="textbox_clear"/>
-        <Label x:Name="Password" Content="Password:" HorizontalAlignment="Left" Margin="883,2,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="White" Grid.ColumnSpan="2" Height="31" Width="86" Grid.Row="1"/>
-        <TextBox x:Name="Password_form" HorizontalAlignment="Left" Height="23" Margin="39,8,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="161" TextChanged="Password_form_TextChanged" Grid.Column="1" Grid.Row="1" GotFocus="textbox_clear"/>
-        <Button x:Name="Login_button" Content="Login" HorizontalAlignment="Left" Margin="212,8,0,0" VerticalAlignment="Top" Width="75" Click="Login_button_Click" Grid.Column="1" Height="22" Grid.Row="1"/>
+        <Label x:Name="Password" Content="Password:" HorizontalAlignment="Left" Margin="888,2,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="White" Height="31" Width="86" Grid.Row="1"/>
+        <TextBox x:Name="Password_form" HorizontalAlignment="Left" Height="23" Margin="974,8,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="161" TextChanged="Password_form_TextChanged" Grid.Row="1" GotFocus="textbox_clear"/>
+        <Button x:Name="Login_button" Content="Login" HorizontalAlignment="Left" Margin="1159,8,0,0" VerticalAlignment="Top" Width="75" Click="Login_button_Click" Height="22" Grid.Row="1"/>
 
-        <Rectangle x:Name="movieList" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
+        <Rectangle x:Name="movieList" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
         <Button x:Name="movieListBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,28,0,0" Click="closeMovieList" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Grid.Row="2" Height="22" Visibility="Hidden"/>
-        <TextBox x:Name="movieTitle" HorizontalAlignment="Left" Height="74" TextWrapping="Wrap" Text="Movies" VerticalAlignment="Top" Width="410" Margin="414,1.173,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
-        <Button x:Name="avengers_movies" Content="" HorizontalAlignment="Left" Margin="142,82.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="160" Height="206" Grid.RowSpan="2" Click="avengers_movies_Click" Visibility="Hidden">
+        <TextBox x:Name="movieTitle" HorizontalAlignment="Left" Height="74" TextWrapping="Wrap" Text="Movies" VerticalAlignment="Top" Width="410" Margin="414,1,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
+        <Button x:Name="avengers_movies" Content="" HorizontalAlignment="Left" Margin="142,82,0,0" Grid.Row="2" VerticalAlignment="Top" Width="160" Height="206" Grid.RowSpan="2" Click="avengers_movies_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/newavengersposter.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="transformer_movies" Content="" HorizontalAlignment="Left" Margin="330,82.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="152" Height="206" Grid.RowSpan="2" Click="transformer_movies_Click" Visibility="Hidden">
+        <Button x:Name="transformer_movies" Content="" HorizontalAlignment="Left" Margin="330,82,0,0" Grid.Row="2" VerticalAlignment="Top" Width="152" Height="206" Grid.RowSpan="2" Click="transformer_movies_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/transformers-movie-poster-2007.jpg"/>
             </Button.Background>
         </Button>
 
-        <Rectangle x:Name="tvshowList" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
+        <Rectangle x:Name="tvshowList" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
         <Button x:Name="tvshowListBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,28,0,0" Click="closeTvList" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Grid.Row="2" Height="22" Visibility="Hidden"/>
-        <TextBox x:Name="tvshowTitle" HorizontalAlignment="Left" Height="61" TextWrapping="Wrap" Text="TV Shows" VerticalAlignment="Top" Width="410" Margin="414,133.895,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Visibility="Hidden"/>
-        <Button x:Name="naruto_tvshows" Content="" HorizontalAlignment="Left" Margin="142,79.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="104" Height="151" Grid.RowSpan="2" Click="naruto_tvshows_Click" Visibility="Hidden">
+        <TextBox x:Name="tvshowTitle" HorizontalAlignment="Left" Height="61" TextWrapping="Wrap" Text="TV Shows" VerticalAlignment="Top" Width="410" Margin="414,0,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
+        <Button x:Name="naruto_tvshows" Content="" HorizontalAlignment="Left" Margin="142,79,0,0" Grid.Row="2" VerticalAlignment="Top" Width="104" Height="151" Grid.RowSpan="2" Click="naruto_tvshows_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/Naruto.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="suits_tvshows" Content="" HorizontalAlignment="Left" Margin="270,79.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="112" Height="151" Grid.RowSpan="2" Click="suits_tvshows_Click" Visibility="Hidden">
+        <Button x:Name="suits_tvshows" Content="" HorizontalAlignment="Left" Margin="270,79,0,0" Grid.Row="2" VerticalAlignment="Top" Width="112" Height="151" Grid.RowSpan="2" Click="suits_tvshows_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/Suits.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="vampirediaries_tvshows" Content="" HorizontalAlignment="Left" Margin="414,82.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="116" Height="148" Grid.RowSpan="2" Click="vampirediaries_tvshows_Click" Visibility="Hidden">
+        <Button x:Name="vampirediaries_tvshows" Content="" HorizontalAlignment="Left" Margin="414,82,0,0" Grid.Row="2" VerticalAlignment="Top" Width="116" Height="148" Grid.RowSpan="2" Click="vampirediaries_tvshows_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/vampire-diaries-version21-TV-series-poster.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="pokemon_tvshows" Content="" HorizontalAlignment="Left" Margin="569,82.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="113" Height="148" Grid.RowSpan="2" Click="pokemon_tvshows_Click" Visibility="Hidden">
+        <Button x:Name="pokemon_tvshows" Content="" HorizontalAlignment="Left" Margin="569,82,0,0" Grid.Row="2" VerticalAlignment="Top" Width="113" Height="148" Grid.RowSpan="2" Click="pokemon_tvshows_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/137-pokemon.jpg"/>
             </Button.Background>
         </Button>
 
 
-        <Rectangle x:Name="favoritesList" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
+        <Rectangle x:Name="favoritesList" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
         <Button x:Name="favoritesListBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,28,0,0" Click="closeFavoritesList" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Grid.Row="2" Height="22" Visibility="Hidden"/>
-        <TextBox x:Name="favoritesTitle" HorizontalAlignment="Left" Height="61" TextWrapping="Wrap" Text="Favorites" VerticalAlignment="Top" Width="410" Margin="414,133.895,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Visibility="Hidden"/>
-        <Button x:Name="deadmau5_favorites" Content="" HorizontalAlignment="Left" Margin="142,82.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="127" Grid.RowSpan="2" Click="deadmau5_favorites_Click" Visibility="Hidden">
+        <TextBox x:Name="favoritesTitle" HorizontalAlignment="Left" Height="61" TextWrapping="Wrap" Text="Favorites" VerticalAlignment="Top" Width="410" Margin="414,0,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
+        <Button x:Name="deadmau5_favorites" Content="" HorizontalAlignment="Left" Margin="142,82,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="127" Grid.RowSpan="2" Click="deadmau5_favorites_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/Deadmau5.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="suits_favorites" Content="" HorizontalAlignment="Left" Margin="302,79.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="107" Height="130" Grid.RowSpan="2" Click="suits_favorites_Click" Visibility="Hidden">
+        <Button x:Name="suits_favorites" Content="" HorizontalAlignment="Left" Margin="302,79,0,0" Grid.Row="2" VerticalAlignment="Top" Width="107" Height="130" Grid.RowSpan="2" Click="suits_favorites_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/Suits.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="transformers_favorites" Content="" HorizontalAlignment="Left" Margin="430,79.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100" Height="129" Grid.RowSpan="2" Click="transformers_favorites_Click" Visibility="Hidden">
+        <Button x:Name="transformers_favorites" Content="" HorizontalAlignment="Left" Margin="430,79,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100" Height="129" Grid.RowSpan="2" Click="transformers_favorites_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/transformers-movie-poster-2007.jpg"/>
             </Button.Background>
         </Button>
 
 
-        <Rectangle x:Name="musicList" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
+        <Rectangle x:Name="musicList" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
         <Button x:Name="musicListBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,28,0,0" Click="closeMusicList" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Grid.Row="2" Height="22" Visibility="Hidden"/>
-        <TextBox x:Name="musicTitle" HorizontalAlignment="Left" Height="61" TextWrapping="Wrap" Text="Music" VerticalAlignment="Top" Width="410" Margin="414,133.895,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Visibility="Hidden"/>
+        <TextBox x:Name="musicTitle" HorizontalAlignment="Left" Height="61" TextWrapping="Wrap" Text="Music" VerticalAlignment="Top" Width="410" Margin="414,0,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
 
 
 
-        <Rectangle x:Name="settings" HorizontalAlignment="Left" Height="534" Stroke="White" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
+        <Rectangle x:Name="settings" HorizontalAlignment="Left" Height="534" Stroke="White" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
         <Button x:Name="settingsBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,28,0,0" Click="closeSettings" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Grid.Row="2" Height="22" Visibility="Hidden" />
-        <TextBox x:Name="settingsTitle" HorizontalAlignment="Left" Height="79" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Width="410" Margin="414,133.895,0,0" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Background="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Visibility="Hidden"/>
+        <TextBox x:Name="settingsTitle" HorizontalAlignment="Left" Height="79" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Width="410" Margin="414,0,0,0" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Background="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
         <Button x:Name="videoSettings" Content="Video Settings" HorizontalAlignment="Left" VerticalAlignment="Top" Width="514" Margin="363,111,0,0" Height="54" BorderBrush="Black" Background="{x:Null}" Foreground="#FF989191" FontSize="32" FontWeight="Bold" Grid.Row="2" Visibility="Hidden"/>
         <Button x:Name="powerSettings" Content="Power Settings" HorizontalAlignment="Left" VerticalAlignment="Top" Width="514" Margin="363,42,0,0" Height="54" BorderBrush="Black" Background="{x:Null}" Foreground="#FF989191" FontSize="32" FontWeight="Bold" Grid.Row="3" Visibility="Hidden"/>
         <Button x:Name="dataAndTime" Content="Date And Time" HorizontalAlignment="Left" VerticalAlignment="Top" Width="514" Margin="363,104,0,0" Height="54" BorderBrush="Black" Background="{x:Null}" Foreground="#FF989191" FontSize="32" FontWeight="Bold" Grid.Row="3" Visibility="Hidden"/>
         <Button x:Name="audioSettings" Content="Audio Settings" HorizontalAlignment="Left" VerticalAlignment="Top" Width="514" Margin="363,18,0,0" Height="54" BorderBrush="Black" Background="{x:Null}" Foreground="#FF989191" FontSize="32" FontWeight="Bold" Grid.Row="4" Visibility="Hidden"/>
 
-        <Label x:Name="date_time" Content="00/00/0000 00:00:00 PM" HorizontalAlignment="Left" Margin="77,19,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Initialized="initialize_date_time" Height="42" Width="268" Grid.RowSpan="2"/>
+        <Label x:Name="date_time" Content="00/00/0000 00:00:00 PM" HorizontalAlignment="Left" Margin="77,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Initialized="initialize_date_time" Height="42" Width="268" Grid.Row="1"/>
 
-        <Button x:Name="account_button" Background="Transparent" HorizontalAlignment="Left" Margin="145,10,0,0" VerticalAlignment="Top" Width="55" Height="51" Grid.Column="1" BorderThickness="0" Grid.RowSpan="2" Click="open_feed" Visibility="Hidden">
+        <Button x:Name="account_button" Background="Transparent" Margin="0,24,139,0" VerticalAlignment="Top" Height="58" BorderThickness="0" Click="open_feed" Visibility="Hidden" HorizontalAlignment="Right" Width="62" Grid.RowSpan="2">
             <Image x:Name="account_icon" Source="Resources/accountIcon.png" Stretch="UniformToFill" Height="44" Width="49" />
         </Button>
-        <Rectangle x:Name="media_feed" HorizontalAlignment="Left" Height="534" Stroke="White" VerticalAlignment="Top" Width="1012" Margin="100,1,0,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
+        <Rectangle x:Name="media_feed" HorizontalAlignment="Left" Height="534" Stroke="White" VerticalAlignment="Top" Width="1012" Margin="100,1,0,0" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Label x:Name="media_feed_title" Content="Social Media Feeds" HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="333" Margin="430,0.173,0,0" FontSize="36" Foreground="#FF989191" FontWeight="Bold" Background="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
+        <Label x:Name="media_feed_title" Content="Social Media Feeds" HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="333" Margin="430,0,0,0" FontSize="36" Foreground="#FF989191" FontWeight="Bold" Background="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
 
-        <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Left" Margin="212,8,0,0" VerticalAlignment="Top" Width="75" Click="logout_button_Click" Grid.Column="1" Height="22" Grid.Row="1" Visibility="Hidden"/>
-        <Button x:Name="deadmau5_music" Content="" HorizontalAlignment="Left" Margin="142,0,0,174.717" Grid.Row="2" VerticalAlignment="Bottom" Width="123" Height="106" Grid.RowSpan="2" Click="deadmau5_music_Click" Visibility="Hidden">
+        <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Left" Margin="1159,8,0,0" VerticalAlignment="Top" Width="75" Click="logout_button_Click" Height="22" Grid.Row="1" Visibility="Hidden"/>
+        <Button x:Name="deadmau5_music" Content="" HorizontalAlignment="Left" Margin="142,0,0,175" Grid.Row="2" VerticalAlignment="Bottom" Width="123" Height="106" Grid.RowSpan="2" Click="deadmau5_music_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/Deadmau5.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="selenagomez_music" Content="" HorizontalAlignment="Left" Margin="282,82.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="127" Height="106" Grid.RowSpan="2" Click="selenagomez_music_Click" Visibility="Hidden">
+        <Button x:Name="selenagomez_music" Content="" HorizontalAlignment="Left" Margin="282,82,0,0" Grid.Row="2" VerticalAlignment="Top" Width="127" Height="106" Grid.RowSpan="2" Click="selenagomez_music_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/Selena Gomez.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="justinbieber_music" Content="" HorizontalAlignment="Left" Margin="430,82.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="119" Height="106" Grid.RowSpan="2" Click="justinbieber_music_Click" Visibility="Hidden">
+        <Button x:Name="justinbieber_music" Content="" HorizontalAlignment="Left" Margin="430,82,0,0" Grid.Row="2" VerticalAlignment="Top" Width="119" Height="106" Grid.RowSpan="2" Click="justinbieber_music_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/Justin Bieber.jpg"/>
             </Button.Background>
         </Button>
 
-        <Rectangle x:Name="suitsBackground" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
+        <Rectangle x:Name="suitsBackground" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
         <Button x:Name="suitsBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,28,0,0" Click="backSuits" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Grid.Row="2" Height="22" Visibility="Hidden"/>
-        <TextBox x:Name="suitsTitle" HorizontalAlignment="Left" Height="61" TextWrapping="Wrap" Text="Suits" VerticalAlignment="Top" Width="410" Margin="414,133.895,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Visibility="Hidden"/>
-        <Button x:Name="recommendSuits" Content="Recommend" HorizontalAlignment="Left" Margin="142,111.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="suitsRecommend" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Height="33" Visibility="Hidden"/>
-        <Button x:Name="favoriteSuits" Content="Favorite" HorizontalAlignment="Left" Margin="142,153.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="suitsFavorite" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="33" Visibility="Hidden"/>
-        <TextBlock x:Name="suitsSynopisis" HorizontalAlignment="Left" Margin="330,69.173,0,0" Grid.Row="2" TextWrapping="Wrap" Text="While running from a drug deal gone bad, Mike Ross, a brilliant young college-dropout, slips into a job interview with one of New York City's best legal closers, Harvey Specter. Tired of cookie-cutter law school grads, Harvey takes a gamble by hiring Mike on the spot after he recognizes his raw talent and photographic memory. Mike and Harvey are a winning team. Even though Mike is a genius, he still has a lot to learn about law. And while Harvey may seem like an emotionless, cold-blooded shark, Mike's sympathy and concern for their cases and clients will help remind Harvey why he went into law in the first place. Mike's other allies in the office include the firm's best paralegal Rachel and Harvey's no-nonsense assistant Donna to help him serve justice. Proving to be an irrepressible duo and invaluable to the practice, Mike and Harvey must keep their secret from everyone including managing partner Jessica and Harvey's arch nemesis Louis, who seems intent on making Mike's life as difficult as possible. " VerticalAlignment="Top" Height="132" Width="761" Foreground="#FF989191" Grid.ColumnSpan="2" Grid.RowSpan="2" FontWeight="Bold" Visibility="Hidden"/>
-        <Button x:Name="suitsS1" Content="" HorizontalAlignment="Left" Margin="330,38.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS1_Click" Visibility="Hidden">
+        <TextBox x:Name="suitsTitle" HorizontalAlignment="Left" Height="61" TextWrapping="Wrap" Text="Suits" VerticalAlignment="Top" Width="410" Margin="414,0,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
+        <Button x:Name="recommendSuits" Content="Recommend" HorizontalAlignment="Left" Margin="142,111,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="suitsRecommend" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Height="33" Visibility="Hidden"/>
+        <Button x:Name="favoriteSuits" Content="Favorite" HorizontalAlignment="Left" Margin="142,153,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="suitsFavorite" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="33" Visibility="Hidden"/>
+        <TextBlock x:Name="suitsSynopisis" HorizontalAlignment="Left" Margin="330,69,0,0" Grid.Row="2" TextWrapping="Wrap" Text="While running from a drug deal gone bad, Mike Ross, a brilliant young college-dropout, slips into a job interview with one of New York City's best legal closers, Harvey Specter. Tired of cookie-cutter law school grads, Harvey takes a gamble by hiring Mike on the spot after he recognizes his raw talent and photographic memory. Mike and Harvey are a winning team. Even though Mike is a genius, he still has a lot to learn about law. And while Harvey may seem like an emotionless, cold-blooded shark, Mike's sympathy and concern for their cases and clients will help remind Harvey why he went into law in the first place. Mike's other allies in the office include the firm's best paralegal Rachel and Harvey's no-nonsense assistant Donna to help him serve justice. Proving to be an irrepressible duo and invaluable to the practice, Mike and Harvey must keep their secret from everyone including managing partner Jessica and Harvey's arch nemesis Louis, who seems intent on making Mike's life as difficult as possible. " VerticalAlignment="Top" Height="132" Width="761" Foreground="#FF989191" Grid.RowSpan="2" FontWeight="Bold" Visibility="Hidden"/>
+        <Button x:Name="suitsS1" Content="" HorizontalAlignment="Left" Margin="330,38,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS1_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/suitsS1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="suitsS2" Content="" HorizontalAlignment="Left" Margin="446,38.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS2_Click" Visibility="Hidden">
+        <Button x:Name="suitsS2" Content="" HorizontalAlignment="Left" Margin="446,38,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS2_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/suitsS2.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="suitsS3" Content="" HorizontalAlignment="Left" Margin="559,38.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS3_Click" Visibility="Hidden">
+        <Button x:Name="suitsS3" Content="" HorizontalAlignment="Left" Margin="559,38,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS3_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/suitsS3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="suitsS4" Content="" HorizontalAlignment="Left" Margin="670,38.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS4_Click" Visibility="Hidden">
+        <Button x:Name="suitsS4" Content="" HorizontalAlignment="Left" Margin="670,38,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS4_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/suitsS4.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="suitsS5" Content="" HorizontalAlignment="Left" Margin="778,38.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS5_Click" Visibility="Hidden">
+        <Button x:Name="suitsS5" Content="" HorizontalAlignment="Left" Margin="778,38,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS5_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/suitsS5.jpg"/>
             </Button.Background>
         </Button>
-        <Label x:Name="suitsS1Label" Content="Season 1" HorizontalAlignment="Left" Margin="341,152.283,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden"/>
-        <Label x:Name="suitsS2Label" Content="Season 2" HorizontalAlignment="Left" Margin="456,152.283,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden"/>
-        <Label x:Name="suitsS3Label" Content="Season 3" HorizontalAlignment="Left" Margin="569,152.283,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden"/>
-        <Label x:Name="suitsS4Label" Content="Season 4" HorizontalAlignment="Left" Margin="680,152.283,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden"/>
-        <Label x:Name="suitsS5Label" Content="Season 5" HorizontalAlignment="Left" Margin="786,152.283,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden"/>
+        <Label x:Name="suitsS1Label" Content="Season 1" HorizontalAlignment="Left" Margin="341,152,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden" Height="28"/>
+        <Label x:Name="suitsS2Label" Content="Season 2" HorizontalAlignment="Left" Margin="456,152,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden" Height="28"/>
+        <Label x:Name="suitsS3Label" Content="Season 3" HorizontalAlignment="Left" Margin="569,152,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden" Height="28"/>
+        <Label x:Name="suitsS4Label" Content="Season 4" HorizontalAlignment="Left" Margin="680,152,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden" Height="28"/>
+        <Label x:Name="suitsS5Label" Content="Season 5" HorizontalAlignment="Left" Margin="786,152,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden" Height="28"/>
 
-        <Rectangle x:Name="avengersBackground" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
+        <Rectangle x:Name="avengersBackground" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
         <Button x:Name="avengersBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,28,0,0" Click="backAvengers" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Grid.Row="2" Height="22" Visibility="Hidden"/>
-        <TextBox x:Name="avengersTitle" HorizontalAlignment="Left" Height="69" TextWrapping="Wrap" Text="Avengers" VerticalAlignment="Top" Width="410" Margin="414,133.895,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Visibility="Hidden"/>
-        <Button x:Name="recommendAvengers" Content="Recommend" HorizontalAlignment="Left" Margin="142,111.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="avengersRecommend" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Height="33" Visibility="Hidden"/>
-        <Button x:Name="favoriteAvengers" Content="Favorite" HorizontalAlignment="Left" Margin="142,153.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="avengersFavorite" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="33" Visibility="Hidden"/>
-        <TextBlock x:Name="avengersSynopisis" HorizontalAlignment="Left" Margin="467,69.173,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Nick Fury is the director of S.H.I.E.L.D., an international peace-keeping agency. The agency is a who's who of Marvel Super Heroes, with Iron Man, The Incredible Hulk, Thor, Captain America, Hawkeye and Black Widow. When global security is threatened by Loki and his cohorts, Nick Fury and his team will need all their powers to save the world from disaster. " VerticalAlignment="Top" Height="75" Width="645" Foreground="#FF989191" Grid.ColumnSpan="2" FontWeight="Bold" Visibility="Hidden"/>
-        <Image x:Name="avengersIcon" HorizontalAlignment="Left" Height="206" Margin="307,69.173,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="141" Source="Resources/newavengersposter.jpg" Visibility="Hidden"/>
-        <Button x:Name="playAvengers" Content="Play Movie" HorizontalAlignment="Left" Margin="467,150.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="221" Click="avengersPlay" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="54" FontSize="21.333" Visibility="Hidden"/>
+        <TextBox x:Name="avengersTitle" HorizontalAlignment="Left" Height="69" TextWrapping="Wrap" Text="Avengers" VerticalAlignment="Top" Width="410" Margin="414,0,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
+        <Button x:Name="recommendAvengers" Content="Recommend" HorizontalAlignment="Left" Margin="142,111,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="avengersRecommend" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Height="33" Visibility="Hidden"/>
+        <Button x:Name="favoriteAvengers" Content="Favorite" HorizontalAlignment="Left" Margin="142,153,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="avengersFavorite" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="33" Visibility="Hidden"/>
+        <TextBlock x:Name="avengersSynopisis" HorizontalAlignment="Left" Margin="467,69,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Nick Fury is the director of S.H.I.E.L.D., an international peace-keeping agency. The agency is a who's who of Marvel Super Heroes, with Iron Man, The Incredible Hulk, Thor, Captain America, Hawkeye and Black Widow. When global security is threatened by Loki and his cohorts, Nick Fury and his team will need all their powers to save the world from disaster. " VerticalAlignment="Top" Height="75" Width="645" Foreground="#FF989191" FontWeight="Bold" Visibility="Hidden"/>
+        <Image x:Name="avengersIcon" HorizontalAlignment="Left" Height="206" Margin="307,69,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="141" Source="Resources/newavengersposter.jpg" Visibility="Hidden"/>
+        <Button x:Name="playAvengers" Content="Play Movie" HorizontalAlignment="Left" Margin="467,150,0,0" Grid.Row="2" VerticalAlignment="Top" Width="221" Click="avengersPlay" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="54" FontSize="21.333" Visibility="Hidden"/>
 
 
     </Grid>
