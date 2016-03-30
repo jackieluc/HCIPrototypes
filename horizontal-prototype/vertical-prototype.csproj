@@ -127,7 +127,14 @@
     <Resource Include="Resources\vampire-diaries-version21-TV-series-poster.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="narcos.jpg" />
+    <Resource Include="Resources\narcos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\suitsS1.jpg" />
+    <Resource Include="Resources\suitsS2.jpg" />
+    <Resource Include="Resources\suitsS3.jpg" />
+    <Resource Include="Resources\suitsS4.jpg" />
+    <Resource Include="Resources\suitsS5.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

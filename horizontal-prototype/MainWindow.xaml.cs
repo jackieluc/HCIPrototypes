@@ -236,7 +236,20 @@ namespace horizontal_prototype
 
         private void avengers_movies_Click(object sender, RoutedEventArgs e)
         {
+            avengersTitle.Visibility = Visibility.Visible;
+            avengersBackground.Visibility = Visibility.Visible;
+            avengersBack.Visibility = Visibility.Visible;
+            recommendAvengers.Visibility = Visibility.Visible;
+            favoriteAvengers.Visibility = Visibility.Visible;
+            avengersSynopisis.Visibility = Visibility.Visible;
+            avengersIcon.Visibility = Visibility.Visible;
+            playAvengers.Visibility = Visibility.Visible;
 
+            movieList.Visibility = Visibility.Hidden;
+            movieListBack.Visibility = Visibility.Hidden;
+            movieTitle.Visibility = Visibility.Hidden;
+            avengers_movies.Visibility = Visibility.Hidden;
+            transformer_movies.Visibility = Visibility.Hidden;
         }
 
         private void transformer_movies_Click(object sender, RoutedEventArgs e)
@@ -251,6 +264,30 @@ namespace horizontal_prototype
 
         private void suits_tvshows_Click(object sender, RoutedEventArgs e)
         {
+            naruto_tvshows.Visibility = Visibility.Hidden;
+            suits_tvshows.Visibility = Visibility.Hidden;
+            vampirediaries_tvshows.Visibility = Visibility.Hidden;
+            pokemon_tvshows.Visibility = Visibility.Hidden;
+            tvshowTitle.Visibility = Visibility.Hidden;
+            tvshowListBack.Visibility = Visibility.Hidden;
+            tvshowList.Visibility = Visibility.Hidden;
+
+            suitsTitle.Visibility = Visibility.Visible;
+            suitsBackground.Visibility = Visibility.Visible;
+            suitsBack.Visibility = Visibility.Visible;
+            recommendSuits.Visibility = Visibility.Visible;
+            favoriteSuits.Visibility = Visibility.Visible;
+            suitsSynopisis.Visibility = Visibility.Visible;
+            suitsS1.Visibility = Visibility.Visible;
+            suitsS2.Visibility = Visibility.Visible;
+            suitsS3.Visibility = Visibility.Visible;
+            suitsS4.Visibility = Visibility.Visible;
+            suitsS5.Visibility = Visibility.Visible;
+            suitsS1Label.Visibility = Visibility.Visible;
+            suitsS2Label.Visibility = Visibility.Visible;
+            suitsS3Label.Visibility = Visibility.Visible;
+            suitsS4Label.Visibility = Visibility.Visible;
+            suitsS5Label.Visibility = Visibility.Visible;
 
         }
 
@@ -290,6 +327,104 @@ namespace horizontal_prototype
         }
 
         private void selenagomez_music_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void backSuits(object sender, RoutedEventArgs e)
+        {
+            suitsTitle.Visibility = Visibility.Hidden;
+            suitsBackground.Visibility = Visibility.Hidden;
+            suitsBack.Visibility = Visibility.Hidden;
+            recommendSuits.Visibility = Visibility.Hidden;
+            favoriteSuits.Visibility = Visibility.Hidden;
+            suitsSynopisis.Visibility = Visibility.Hidden;
+            suitsS1.Visibility = Visibility.Hidden;
+            suitsS2.Visibility = Visibility.Hidden;
+            suitsS3.Visibility = Visibility.Hidden;
+            suitsS4.Visibility = Visibility.Hidden;
+            suitsS5.Visibility = Visibility.Hidden;
+            suitsS1Label.Visibility = Visibility.Hidden;
+            suitsS2Label.Visibility = Visibility.Hidden;
+            suitsS3Label.Visibility = Visibility.Hidden;
+            suitsS4Label.Visibility = Visibility.Hidden;
+            suitsS5Label.Visibility = Visibility.Hidden;
+
+            naruto_tvshows.Visibility = Visibility.Visible;
+            suits_tvshows.Visibility = Visibility.Visible;
+            vampirediaries_tvshows.Visibility = Visibility.Visible;
+            pokemon_tvshows.Visibility = Visibility.Visible;
+            tvshowTitle.Visibility = Visibility.Visible;
+            tvshowListBack.Visibility = Visibility.Visible;
+            tvshowList.Visibility = Visibility.Visible;
+
+
+        }
+
+        private void suitsRecommend(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void suitsFavorite(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void suitsS1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void suitsS2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void suitsS3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void suitsS4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void suitsS5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void backAvengers(object sender, RoutedEventArgs e)
+        {
+            avengersTitle.Visibility = Visibility.Hidden;
+            avengersBackground.Visibility = Visibility.Hidden;
+            avengersBack.Visibility = Visibility.Hidden;
+            recommendAvengers.Visibility = Visibility.Hidden;
+            favoriteAvengers.Visibility = Visibility.Hidden;
+            avengersSynopisis.Visibility = Visibility.Hidden;
+            avengersIcon.Visibility = Visibility.Hidden;
+            playAvengers.Visibility = Visibility.Hidden;
+
+            movieList.Visibility = Visibility.Visible;
+            movieListBack.Visibility = Visibility.Visible;
+            movieTitle.Visibility = Visibility.Visible;
+            avengers_movies.Visibility = Visibility.Visible;
+            transformer_movies.Visibility = Visibility.Visible;
+        }
+
+        private void avengersRecommend(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void avengersFavorite(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void avengersPlay(object sender, RoutedEventArgs e)
         {
 
         }

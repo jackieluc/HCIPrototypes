@@ -178,5 +178,61 @@
                 <ImageBrush ImageSource="Resources/Justin Bieber.jpg"/>
             </Button.Background>
         </Button>
+
+        <Rectangle x:Name="suitsBackground" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/background-dark.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="suitsBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,28,0,0" Click="backSuits" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Grid.Row="2" Height="22" Visibility="Hidden"/>
+        <TextBox x:Name="suitsTitle" HorizontalAlignment="Left" Height="61" TextWrapping="Wrap" Text="Suits" VerticalAlignment="Top" Width="410" Margin="414,133.895,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Visibility="Hidden"/>
+        <Button x:Name="recommendSuits" Content="Recommend" HorizontalAlignment="Left" Margin="142,111.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="suitsRecommend" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Height="33" Visibility="Hidden"/>
+        <Button x:Name="favoriteSuits" Content="Favorite" HorizontalAlignment="Left" Margin="142,153.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="suitsFavorite" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="33" Visibility="Hidden"/>
+        <TextBlock x:Name="suitsSynopisis" HorizontalAlignment="Left" Margin="330,69.173,0,0" Grid.Row="2" TextWrapping="Wrap" Text="While running from a drug deal gone bad, Mike Ross, a brilliant young college-dropout, slips into a job interview with one of New York City's best legal closers, Harvey Specter. Tired of cookie-cutter law school grads, Harvey takes a gamble by hiring Mike on the spot after he recognizes his raw talent and photographic memory. Mike and Harvey are a winning team. Even though Mike is a genius, he still has a lot to learn about law. And while Harvey may seem like an emotionless, cold-blooded shark, Mike's sympathy and concern for their cases and clients will help remind Harvey why he went into law in the first place. Mike's other allies in the office include the firm's best paralegal Rachel and Harvey's no-nonsense assistant Donna to help him serve justice. Proving to be an irrepressible duo and invaluable to the practice, Mike and Harvey must keep their secret from everyone including managing partner Jessica and Harvey's arch nemesis Louis, who seems intent on making Mike's life as difficult as possible. " VerticalAlignment="Top" Height="132" Width="761" Foreground="#FF989191" Grid.ColumnSpan="2" Grid.RowSpan="2" FontWeight="Bold" Visibility="Hidden"/>
+        <Button x:Name="suitsS1" Content="" HorizontalAlignment="Left" Margin="330,38.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS1_Click" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/suitsS1.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="suitsS2" Content="" HorizontalAlignment="Left" Margin="446,38.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS2_Click" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/suitsS2.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="suitsS3" Content="" HorizontalAlignment="Left" Margin="559,38.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS3_Click" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/suitsS3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="suitsS4" Content="" HorizontalAlignment="Left" Margin="670,38.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS4_Click" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/suitsS4.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="suitsS5" Content="" HorizontalAlignment="Left" Margin="778,38.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="84" Height="120" Click="suitsS5_Click" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/suitsS5.jpg"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="suitsS1Label" Content="Season 1" HorizontalAlignment="Left" Margin="341,152.283,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden"/>
+        <Label x:Name="suitsS2Label" Content="Season 2" HorizontalAlignment="Left" Margin="456,152.283,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden"/>
+        <Label x:Name="suitsS3Label" Content="Season 3" HorizontalAlignment="Left" Margin="569,152.283,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden"/>
+        <Label x:Name="suitsS4Label" Content="Season 4" HorizontalAlignment="Left" Margin="680,152.283,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden"/>
+        <Label x:Name="suitsS5Label" Content="Season 5" HorizontalAlignment="Left" Margin="786,152.283,0,0" Grid.Row="3" VerticalAlignment="Top" Foreground="#FF989191" FontWeight="Bold" FontSize="13.333" Width="74" Visibility="Hidden"/>
+
+        <Rectangle x:Name="avengersBackground" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/background-dark.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="avengersBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,28,0,0" Click="backAvengers" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Grid.Row="2" Height="22" Visibility="Hidden"/>
+        <TextBox x:Name="avengersTitle" HorizontalAlignment="Left" Height="69" TextWrapping="Wrap" Text="Avengers" VerticalAlignment="Top" Width="410" Margin="414,133.895,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Visibility="Hidden"/>
+        <Button x:Name="recommendAvengers" Content="Recommend" HorizontalAlignment="Left" Margin="142,111.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="avengersRecommend" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Height="33" Visibility="Hidden"/>
+        <Button x:Name="favoriteAvengers" Content="Favorite" HorizontalAlignment="Left" Margin="142,153.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="avengersFavorite" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="33" Visibility="Hidden"/>
+        <TextBlock x:Name="avengersSynopisis" HorizontalAlignment="Left" Margin="467,69.173,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Nick Fury is the director of S.H.I.E.L.D., an international peace-keeping agency. The agency is a who's who of Marvel Super Heroes, with Iron Man, The Incredible Hulk, Thor, Captain America, Hawkeye and Black Widow. When global security is threatened by Loki and his cohorts, Nick Fury and his team will need all their powers to save the world from disaster. " VerticalAlignment="Top" Height="75" Width="645" Foreground="#FF989191" Grid.ColumnSpan="2" FontWeight="Bold" Visibility="Hidden"/>
+        <Image x:Name="avengersIcon" HorizontalAlignment="Left" Height="206" Margin="307,69.173,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="141" Source="Resources/newavengersposter.jpg" Visibility="Hidden"/>
+        <Button x:Name="playAvengers" Content="Play Movie" HorizontalAlignment="Left" Margin="467,150.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="221" Click="avengersPlay" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="54" FontSize="21.333" Visibility="Hidden"/>
+
+
     </Grid>
 </Window>
