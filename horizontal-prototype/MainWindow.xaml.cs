@@ -22,6 +22,9 @@ namespace horizontal_prototype
     public partial class MainWindow : Window
     {
         private Boolean feed_open = true;
+        private Boolean tvshow_favorite = false;
+        private Boolean movies_favorite = false;
+        private Boolean music_favorite = false;
 
         public MainWindow()
         {
@@ -62,9 +65,6 @@ namespace horizontal_prototype
             favoritesList.Visibility = Visibility.Visible;
             favoritesListBack.Visibility = Visibility.Visible;
             favoritesTitle.Visibility = Visibility.Visible;
-            deadmau5_favorites.Visibility = Visibility.Visible;
-            suits_favorites.Visibility = Visibility.Visible;
-            transformers_favorites.Visibility = Visibility.Visible;
         }
 
         private void music_button_Click(object sender, RoutedEventArgs e)
@@ -168,9 +168,9 @@ namespace horizontal_prototype
             favoritesList.Visibility = Visibility.Hidden;
             favoritesListBack.Visibility = Visibility.Hidden;
             favoritesTitle.Visibility = Visibility.Hidden;
-            deadmau5_favorites.Visibility = Visibility.Hidden;
+            bieber_favorites.Visibility = Visibility.Hidden;
             suits_favorites.Visibility = Visibility.Hidden;
-            transformers_favorites.Visibility = Visibility.Hidden;
+            avengers_favorites.Visibility = Visibility.Hidden;
         }
 
         private void closeMusicList(object sender, RoutedEventArgs e)
@@ -301,17 +301,7 @@ namespace horizontal_prototype
 
         }
 
-        private void deadmau5_favorites_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void suits_favorites_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void transformers_favorites_Click(object sender, RoutedEventArgs e)
         {
 
         }
@@ -323,7 +313,21 @@ namespace horizontal_prototype
 
         private void justinbieber_music_Click(object sender, RoutedEventArgs e)
         {
+            bieberTitle.Visibility = Visibility.Visible;
+            bieberBackground.Visibility = Visibility.Visible;
+            bieberBack.Visibility = Visibility.Visible;
+            recommendBieber.Visibility = Visibility.Visible;
+            favoriteBieber.Visibility = Visibility.Visible;
+            bieberMusicList.Visibility = Visibility.Visible;
+            bieberIcon.Visibility = Visibility.Visible;
+            playAllBieber.Visibility = Visibility.Visible;
 
+            justinbieber_music.Visibility = Visibility.Hidden;
+            deadmau5_music.Visibility = Visibility.Hidden;
+            selenagomez_music.Visibility = Visibility.Hidden;
+            musicTitle.Visibility = Visibility.Hidden;
+            musicListBack.Visibility = Visibility.Hidden;
+            musicList.Visibility = Visibility.Hidden;
         }
 
         private void selenagomez_music_Click(object sender, RoutedEventArgs e)
@@ -425,6 +429,50 @@ namespace horizontal_prototype
         }
 
         private void avengersPlay(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void backBieber(object sender, RoutedEventArgs e)
+        {
+            bieberTitle.Visibility = Visibility.Hidden;
+            bieberBackground.Visibility = Visibility.Hidden;
+            bieberBack.Visibility = Visibility.Hidden;
+            recommendBieber.Visibility = Visibility.Hidden;
+            favoriteBieber.Visibility = Visibility.Hidden;
+            bieberMusicList.Visibility = Visibility.Hidden;
+            bieberIcon.Visibility = Visibility.Hidden;
+            playAllBieber.Visibility = Visibility.Hidden;
+
+            justinbieber_music.Visibility = Visibility.Visible;
+            deadmau5_music.Visibility = Visibility.Visible;
+            selenagomez_music.Visibility = Visibility.Visible;
+            musicTitle.Visibility = Visibility.Visible;
+            musicListBack.Visibility = Visibility.Visible;
+            musicList.Visibility = Visibility.Visible;
+        }
+
+        private void bieberRecommend(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bieberFavorite(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bieberPlayAll(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bieber_favorites_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void avengers_favorites_Click(object sender, RoutedEventArgs e)
         {
 
         }

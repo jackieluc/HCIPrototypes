@@ -111,9 +111,9 @@
         </Rectangle>
         <Button x:Name="favoritesListBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,28,0,0" Click="closeFavoritesList" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Grid.Row="2" Height="22" Visibility="Hidden"/>
         <TextBox x:Name="favoritesTitle" HorizontalAlignment="Left" Height="61" TextWrapping="Wrap" Text="Favorites" VerticalAlignment="Top" Width="410" Margin="414,133.895,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Visibility="Hidden"/>
-        <Button x:Name="deadmau5_favorites" Content="" HorizontalAlignment="Left" Margin="142,82.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="127" Grid.RowSpan="2" Click="deadmau5_favorites_Click" Visibility="Hidden">
+        <Button x:Name="bieber_favorites" Content="" HorizontalAlignment="Left" Margin="142,82.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="127" Grid.RowSpan="2" Click="bieber_favorites_Click" Visibility="Hidden">
             <Button.Background>
-                <ImageBrush ImageSource="Resources/Deadmau5.jpg"/>
+                <ImageBrush ImageSource="Resources/Justin Bieber.jpg"/>
             </Button.Background>
         </Button>
         <Button x:Name="suits_favorites" Content="" HorizontalAlignment="Left" Margin="302,79.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="107" Height="130" Grid.RowSpan="2" Click="suits_favorites_Click" Visibility="Hidden">
@@ -121,9 +121,9 @@
                 <ImageBrush ImageSource="Resources/Suits.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="transformers_favorites" Content="" HorizontalAlignment="Left" Margin="430,79.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100" Height="129" Grid.RowSpan="2" Click="transformers_favorites_Click" Visibility="Hidden">
+        <Button x:Name="avengers_favorites" Content="" HorizontalAlignment="Left" Margin="430,79.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100" Height="129" Grid.RowSpan="2" Click="avengers_favorites_Click" Visibility="Hidden">
             <Button.Background>
-                <ImageBrush ImageSource="Resources/transformers-movie-poster-2007.jpg"/>
+                <ImageBrush ImageSource="Resources/newavengersposter.jpg"/>
             </Button.Background>
         </Button>
 
@@ -233,6 +233,18 @@
         <Image x:Name="avengersIcon" HorizontalAlignment="Left" Height="206" Margin="307,69.173,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="141" Source="Resources/newavengersposter.jpg" Visibility="Hidden"/>
         <Button x:Name="playAvengers" Content="Play Movie" HorizontalAlignment="Left" Margin="467,150.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="221" Click="avengersPlay" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="54" FontSize="21.333" Visibility="Hidden"/>
 
+        <Rectangle x:Name="bieberBackground" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/background-dark.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="bieberBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,28,0,0" Click="backBieber" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Grid.Row="2" Height="22" Visibility="Hidden"/>
+        <TextBox x:Name="bieberTitle" HorizontalAlignment="Left" Height="69" TextWrapping="Wrap" Text="Believe - Justin Bieber" VerticalAlignment="Top" Width="522" Margin="414,133.895,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <Button x:Name="recommendBieber" Content="Recommend" HorizontalAlignment="Left" Margin="142,111.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="bieberRecommend" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Height="33" Visibility="Hidden"/>
+        <Button x:Name="favoriteBieber" Content="Favorite" HorizontalAlignment="Left" Margin="142,153.173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135" Click="bieberFavorite" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="33" Visibility="Hidden"/>
+        <TextBlock x:Name="bieberMusicList" HorizontalAlignment="Left" Margin="482,69.173,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="325" Width="439" Foreground="#FF989191" FontWeight="Bold" FontSize="16" Grid.RowSpan="3" Visibility="Hidden"><Run Text="&#x9;Song&#x9;&#x9;&#x9;&#x9;&#x9;Time"/><LineBreak/><Run FontSize="12" Text=""/><LineBreak/><Run Text="1.&#x9;All Around The World&#x9;&#x9;&#x9;4:04"/><LineBreak/><Run Text="2.&#x9;Boyfriend&#x9;&#x9;&#x9;&#x9;2:51"/><LineBreak/><Run Text="3.&#x9;As long as You Love Me&#x9;&#x9;&#x9;3:49"/><LineBreak/><Run Text="4.&#x9;Catching Feelings&#x9;&#x9;&#x9;3:54"/><LineBreak/><Run Text="5.&#x9;Take You&#x9;&#x9;&#x9;&#x9;3:40"/><LineBreak/><Run Text="6.&#x9;Right Here&#x9;&#x9;&#x9;&#x9;3:24"/><LineBreak/><Run Text="7.&#x9;Fall&#x9;&#x9;&#x9;&#x9;&#x9;4:08"/><LineBreak/><Run Text="8.&#x9;Die in Your Arms&#x9;&#x9;&#x9;&#x9;3:57"/><LineBreak/><Run Text="9.&#x9;Thought of You&#x9;&#x9;&#x9;&#x9;3:50"/><LineBreak/><Run Text="10.&#x9;Beauty and a Beat&#x9;&#x9;&#x9;3:48"/><LineBreak/><Run Text="11.&#x9;One Love&#x9;&#x9;&#x9;&#x9;3:54"/><LineBreak/><Run Text="12.&#x9;Be Alright&#x9;&#x9;&#x9;&#x9;3:09"/><LineBreak/><Run Text="13.&#x9;Believe&#x9;&#x9;&#x9;&#x9;&#x9;3:42"/></TextBlock>
+        <Image x:Name="bieberIcon" HorizontalAlignment="Left" Height="139" Margin="307,69.173,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="141" Source="Resources/Justin Bieber.jpg" Visibility="Hidden"/>
+        <Button x:Name="playAllBieber" Content="Play All" HorizontalAlignment="Left" Margin="311,49.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="135" Click="bieberPlayAll" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Height="33" Visibility="Hidden"/>
 
     </Grid>
 </Window>
