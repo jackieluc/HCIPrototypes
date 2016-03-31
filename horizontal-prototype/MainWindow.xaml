@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Name="JCR_Entertainment" x:Class="horizontal_prototype.MainWindow"
         Height="768" Width="1280" Icon="Resources/Youtube_Icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Width="1280" Height="768">
+    <Grid Width="1280" Margin="0,0,-6,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="34*"/>
             <RowDefinition Height="124*"/>
@@ -11,7 +11,7 @@
             <RowDefinition Height="200*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="935*"/>
+            <ColumnDefinition Width="1280"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="Resources/bg.jpg"/>
@@ -57,7 +57,7 @@
         <Label x:Name="Password" Content="Password:" HorizontalAlignment="Left" Margin="888,2,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="White" Height="31" Width="86" Grid.Row="1" d:IsHidden="True"/>
         <PasswordBox x:Name="Password_form" HorizontalAlignment="Left" Height="23" Margin="974,8,0,0" VerticalAlignment="Top" Width="161" Grid.Row="1" d:IsHidden="True"/>
         <Button x:Name="Login_button" Content="Login" HorizontalAlignment="Left" Margin="1159,8,0,0" VerticalAlignment="Top" Width="75" Click="Login_button_Click" Height="22" Grid.Row="1" d:IsHidden="True"/>
-<!--
+        <!--
         <Label x:Name="textBlock" HorizontalAlignment="Left" Margin="414,19,0,0" VerticalAlignment="Top" Content="JCR Entertainment" Foreground="White" FontWeight="Bold" Height="39" Width="229" FontSize="24" Grid.RowSpan="2"/>
         <Label x:Name="Login" Content="Login:" HorizontalAlignment="Left" Margin="670,2,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" FontSize="16" Height="31" Width="56" Grid.Row="1"/>
         <TextBox x:Name="Username_form" HorizontalAlignment="Left" Height="23" Margin="726,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" TextChanged="Username_form_TextChanged" Grid.Row="1" GotFocus="textbox_clear"/>
@@ -126,7 +126,7 @@
                 <ImageBrush ImageSource="Resources/Justin Bieber.jpg"/>
             </Button.Background>
         </Button>
-            
+
         <Button x:Name="suits_favorites" Content="" HorizontalAlignment="Left" Margin="302,79,0,0" Grid.Row="2" VerticalAlignment="Top" Width="107" Height="130" Grid.RowSpan="2" Click="suits_favorites_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/Suits.jpg"/>
@@ -238,16 +238,16 @@
         <Image x:Name="avengersIcon" HorizontalAlignment="Left" Height="206" Margin="307,69,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="141" Source="Resources/newavengersposter.jpg" Visibility="Hidden"/>
         <Button x:Name="playAvengers" Content="Play Movie" HorizontalAlignment="Left" Margin="467,150,0,0" Grid.Row="2" VerticalAlignment="Top" Width="221" Click="avengersPlay" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="54" FontSize="21.333" Visibility="Hidden"/>
 
-        <Rectangle x:Name="social_feed" HorizontalAlignment="Center" Stroke="White" VerticalAlignment="Center" Margin="0" Visibility="Hidden" Height="768" Width="1280" Grid.RowSpan="5" Grid.ColumnSpan="1">
+        <Rectangle x:Name="social_feed" HorizontalAlignment="Center" Stroke="White" VerticalAlignment="Center" Margin="0" Visibility="Visible" Height="768" Width="1280" Grid.RowSpan="5" Grid.ColumnSpan="1">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle x:Name="bieberBackground" HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="1012" Margin="117,1,0,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
-          <Rectangle.Fill>
-            <ImageBrush ImageSource="Resources/background-dark.jpg"/>
-          </Rectangle.Fill>
-        </Rectangle> 
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/background-dark.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
         <Label x:Name="social_feed_title" Content="Social Media Feeds" HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="333" Margin="430,0,0,0" FontSize="36" Foreground="#FF989191" FontWeight="Bold" Background="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
         <Button x:Name="backSocial_button" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="142,28,0,0" Click="backSocial" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Grid.Row="2" Height="22" Visibility="Hidden"/>
 
@@ -270,8 +270,23 @@
         <Button x:Name="account_button" Background="Transparent" ToolTip="Account Settings" ToolTipService.ShowOnDisabled="True" Margin="0,24,139,0" VerticalAlignment="Top" Height="58" BorderThickness="0" Click="account_settings" Visibility="Visible" HorizontalAlignment="Right" Width="62" Grid.RowSpan="2">
             <Image x:Name="account_icon" Source="Resources/accountIcon.png" Height="56" Width="62" RenderTransformOrigin="0.5,0.5" />
         </Button>
-        
+
         <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Left" Margin="1159,8,0,0" VerticalAlignment="Top" Width="75" Click="logout_button_Click" Height="22" Grid.Row="1" Visibility="Visible"/>
         
+        <StackPanel x:Name="notifications_feed" HorizontalAlignment="Left" Height="641" Margin="877,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4">
+            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FFF03535">Notifications</TextBlock>
+            <Button x:Name="notify1" Height="95" >notify1 notification</Button>
+        </StackPanel>
+
+        <StackPanel x:Name="twitter_feed" HorizontalAlignment="Left" Height="641" Margin="451,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4">
+            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FF1BD4AA">Twitter</TextBlock>
+            <Button x:Name="twitter1" Height="95" >twitter1 feed</Button>
+        </StackPanel>
+
+        <StackPanel x:Name="facebook_feed" HorizontalAlignment="Left" Height="641" Margin="21,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4">
+            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FF3557F0">Facebook</TextBlock>
+            <Button x:Name="facebook1" Height="95" >facebook1 feed</Button>
+        </StackPanel>
+
     </Grid>
 </Window>
