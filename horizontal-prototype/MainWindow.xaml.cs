@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -21,8 +22,11 @@ namespace horizontal_prototype
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Boolean feed_open = true;
+        private Boolean in_social = false;
+        private Boolean in_account = false;
 
+        private Boolean in_app = false;
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -41,80 +45,109 @@ namespace horizontal_prototype
 
         private void netflix_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (!in_app)
             {
-                System.Diagnostics.Process.Start("https://www.netflix.com/Login?locale=en-CA");
+                try
+                {
+                    System.Diagnostics.Process.Start("https://www.netflix.com/Login?locale=en-CA");
+                }
+                catch { }
             }
-            catch { }
         }
 
         private void movies_Click(object sender, RoutedEventArgs e)
         {
-            movieList.Visibility = Visibility.Visible;
-            movieListBack.Visibility = Visibility.Visible;
-            movieTitle.Visibility = Visibility.Visible;
-            avengers_movies.Visibility = Visibility.Visible;
-            transformer_movies.Visibility = Visibility.Visible;
+            if (!in_app)
+            {
+                in_app = true;
+                movieList.Visibility = Visibility.Visible;
+                movieListBack.Visibility = Visibility.Visible;
+                movieTitle.Visibility = Visibility.Visible;
+                avengers_movies.Visibility = Visibility.Visible;
+                transformer_movies.Visibility = Visibility.Visible;
+            }
         }
 
         private void favourites_button_Click(object sender, RoutedEventArgs e)
         {
-            favoritesList.Visibility = Visibility.Visible;
-            favoritesListBack.Visibility = Visibility.Visible;
-            favoritesTitle.Visibility = Visibility.Visible;
-            deadmau5_favorites.Visibility = Visibility.Visible;
-            suits_favorites.Visibility = Visibility.Visible;
-            transformers_favorites.Visibility = Visibility.Visible;
+            if (!in_app)
+            {
+                in_app = true;
+                favoritesList.Visibility = Visibility.Visible;
+                favoritesListBack.Visibility = Visibility.Visible;
+                favoritesTitle.Visibility = Visibility.Visible;
+                deadmau5_favorites.Visibility = Visibility.Visible;
+                suits_favorites.Visibility = Visibility.Visible;
+                transformers_favorites.Visibility = Visibility.Visible;
+            }
         }
 
         private void music_button_Click(object sender, RoutedEventArgs e)
         {
-            musicList.Visibility = Visibility.Visible;
-            musicListBack.Visibility = Visibility.Visible;
-            musicTitle.Visibility = Visibility.Visible;
-            deadmau5_music.Visibility = Visibility.Visible;
-            selenagomez_music.Visibility = Visibility.Visible;
-            justinbieber_music.Visibility = Visibility.Visible;
+            if (!in_app)
+            {
+                in_app = true;
+                musicList.Visibility = Visibility.Visible;
+                musicListBack.Visibility = Visibility.Visible;
+                musicTitle.Visibility = Visibility.Visible;
+                deadmau5_music.Visibility = Visibility.Visible;
+                selenagomez_music.Visibility = Visibility.Visible;
+                justinbieber_music.Visibility = Visibility.Visible;
+            }
         }
 
         private void tvshows_button_Click(object sender, RoutedEventArgs e)
         {
-            tvshowList.Visibility = Visibility.Visible;
-            tvshowListBack.Visibility = Visibility.Visible;
-            tvshowTitle.Visibility = Visibility.Visible;
-            naruto_tvshows.Visibility = Visibility.Visible;
-            suits_tvshows.Visibility = Visibility.Visible;
-            vampirediaries_tvshows.Visibility = Visibility.Visible;
-            pokemon_tvshows.Visibility = Visibility.Visible;
+            if (!in_app)
+            {
+                in_app = true;
+                tvshowList.Visibility = Visibility.Visible;
+                tvshowListBack.Visibility = Visibility.Visible;
+                tvshowTitle.Visibility = Visibility.Visible;
+                naruto_tvshows.Visibility = Visibility.Visible;
+                suits_tvshows.Visibility = Visibility.Visible;
+                vampirediaries_tvshows.Visibility = Visibility.Visible;
+                pokemon_tvshows.Visibility = Visibility.Visible;
+            }
         }
 
         private void settings_button_Click(object sender, RoutedEventArgs e)
         {
-            settings.Visibility = Visibility.Visible;
-            settingsBack.Visibility = Visibility.Visible;
-            settingsTitle.Visibility = Visibility.Visible;
-            videoSettings.Visibility = Visibility.Visible;
-            powerSettings.Visibility = Visibility.Visible;
-            dataAndTime.Visibility = Visibility.Visible;
-            audioSettings.Visibility = Visibility.Visible;
+            if (!in_app)
+            {
+                in_app = true;
+                settings.Visibility = Visibility.Visible;
+                settingsBack.Visibility = Visibility.Visible;
+                settingsTitle.Visibility = Visibility.Visible;
+                videoSettings.Visibility = Visibility.Visible;
+                powerSettings.Visibility = Visibility.Visible;
+                dataAndTime.Visibility = Visibility.Visible;
+                audioSettings.Visibility = Visibility.Visible;
+            }
         }
 
         private void youtube_button_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (!in_app)
             {
-                System.Diagnostics.Process.Start("https://www.youtube.com/");
+                try
+                {
+                    System.Diagnostics.Process.Start("https://www.youtube.com/");
+                }
+                catch { }
             }
-            catch { }
         }
 
         private void spotify_button_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (!in_app)
             {
-                System.Diagnostics.Process.Start("https://accounts.spotify.com/en/login?continue=https:%2F%2Fwww.spotify.com%2Fca-en%2Faccount%2Foverview%2F");
+                try
+                {
+                    System.Diagnostics.Process.Start("https://accounts.spotify.com/en/login?continue=https:%2F%2Fwww.spotify.com%2Fca-en%2Faccount%2Foverview%2F");
+                }
+                catch { }
             }
-            catch { }
         }
 
         private void Username_form_TextChanged(object sender, TextChangedEventArgs e)
@@ -139,6 +172,7 @@ namespace horizontal_prototype
 
             //LOGIN LOGIC HERE. If not authorized, don't log in, otherwise login
 
+            social_button.Visibility = Visibility.Visible;
             account_button.Visibility = Visibility.Visible;
             logout_button.Visibility = Visibility.Visible;
         }
@@ -201,36 +235,23 @@ namespace horizontal_prototype
             textBox.GotFocus -= textbox_clear;
         }
 
-        private void open_feed(object sender, RoutedEventArgs e)
-        {
-            //Toggle open/close the social media feed
-            if (feed_open)
-            {
-                media_feed.Visibility = Visibility.Visible;
-                media_feed_title.Visibility = Visibility.Visible;
-
-                feed_open = false;
-            }
-            else if (!feed_open)
-            {
-                media_feed.Visibility = Visibility.Hidden;
-                media_feed_title.Visibility = Visibility.Hidden;
-
-                feed_open = true;
-            }
-        }
-
         private void logout_button_Click(object sender, RoutedEventArgs e)
         {
-            Login_button.Visibility = Visibility.Visible;
-            Login.Visibility = Visibility.Visible;
-            Username_form.Visibility = Visibility.Visible;
-            Password.Visibility = Visibility.Visible;
-            Password_form.Visibility = Visibility.Visible;
+            MessageBoxResult messageBoxResult = new MessageBoxResult();
+            messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Logout Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
 
-            logout_button.Visibility = Visibility.Hidden;
-            account_button.Visibility = Visibility.Hidden;
+                Login_button.Visibility = Visibility.Visible;
+                Login.Visibility = Visibility.Visible;
+                Username_form.Visibility = Visibility.Visible;
+                Password.Visibility = Visibility.Visible;
+                Password_form.Visibility = Visibility.Visible;
 
+                logout_button.Visibility = Visibility.Hidden;
+                account_button.Visibility = Visibility.Hidden;
+                social_button.Visibility = Visibility.Hidden;
+            }
             //LOGOUT LOGIC HERE
         }
 
@@ -427,6 +448,51 @@ namespace horizontal_prototype
         private void avengersPlay(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void open_feed(object sender, RoutedEventArgs e)
+        {
+            if (!in_social && !in_account)
+            {
+                in_app = true;
+                in_social = true;
+                social_feed.Visibility = Visibility.Visible;
+                social_feed_title.Visibility = Visibility.Visible;
+                backSocial_button.Visibility = Visibility.Visible;
+            }
+            else backSocial(sender, e);
+        }
+
+        private void backSocial(object sender, RoutedEventArgs e)
+        {
+            social_feed.Visibility = Visibility.Hidden;
+            social_feed_title.Visibility = Visibility.Hidden;
+            backSocial_button.Visibility = Visibility.Hidden;
+            in_social = false;
+            in_app = false;
+        }
+
+        private void account_settings(object sender, RoutedEventArgs e)
+        {
+            if (!in_social && !in_account)
+            {
+                in_app = true;
+                in_account = true;
+                account_page.Visibility = Visibility.Visible;
+                account_title.Visibility = Visibility.Visible;
+                backAccount_button.Visibility = Visibility.Visible;
+            }
+            else backAccount(sender, e);
+            
+        }
+
+        private void backAccount(object sender, RoutedEventArgs e)
+        {
+            account_page.Visibility = Visibility.Hidden;
+            account_title.Visibility = Visibility.Hidden;
+            backAccount_button.Visibility = Visibility.Hidden;
+            in_account = false;
+            in_app = false;
         }
     }
 }
