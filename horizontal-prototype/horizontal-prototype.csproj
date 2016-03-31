@@ -98,6 +98,7 @@
     <Resource Include="Resources\bg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\iconmonstr-globe-5-240.png" />
     <Resource Include="Resources\netflix.png" />
   </ItemGroup>
   <ItemGroup>
@@ -128,9 +129,6 @@
     <Resource Include="Resources\vampire-diaries-version21-TV-series-poster.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\iconmonstr-globe-5-240.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\login-green.png" />
     <Resource Include="Resources\narcos.jpg" />
     <Resource Include="Resources\suitsS1.jpg" />
@@ -138,6 +136,12 @@
     <Resource Include="Resources\suitsS3.jpg" />
     <Resource Include="Resources\suitsS4.jpg" />
     <Resource Include="Resources\suitsS5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\iconmonstr-warning-3-240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\notification-globe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

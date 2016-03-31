@@ -26,7 +26,9 @@ namespace horizontal_prototype
         private Boolean in_account = false;
 
         private Boolean in_app = false;
-        
+
+        private Boolean notify = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -36,7 +38,24 @@ namespace horizontal_prototype
             {
                 date_time.Content = DateTime.Now.ToString();
             }, this.Dispatcher);
+
+            DispatcherTimer notificationTimer = new DispatcherTimer(TimeSpan.FromMilliseconds(1), DispatcherPriority.Send, delegate {
+                if (Keyboard.IsKeyDown(Key.N) && !notify)
+                {
+                    notifyUser();
+                }
+            }, this.Dispatcher);
         }
+
+              private void notifyUser()
+              {
+                  if (!notify && social_button.Visibility == Visibility.Visible)
+                  {
+                      social_button.Visibility = Visibility.Hidden;
+                      notify_button.Visibility = Visibility.Visible;
+                      notify = true;
+                  }
+              }
 
         private void initialize_date_time(object sender, EventArgs e)
         {
@@ -152,7 +171,7 @@ namespace horizontal_prototype
 
         private void Username_form_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+
         }
 
         private void Password_form_TextChanged(object sender, TextChangedEventArgs e)
@@ -162,13 +181,13 @@ namespace horizontal_prototype
 
         private void Login_button_Click(object sender, RoutedEventArgs e)
         {
-            
+
             Login_button.Visibility = Visibility.Hidden;
             Login.Visibility = Visibility.Hidden;
             Username_form.Visibility = Visibility.Hidden;
             Password.Visibility = Visibility.Hidden;
             Password_form.Visibility = Visibility.Hidden;
-            
+
 
             //LOGIN LOGIC HERE. If not authorized, don't log in, otherwise login
 
@@ -238,7 +257,7 @@ namespace horizontal_prototype
         private void logout_button_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult messageBoxResult = new MessageBoxResult();
-            messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Logout Confirmation", System.Windows.MessageBoxButton.YesNo);
+            messageBoxResult = MessageBox.Show("Are you sure you want to log out?", "Logging Out", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
 
@@ -250,7 +269,18 @@ namespace horizontal_prototype
 
                 logout_button.Visibility = Visibility.Hidden;
                 account_button.Visibility = Visibility.Hidden;
+                account_title.Visibility = Visibility.Hidden;
+                account_page.Visibility = Visibility.Hidden;
+                backAccount_button.Visibility = Visibility.Hidden;
+                
                 social_button.Visibility = Visibility.Hidden;
+                notify_button.Visibility = Visibility.Hidden;
+                social_feed_title.Visibility = Visibility.Hidden;
+                social_feed.Visibility = Visibility.Hidden;
+                backSocial_button.Visibility = Visibility.Hidden;
+                in_account = false;
+                in_social = false;
+                notify = false;
             }
             //LOGOUT LOGIC HERE
         }
@@ -454,6 +484,10 @@ namespace horizontal_prototype
         {
             if (!in_social && !in_account)
             {
+                notify_button.Visibility = Visibility.Hidden;
+                social_button.Visibility = Visibility.Visible;
+                notify = false;
+
                 in_app = true;
                 in_social = true;
                 social_feed.Visibility = Visibility.Visible;
@@ -483,7 +517,7 @@ namespace horizontal_prototype
                 backAccount_button.Visibility = Visibility.Visible;
             }
             else backAccount(sender, e);
-            
+
         }
 
         private void backAccount(object sender, RoutedEventArgs e)

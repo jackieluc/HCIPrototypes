@@ -151,8 +151,8 @@
 
         <Label x:Name="date_time" Content="00/00/0000 00:00:00 PM" HorizontalAlignment="Left" Margin="77,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Initialized="initialize_date_time" Height="42" Width="268" Grid.Row="1"/>
 
-        <Button x:Name="account_button" Background="Transparent" Margin="0,24,139,0" VerticalAlignment="Top" Height="58" BorderThickness="0" Click="account_settings" Visibility="Visible" HorizontalAlignment="Right" Width="62" Grid.RowSpan="2">
-            <Image x:Name="account_icon" Source="Resources/accountIcon.png" Height="56" Width="62" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5" />
+        <Button x:Name="account_button" Background="Transparent" ToolTip="Account Settings" ToolTipService.ShowOnDisabled="True" Margin="0,24,139,0" VerticalAlignment="Top" Height="58" BorderThickness="0" Click="account_settings" Visibility="Visible" HorizontalAlignment="Right" Width="62" Grid.RowSpan="2">
+            <Image x:Name="account_icon" Source="Resources/accountIcon.png" Height="56" Width="62" RenderTransformOrigin="0.5,0.5" />
         </Button>
         <Rectangle x:Name="account_page" HorizontalAlignment="Left" Height="534" Stroke="White" VerticalAlignment="Top" Width="1012" Margin="100,1,0,0" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
             <Rectangle.Fill>
@@ -233,9 +233,14 @@
         <Image x:Name="avengersIcon" HorizontalAlignment="Left" Height="206" Margin="307,69,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="141" Source="Resources/newavengersposter.jpg" Visibility="Hidden"/>
         <Button x:Name="playAvengers" Content="Play Movie" HorizontalAlignment="Left" Margin="467,150,0,0" Grid.Row="2" VerticalAlignment="Top" Width="221" Click="avengersPlay" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="54" FontSize="21.333" Visibility="Hidden"/>
 
-        <Button x:Name="social_button" Background="Transparent" Margin="0,24,225,0" VerticalAlignment="Top" Height="58" BorderThickness="0" Click="open_feed" Visibility="Visible" HorizontalAlignment="Right" Width="62" Grid.RowSpan="2">
+        <Button x:Name="social_button" Background="Transparent" ToolTip="Notifications and Social Media" ToolTipService.ShowOnDisabled="True" Margin="0,24,225,0" VerticalAlignment="Top" Height="58" BorderThickness="0" Click="open_feed" Visibility="Visible" HorizontalAlignment="Right" Width="62" Grid.RowSpan="2">
             <Image x:Name="social_icon" Source="Resources/iconmonstr-globe-5-240.png" Height="48" Width="53" />
         </Button>
+        
+        <Button x:Name="notify_button" Background="Transparent" ToolTip="Notifications and Social Media" ToolTipService.ShowOnDisabled="True" Margin="0,24,225,0" VerticalAlignment="Top" Height="58" BorderThickness="0" Click="open_feed" Visibility="Hidden" HorizontalAlignment="Right" Width="62" Grid.RowSpan="2">
+            <Image x:Name="notify_icon" Source="Resources/notification-globe.png" Height="48" Width="53" />
+        </Button>
+
         <Rectangle x:Name="social_feed" HorizontalAlignment="Left" Height="534" Stroke="White" VerticalAlignment="Top" Width="1012" Margin="100,1,0,0" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>

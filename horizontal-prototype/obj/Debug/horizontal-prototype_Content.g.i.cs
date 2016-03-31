@@ -8,12 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/login-green.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/narcos.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/suitss1.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/suitss2.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/suitss3.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/suitss4.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/suitss5.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/iconmonstr-warning-3-240.png")]
 
 
