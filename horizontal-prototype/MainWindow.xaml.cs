@@ -25,8 +25,6 @@ namespace horizontal_prototype
         private Boolean in_social = false;
         private Boolean in_account = false;
 
-        private Boolean in_app = false;
-
         private Boolean notify = false;
 
         public MainWindow()
@@ -64,109 +62,80 @@ namespace horizontal_prototype
 
         private void netflix_Click(object sender, RoutedEventArgs e)
         {
-            if (!in_app)
+            try
             {
-                try
-                {
-                    System.Diagnostics.Process.Start("https://www.netflix.com/Login?locale=en-CA");
-                }
-                catch { }
+                System.Diagnostics.Process.Start("https://www.netflix.com/Login?locale=en-CA");
             }
+            catch { }
         }
 
         private void movies_Click(object sender, RoutedEventArgs e)
         {
-            if (!in_app)
-            {
-                in_app = true;
-                movieList.Visibility = Visibility.Visible;
-                movieListBack.Visibility = Visibility.Visible;
-                movieTitle.Visibility = Visibility.Visible;
-                avengers_movies.Visibility = Visibility.Visible;
-                transformer_movies.Visibility = Visibility.Visible;
-            }
+            movieList.Visibility = Visibility.Visible;
+            movieListBack.Visibility = Visibility.Visible;
+            movieTitle.Visibility = Visibility.Visible;
+            avengers_movies.Visibility = Visibility.Visible;
+            transformer_movies.Visibility = Visibility.Visible;
         }
 
         private void favourites_button_Click(object sender, RoutedEventArgs e)
         {
-            if (!in_app)
-            {
-                in_app = true;
-                favoritesList.Visibility = Visibility.Visible;
-                favoritesListBack.Visibility = Visibility.Visible;
-                favoritesTitle.Visibility = Visibility.Visible;
-                deadmau5_favorites.Visibility = Visibility.Visible;
-                suits_favorites.Visibility = Visibility.Visible;
-                transformers_favorites.Visibility = Visibility.Visible;
-            }
+            favoritesList.Visibility = Visibility.Visible;
+            favoritesListBack.Visibility = Visibility.Visible;
+            favoritesTitle.Visibility = Visibility.Visible;
+            deadmau5_favorites.Visibility = Visibility.Visible;
+            suits_favorites.Visibility = Visibility.Visible;
+            transformers_favorites.Visibility = Visibility.Visible;
         }
 
         private void music_button_Click(object sender, RoutedEventArgs e)
         {
-            if (!in_app)
-            {
-                in_app = true;
-                musicList.Visibility = Visibility.Visible;
-                musicListBack.Visibility = Visibility.Visible;
-                musicTitle.Visibility = Visibility.Visible;
-                deadmau5_music.Visibility = Visibility.Visible;
-                selenagomez_music.Visibility = Visibility.Visible;
-                justinbieber_music.Visibility = Visibility.Visible;
-            }
+            musicList.Visibility = Visibility.Visible;
+            musicListBack.Visibility = Visibility.Visible;
+            musicTitle.Visibility = Visibility.Visible;
+            deadmau5_music.Visibility = Visibility.Visible;
+            selenagomez_music.Visibility = Visibility.Visible;
+            justinbieber_music.Visibility = Visibility.Visible;
         }
 
         private void tvshows_button_Click(object sender, RoutedEventArgs e)
         {
-            if (!in_app)
-            {
-                in_app = true;
-                tvshowList.Visibility = Visibility.Visible;
-                tvshowListBack.Visibility = Visibility.Visible;
-                tvshowTitle.Visibility = Visibility.Visible;
-                naruto_tvshows.Visibility = Visibility.Visible;
-                suits_tvshows.Visibility = Visibility.Visible;
-                vampirediaries_tvshows.Visibility = Visibility.Visible;
-                pokemon_tvshows.Visibility = Visibility.Visible;
-            }
+             tvshowList.Visibility = Visibility.Visible;
+             tvshowListBack.Visibility = Visibility.Visible;
+             tvshowTitle.Visibility = Visibility.Visible;
+             naruto_tvshows.Visibility = Visibility.Visible;
+             suits_tvshows.Visibility = Visibility.Visible;
+             vampirediaries_tvshows.Visibility = Visibility.Visible;
+             pokemon_tvshows.Visibility = Visibility.Visible;
         }
 
         private void settings_button_Click(object sender, RoutedEventArgs e)
         {
-            if (!in_app)
-            {
-                in_app = true;
-                settings.Visibility = Visibility.Visible;
-                settingsBack.Visibility = Visibility.Visible;
-                settingsTitle.Visibility = Visibility.Visible;
-                videoSettings.Visibility = Visibility.Visible;
-                powerSettings.Visibility = Visibility.Visible;
-                dataAndTime.Visibility = Visibility.Visible;
-                audioSettings.Visibility = Visibility.Visible;
-            }
+            settings.Visibility = Visibility.Visible;
+            settingsBack.Visibility = Visibility.Visible;
+            settingsTitle.Visibility = Visibility.Visible;
+            videoSettings.Visibility = Visibility.Visible;
+            powerSettings.Visibility = Visibility.Visible;
+            dataAndTime.Visibility = Visibility.Visible;
+            audioSettings.Visibility = Visibility.Visible;
         }
 
         private void youtube_button_Click(object sender, RoutedEventArgs e)
         {
-            if (!in_app)
+            try
             {
-                try
-                {
-                    System.Diagnostics.Process.Start("https://www.youtube.com/");
-                }
-                catch { }
+                System.Diagnostics.Process.Start("https://www.youtube.com/");
             }
+            catch { }
         }
 
         private void spotify_button_Click(object sender, RoutedEventArgs e)
         {
-            if (!in_app)
+            try
             {
-                try
-                {
-                    System.Diagnostics.Process.Start("https://accounts.spotify.com/en/login?continue=https:%2F%2Fwww.spotify.com%2Fca-en%2Faccount%2Foverview%2F");
-                }
-                catch { }
+                System.Diagnostics.Process.Start("https://accounts.spotify.com/en/login?continue=https:%2F%2Fwww.spotify.com%2Fca-en%2Faccount%2Foverview%2F");
             }
+            catch { }
         }
 
         private void Username_form_TextChanged(object sender, TextChangedEventArgs e)
@@ -488,7 +457,6 @@ namespace horizontal_prototype
                 social_button.Visibility = Visibility.Visible;
                 notify = false;
 
-                in_app = true;
                 in_social = true;
                 social_feed.Visibility = Visibility.Visible;
                 social_feed_title.Visibility = Visibility.Visible;
@@ -503,14 +471,12 @@ namespace horizontal_prototype
             social_feed_title.Visibility = Visibility.Hidden;
             backSocial_button.Visibility = Visibility.Hidden;
             in_social = false;
-            in_app = false;
         }
 
         private void account_settings(object sender, RoutedEventArgs e)
         {
             if (!in_social && !in_account)
             {
-                in_app = true;
                 in_account = true;
                 account_page.Visibility = Visibility.Visible;
                 account_title.Visibility = Visibility.Visible;
@@ -526,7 +492,6 @@ namespace horizontal_prototype
             account_title.Visibility = Visibility.Hidden;
             backAccount_button.Visibility = Visibility.Hidden;
             in_account = false;
-            in_app = false;
         }
     }
 }
