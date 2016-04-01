@@ -73,15 +73,21 @@ namespace horizontal_prototype
                               TextAlignment   = TextAlignment.Center,
                               TextWrapping    = TextWrapping.Wrap
                             };
-                      
+                       
                           notifications_feed.Children.Add(notification);
                       }
                       else
                       {
                           Button notification = new Button();
-                          notification.Visibility = Visibility.Visible;
-                          notification.Height = 95;
-                          notification.Content = "John Smith recommends you to watch Marvel's The Avengers!";
+                          notification.Content = new TextBlock()
+                          {
+                              Height = 95,
+                              FontSize = 16,
+                              Text = "John Smith recommends you to watch Marvel's The Avengers! It is available on DVD/Blu-Ray!",
+                              TextAlignment = TextAlignment.Center,
+                              TextWrapping = TextWrapping.Wrap
+                          };
+
                           notifications_feed.Children.Add(notification);
                       }
                   }
