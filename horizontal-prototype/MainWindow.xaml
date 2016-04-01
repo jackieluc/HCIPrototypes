@@ -272,20 +272,20 @@
         </Button>
 
         <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Left" Margin="1159,8,0,0" VerticalAlignment="Top" Width="75" Click="logout_button_Click" Height="22" Grid.Row="1" Visibility="Visible"/>
-        
-        <StackPanel x:Name="notifications_feed" HorizontalAlignment="Left" Height="641" Margin="877,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4">
+
+        <StackPanel x:Name="notifications_feed" HorizontalAlignment="Left" Height="641" Margin="877,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4" Background="White" Visibility="Visible">
             <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FFF03535">Notifications</TextBlock>
-            <Button x:Name="notify1" Height="95" >notify1 notification</Button>
+           <!-- <Button x:Name="notify1" Height="95" BorderBrush="Black" Visibility="Visible">notify1 notification</Button> -->
         </StackPanel>
 
-        <StackPanel x:Name="twitter_feed" HorizontalAlignment="Left" Height="641" Margin="451,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4">
+        <StackPanel x:Name="twitter_feed" HorizontalAlignment="Left" Height="641" Margin="451,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4" Background="White" Visibility="Visible">
             <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FF1BD4AA">Twitter</TextBlock>
-            <Button x:Name="twitter1" Height="95" >twitter1 feed</Button>
+            <Button x:Name="twitter1" Height="95" BorderBrush="Black" Visibility="Hidden">twitter1 feed</Button>
         </StackPanel>
 
-        <StackPanel x:Name="facebook_feed" HorizontalAlignment="Left" Height="641" Margin="21,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4">
+        <StackPanel x:Name="facebook_feed" HorizontalAlignment="Left" Height="641" Margin="21,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4" Background="White" Visibility="Visible">
             <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FF3557F0">Facebook</TextBlock>
-            <Button x:Name="facebook1" Height="95" >facebook1 feed</Button>
+            <Button x:Name="facebook1" Height="95" BorderBrush="Black" Visibility="Hidden">facebook1 feed</Button>
         </StackPanel>
 
     </Grid>

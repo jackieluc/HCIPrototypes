@@ -62,6 +62,28 @@ namespace horizontal_prototype
                       social_button.Visibility = Visibility.Hidden;
                       notify_button.Visibility = Visibility.Visible;
                       notify = true;
+
+                      if (john_logged_on && !alex_logged_on)
+                      {
+                          Button notification = new Button(); 
+                          notification.Content = new TextBlock() {
+                              Height          = 95,
+                              FontSize        = 16,
+                              Text            = "Alex Wong recommends you to watch Marvel's The Avengers! It is available on DVD/Blu-Ray!",
+                              TextAlignment   = TextAlignment.Center,
+                              TextWrapping    = TextWrapping.Wrap
+                            };
+                      
+                          notifications_feed.Children.Add(notification);
+                      }
+                      else
+                      {
+                          Button notification = new Button();
+                          notification.Visibility = Visibility.Visible;
+                          notification.Height = 95;
+                          notification.Content = "John Smith recommends you to watch Marvel's The Avengers!";
+                          notifications_feed.Children.Add(notification);
+                      }
                   }
               }
 
@@ -299,6 +321,9 @@ namespace horizontal_prototype
                 social_feed_title.Visibility = Visibility.Hidden;
                 social_feed.Visibility = Visibility.Hidden;
                 backSocial_button.Visibility = Visibility.Hidden;
+                twitter_feed.Visibility = Visibility.Hidden;
+                facebook_feed.Visibility = Visibility.Hidden;
+                notifications_feed.Visibility = Visibility.Hidden;
                 notify = false;
 
                 john_logged_on = false;
@@ -311,6 +336,9 @@ namespace horizontal_prototype
             {
                 social_feed.Visibility = Visibility.Hidden;
                 social_feed_title.Visibility = Visibility.Hidden;
+                twitter_feed.Visibility = Visibility.Hidden;
+                facebook_feed.Visibility = Visibility.Hidden;
+                notifications_feed.Visibility = Visibility.Hidden;
 
                 feed_open = true;
             }
@@ -558,6 +586,9 @@ namespace horizontal_prototype
                 social_feed.Visibility = Visibility.Visible;
                 social_feed_title.Visibility = Visibility.Visible;
                 backSocial_button.Visibility = Visibility.Visible;
+                notifications_feed.Visibility = Visibility.Visible;
+                twitter_feed.Visibility = Visibility.Visible;
+                facebook_feed.Visibility = Visibility.Visible;
 
                 account_page.Visibility = Visibility.Hidden;
                 account_title.Visibility = Visibility.Hidden;
@@ -571,6 +602,9 @@ namespace horizontal_prototype
             social_feed.Visibility = Visibility.Hidden;
             social_feed_title.Visibility = Visibility.Hidden;
             backSocial_button.Visibility = Visibility.Hidden;
+            twitter_feed.Visibility = Visibility.Hidden;
+            facebook_feed.Visibility = Visibility.Hidden;
+            notifications_feed.Visibility = Visibility.Hidden;
             in_social = false;
 
             if (in_account)
