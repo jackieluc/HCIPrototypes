@@ -52,46 +52,65 @@ namespace horizontal_prototype
                 {
                     notifyUser();
                 }
+                if (Keyboard.IsKeyDown(Key.Left) && web_browser.Visibility == Visibility.Visible)
+                {
+                    web_browser.Visibility = Visibility.Hidden;
+                }
+                if (Keyboard.IsKeyDown(Key.Right) && web_browser.Visibility == Visibility.Hidden)
+                {
+                    web_browser.Visibility = Visibility.Visible;
+                }
             }, this.Dispatcher);
         }
 
-              private void notifyUser()
-              {
-                  if (!notify && social_button.Visibility == Visibility.Visible)
-                  {
-                      social_button.Visibility = Visibility.Hidden;
-                      notify_button.Visibility = Visibility.Visible;
-                      notify = true;
+         private void notifyUser()
+         {
+            if (!notify && social_button.Visibility == Visibility.Visible)
+            {
+                social_button.Visibility = Visibility.Hidden;
+                notify_button.Visibility = Visibility.Visible;
+                notify = true;
 
-                      if (john_logged_on && !alex_logged_on)
-                      {
-                          Button notification = new Button(); 
-                          notification.Content = new TextBlock() {
-                              Height          = 95,
-                              FontSize        = 16,
-                              Text            = "Alex Wong recommends you to watch Marvel's The Avengers! It is available on DVD/Blu-Ray!",
-                              TextAlignment   = TextAlignment.Center,
-                              TextWrapping    = TextWrapping.Wrap
-                            };
-                       
-                          notifications_feed.Children.Add(notification);
-                      }
-                      else
-                      {
-                          Button notification = new Button();
-                          notification.Content = new TextBlock()
-                          {
-                              Height = 95,
-                              FontSize = 16,
-                              Text = "John Smith recommends you to watch Marvel's The Avengers! It is available on DVD/Blu-Ray!",
-                              TextAlignment = TextAlignment.Center,
-                              TextWrapping = TextWrapping.Wrap
-                          };
+                if (john_logged_on && !alex_logged_on)
+                {
+                    Button notification = new Button();
+                    notification.Content = new TextBlock()
+                    {
+                        Height = 95,
+                        FontSize = 16,
+                        Text = "Alex Wong recommends you to watch Marvel's The Avengers! It is available on DVD/Blu-Ray!",
+                        TextAlignment = TextAlignment.Center,
+                        TextWrapping = TextWrapping.Wrap
+                    };
 
-                          notifications_feed.Children.Add(notification);
-                      }
-                  }
-              }
+                    notification.Click += notification_Click;
+
+                    john_notifications_feed.Children.Add(notification);
+                }
+                else
+                {
+                    Button notification = new Button();
+                    notification.Content = new TextBlock()
+                    {
+                        Height = 95,
+                        FontSize = 16,
+                        Text = "John Smith recommends you to watch Marvel's The Avengers! It is available on DVD/Blu-Ray!",
+                        TextAlignment = TextAlignment.Center,
+                        TextWrapping = TextWrapping.Wrap
+                    };
+
+                    notification.Click += notification_Click;
+
+                    alex_notifications_feed.Children.Add(notification);
+                }
+            }
+        }
+
+         private void notification_Click(object sender, RoutedEventArgs e)
+         {
+             web_browser.Visibility = Visibility.Visible;
+             web_browser.Navigate("http://marvel.com/avengers_movie/");
+         }
 
         private void initialize_date_time(object sender, EventArgs e)
         {
@@ -100,11 +119,8 @@ namespace horizontal_prototype
 
         private void netflix_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                System.Diagnostics.Process.Start("https://www.netflix.com/Login?locale=en-CA");
-            }
-            catch { }
+            web_browser.Visibility = Visibility.Visible;
+            web_browser.Navigate("https://www.netflix.com/Login?locale=en-CA");
         }
 
         private void movies_Click(object sender, RoutedEventArgs e)
@@ -184,20 +200,14 @@ namespace horizontal_prototype
 
         private void youtube_button_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                System.Diagnostics.Process.Start("https://www.youtube.com/");
-            }
-            catch { }
+            web_browser.Visibility = Visibility.Visible;
+            web_browser.Navigate("https://www.youtube.com");
         }
 
         private void spotify_button_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                System.Diagnostics.Process.Start("https://accounts.spotify.com/en/login?continue=https:%2F%2Fwww.spotify.com%2Fca-en%2Faccount%2Foverview%2F");
-            }
-            catch { }
+            web_browser.Visibility = Visibility.Visible;
+            web_browser.Navigate("https://www.spotify.com/ca-en/");
         }
 
         private void Username_form_TextChanged(object sender, TextChangedEventArgs e)
@@ -221,6 +231,7 @@ namespace horizontal_prototype
                 Username_form.Visibility = Visibility.Hidden;
                 Password.Visibility = Visibility.Hidden;
                 Password_form.Visibility = Visibility.Hidden;
+                login_failed_msg.Visibility = Visibility.Hidden;
 
                 social_button.Visibility = Visibility.Visible;
                 account_button.Visibility = Visibility.Visible;
@@ -235,13 +246,14 @@ namespace horizontal_prototype
                 Username_form.Visibility = Visibility.Hidden;
                 Password.Visibility = Visibility.Hidden;
                 Password_form.Visibility = Visibility.Hidden;
+                login_failed_msg.Visibility = Visibility.Hidden;
 
                 social_button.Visibility = Visibility.Visible;
                 account_button.Visibility = Visibility.Visible;
                 logout_button.Visibility = Visibility.Visible;
             }
             else {
-                //MESSAGEBOX INFORMING INVALID LOGIN
+                login_failed_msg.Visibility = Visibility.Visible;
             }
         }
 
@@ -327,9 +339,15 @@ namespace horizontal_prototype
                 social_feed_title.Visibility = Visibility.Hidden;
                 social_feed.Visibility = Visibility.Hidden;
                 backSocial_button.Visibility = Visibility.Hidden;
-                twitter_feed.Visibility = Visibility.Hidden;
-                facebook_feed.Visibility = Visibility.Hidden;
-                notifications_feed.Visibility = Visibility.Hidden;
+
+                john_twitter_feed.Visibility = Visibility.Hidden;
+                john_facebook_feed.Visibility = Visibility.Hidden;
+                john_notifications_feed.Visibility = Visibility.Hidden;
+
+                alex_twitter_feed.Visibility = Visibility.Hidden;
+                alex_facebook_feed.Visibility = Visibility.Hidden;
+                alex_notifications_feed.Visibility = Visibility.Hidden;
+
                 notify = false;
 
                 john_logged_on = false;
@@ -342,29 +360,19 @@ namespace horizontal_prototype
             {
                 social_feed.Visibility = Visibility.Hidden;
                 social_feed_title.Visibility = Visibility.Hidden;
-                twitter_feed.Visibility = Visibility.Hidden;
-                facebook_feed.Visibility = Visibility.Hidden;
-                notifications_feed.Visibility = Visibility.Hidden;
+
+                john_twitter_feed.Visibility = Visibility.Hidden;
+                john_facebook_feed.Visibility = Visibility.Hidden;
+                john_notifications_feed.Visibility = Visibility.Hidden;
+
+                alex_twitter_feed.Visibility = Visibility.Hidden;
+                alex_facebook_feed.Visibility = Visibility.Hidden;
+                alex_notifications_feed.Visibility = Visibility.Hidden;
 
                 feed_open = true;
             }
         }
-/*
-        private void logout_button_Click(object sender, RoutedEventArgs e)
-        {
-            Login_button.Visibility = Visibility.Visible;
-            Login.Visibility = Visibility.Visible;
-            Username_form.Visibility = Visibility.Visible;
-            Password.Visibility = Visibility.Visible;
-            Password_form.Visibility = Visibility.Visible;
 
-            logout_button.Visibility = Visibility.Hidden;
-            account_button.Visibility = Visibility.Hidden;
-
-            john_logged_on = false;
-            alex_logged_on = false;
-        }
-        */
         private void avengers_movies_Click(object sender, RoutedEventArgs e)
         {
             avengersTitle.Visibility = Visibility.Visible;
@@ -498,7 +506,43 @@ namespace horizontal_prototype
 
         private void suitsRecommend(object sender, RoutedEventArgs e)
         {
+            if (john_logged_on && !alex_logged_on)
+            {
+                Button notification = new Button();
+                notification.Content = new TextBlock()
+                {
+                    Height = 95,
+                    FontSize = 16,
+                    Text = "John Smith recommends you to watch Suits! It is available on DVD/Blu-Ray!",
+                    TextAlignment = TextAlignment.Center,
+                    TextWrapping = TextWrapping.Wrap
+                };
 
+                notification.Click += suits_Click;
+
+                alex_notifications_feed.Children.Add(notification);
+            }
+            else {
+                Button notification = new Button();
+                notification.Content = new TextBlock()
+                {
+                    Height = 95,
+                    FontSize = 16,
+                    Text = "Alex recommends you to watch Suits! It is available on DVD/Blu-Ray!",
+                    TextAlignment = TextAlignment.Center,
+                    TextWrapping = TextWrapping.Wrap
+                };
+
+                notification.Click += suits_Click;
+
+                john_notifications_feed.Children.Add(notification);
+            }
+        }
+
+        private void suits_Click(object sender, RoutedEventArgs e)
+        {
+            web_browser.Visibility = Visibility.Visible;
+            web_browser.Navigate("http://www.usanetwork.com/suits");
         }
 
         private void suitsFavorite(object sender, RoutedEventArgs e)
@@ -559,7 +603,38 @@ namespace horizontal_prototype
 
         private void avengersRecommend(object sender, RoutedEventArgs e)
         {
+            if (john_logged_on && !alex_logged_on)
+            {
+                Button notification = new Button();
+                notification.Content = new TextBlock()
+                {
+                    Height = 95,
+                    FontSize = 16,
+                    Text = "John Smith recommends you to watch Marvel's The Avengers! It is available on DVD/Blu-Ray!",
+                    TextAlignment = TextAlignment.Center,
+                    TextWrapping = TextWrapping.Wrap
+                };
 
+                notification.Click += notification_Click;
+
+                alex_notifications_feed.Children.Add(notification);
+            }
+            else
+            {
+                Button notification = new Button();
+                notification.Content = new TextBlock()
+                {
+                    Height = 95,
+                    FontSize = 16,
+                    Text = "Alex Wong recommends you to watch Marvel's The Avengers! It is available on DVD/Blu-Ray!",
+                    TextAlignment = TextAlignment.Center,
+                    TextWrapping = TextWrapping.Wrap
+                };
+
+                notification.Click += notification_Click;
+
+                john_notifications_feed.Children.Add(notification);
+            }
         }
 
         private void avengersFavorite(object sender, RoutedEventArgs e)
@@ -592,9 +667,19 @@ namespace horizontal_prototype
                 social_feed.Visibility = Visibility.Visible;
                 social_feed_title.Visibility = Visibility.Visible;
                 backSocial_button.Visibility = Visibility.Visible;
-                notifications_feed.Visibility = Visibility.Visible;
-                twitter_feed.Visibility = Visibility.Visible;
-                facebook_feed.Visibility = Visibility.Visible;
+
+                if (john_logged_on && !alex_logged_on)
+                {
+                    john_twitter_feed.Visibility = Visibility.Visible;
+                    john_facebook_feed.Visibility = Visibility.Visible;
+                    john_notifications_feed.Visibility = Visibility.Visible;
+                }
+                else if (alex_logged_on && !john_logged_on)
+                {
+                    alex_twitter_feed.Visibility = Visibility.Visible;
+                    alex_facebook_feed.Visibility = Visibility.Visible;
+                    alex_notifications_feed.Visibility = Visibility.Visible;
+                }
 
                 account_page.Visibility = Visibility.Hidden;
                 account_title.Visibility = Visibility.Hidden;
@@ -608,13 +693,28 @@ namespace horizontal_prototype
             social_feed.Visibility = Visibility.Hidden;
             social_feed_title.Visibility = Visibility.Hidden;
             backSocial_button.Visibility = Visibility.Hidden;
-            twitter_feed.Visibility = Visibility.Hidden;
-            facebook_feed.Visibility = Visibility.Hidden;
-            notifications_feed.Visibility = Visibility.Hidden;
+
+            john_twitter_feed.Visibility = Visibility.Hidden;
+            john_facebook_feed.Visibility = Visibility.Hidden;
+            john_notifications_feed.Visibility = Visibility.Hidden;
+
+            alex_twitter_feed.Visibility = Visibility.Hidden;
+            alex_facebook_feed.Visibility = Visibility.Hidden;
+            alex_notifications_feed.Visibility = Visibility.Hidden;
+
+
             in_social = false;
 
             if (in_account)
             {
+                john_twitter_feed.Visibility = Visibility.Hidden;
+                john_facebook_feed.Visibility = Visibility.Hidden;
+                john_notifications_feed.Visibility = Visibility.Hidden;
+
+                alex_twitter_feed.Visibility = Visibility.Hidden;
+                alex_facebook_feed.Visibility = Visibility.Hidden;
+                alex_notifications_feed.Visibility = Visibility.Hidden;
+
                 account_page.Visibility = Visibility.Visible;
                 account_title.Visibility = Visibility.Visible;
                 backAccount_button.Visibility = Visibility.Visible;
@@ -633,6 +733,14 @@ namespace horizontal_prototype
                 social_feed.Visibility = Visibility.Hidden;
                 social_feed_title.Visibility = Visibility.Hidden;
                 backSocial_button.Visibility = Visibility.Hidden;
+
+                john_twitter_feed.Visibility = Visibility.Hidden;
+                john_facebook_feed.Visibility = Visibility.Hidden;
+                john_notifications_feed.Visibility = Visibility.Hidden;
+
+                alex_twitter_feed.Visibility = Visibility.Hidden;
+                alex_facebook_feed.Visibility = Visibility.Hidden;
+                alex_notifications_feed.Visibility = Visibility.Hidden;
             }
             else backAccount(sender, e);
 
@@ -655,6 +763,19 @@ namespace horizontal_prototype
                 social_feed.Visibility = Visibility.Visible;
                 social_feed_title.Visibility = Visibility.Visible;
                 backSocial_button.Visibility = Visibility.Visible;
+
+                if (john_logged_on && !alex_logged_on)
+                {
+                    john_twitter_feed.Visibility = Visibility.Visible;
+                    john_facebook_feed.Visibility = Visibility.Visible;
+                    john_notifications_feed.Visibility = Visibility.Visible;
+                }
+                else if (alex_logged_on && !john_logged_on)
+                {
+                    alex_twitter_feed.Visibility = Visibility.Visible;
+                    alex_facebook_feed.Visibility = Visibility.Visible;
+                    alex_notifications_feed.Visibility = Visibility.Visible;
+                }
             }
         }
 
@@ -679,7 +800,44 @@ namespace horizontal_prototype
 
         private void bieberRecommend(object sender, RoutedEventArgs e)
         {
+            if (john_logged_on && !alex_logged_on)
+            {
+                Button notification = new Button();
+                notification.Content = new TextBlock()
+                {
+                    Height = 95,
+                    FontSize = 16,
+                    Text = "John Smith recommends you to listen to Justin Bieber's album titled Believe!",
+                    TextAlignment = TextAlignment.Center,
+                    TextWrapping = TextWrapping.Wrap
+                };
 
+                notification.Click += jb_Click;
+
+                alex_notifications_feed.Children.Add(notification);
+            }
+            else
+            {
+                Button notification = new Button();
+                notification.Content = new TextBlock()
+                {
+                    Height = 95,
+                    FontSize = 16,
+                    Text = "Alex Wong recommends you to listen to Justin Bieber's album titled Believe!",
+                    TextAlignment = TextAlignment.Center,
+                    TextWrapping = TextWrapping.Wrap
+                };
+
+                notification.Click += jb_Click;
+
+                john_notifications_feed.Children.Add(notification);
+            }
+        }
+
+        private void jb_Click(object sender, RoutedEventArgs e)
+        {
+            web_browser.Visibility = Visibility.Visible;
+            web_browser.Navigate("https://itunes.apple.com/us/movie/justin-biebers-believe/id806447738");
         }
 
         private void bieberFavorite(object sender, RoutedEventArgs e)
