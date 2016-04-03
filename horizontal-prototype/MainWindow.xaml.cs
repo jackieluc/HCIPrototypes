@@ -530,8 +530,9 @@ namespace horizontal_prototype
                 notification.Click += suits_Click;
 
                 alex_notifications_feed.Children.Add(notification);
+                MessageBox.Show("Recommendation sent!", "", MessageBoxButton.OK);
             }
-            else {
+            else if (alex_logged_on && !john_logged_on){
                 Button notification = new Button();
                 notification.Content = new TextBlock()
                 {
@@ -545,7 +546,9 @@ namespace horizontal_prototype
                 notification.Click += suits_Click;
 
                 john_notifications_feed.Children.Add(notification);
+                MessageBox.Show("Recommendation sent!", "", MessageBoxButton.OK);
             }
+            else MessageBox.Show("Please log in to send recommendations!", "", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void suits_Click(object sender, RoutedEventArgs e)
@@ -556,15 +559,17 @@ namespace horizontal_prototype
 
         private void suitsFavorite(object sender, RoutedEventArgs e)
         {
-            if (john_logged_on == true)
+            if (john_logged_on)
             {
                 john_tvshow_favorite = true;
+                MessageBox.Show("Added to favorites!", "", MessageBoxButton.OK);
             }
-
-            if (alex_logged_on == true)
+            else if (alex_logged_on)
             {
                 alex_tvshow_favorite = true;
+                MessageBox.Show("Added to favorites!", "", MessageBoxButton.OK);
             }
+            else MessageBox.Show("Please log in to add to favorites!", "", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void suitsS1_Click(object sender, RoutedEventArgs e)
@@ -629,8 +634,9 @@ namespace horizontal_prototype
                 notification.Click += notification_Click;
 
                 alex_notifications_feed.Children.Add(notification);
+                MessageBox.Show("Recommendation sent!", "", MessageBoxButton.OK);
             }
-            else
+            else if (alex_logged_on && !john_logged_on)
             {
                 Button notification = new Button();
                 notification.Content = new TextBlock()
@@ -645,7 +651,10 @@ namespace horizontal_prototype
                 notification.Click += notification_Click;
 
                 john_notifications_feed.Children.Add(notification);
+                MessageBox.Show("Recommendation sent!", "", MessageBoxButton.OK);
             }
+            else MessageBox.Show("Please log in to send recommendations!", "", MessageBoxButton.OK, MessageBoxImage.Information);
+
         }
 
         private void avengersFavorite(object sender, RoutedEventArgs e)
@@ -653,12 +662,15 @@ namespace horizontal_prototype
             if (john_logged_on == true)
             {
                 john_movies_favorite = true;
+                MessageBox.Show("Added to favorites!", "", MessageBoxButton.OK);
             }
-
-            if (alex_logged_on == true)
+            else if (alex_logged_on == true)
             {
                 alex_movies_favorite = true;
+                MessageBox.Show("Added to favorites!", "", MessageBoxButton.OK);
             }
+            else MessageBox.Show("Please log in to add to favorites!", "", MessageBoxButton.OK, MessageBoxImage.Information);
+
         }
 
         private void avengersPlay(object sender, RoutedEventArgs e)
@@ -828,8 +840,9 @@ namespace horizontal_prototype
                 notification.Click += jb_Click;
 
                 alex_notifications_feed.Children.Add(notification);
+                MessageBox.Show("Recommendation sent!", "", MessageBoxButton.OK);
             }
-            else
+            else if (alex_logged_on && !john_logged_on)
             {
                 Button notification = new Button();
                 notification.Content = new TextBlock()
@@ -844,7 +857,9 @@ namespace horizontal_prototype
                 notification.Click += jb_Click;
 
                 john_notifications_feed.Children.Add(notification);
+                MessageBox.Show("Recommendation sent!", "", MessageBoxButton.OK);
             }
+            else MessageBox.Show("Please log in to send recommendations!", "", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void jb_Click(object sender, RoutedEventArgs e)
@@ -858,12 +873,14 @@ namespace horizontal_prototype
             if (john_logged_on == true)
             {
                 john_music_favorite = true;
+                MessageBox.Show("Added to favorites!", "", MessageBoxButton.OK);
             }
-
-            if (alex_logged_on == true)
+            else if (alex_logged_on == true)
             {
                 alex_music_favorite = true;
+                MessageBox.Show("Added to favorites!", "", MessageBoxButton.OK);
             }
+            else MessageBox.Show("Please log in to add to favorites!", "", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void bieberPlayAll(object sender, RoutedEventArgs e)
