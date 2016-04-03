@@ -38,3 +38,16 @@ C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\obj\D
 C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.csproj.GenerateResource.Cache
 C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.exe
 C:\Users\Chris\Desktop\CPSC_481_Project\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.pdb
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.exe.config
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.exe
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\bin\Debug\horizontal-prototype.pdb
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\obj\Debug\MainWindow.baml
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\obj\Debug\MainWindow.g.cs
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\obj\Debug\App.g.cs
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype_MarkupCompile.cache
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.g.resources
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal_prototype.Properties.Resources.resources
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.csproj.GenerateResource.Cache
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.exe
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.pdb
+C:\Users\Jackie\Documents\Visual Studio 2013\Projects\horizontal-prototype\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.csprojResolveAssemblyReference.cache
