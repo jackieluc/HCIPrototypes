@@ -26,6 +26,7 @@ namespace horizontal_prototype
         private Boolean in_account = false;
 
         private Boolean notify = false;
+        private Boolean gotNotification = false;
 
         private Boolean feed_open = true;
         private Boolean john_tvshow_favorite = false;
@@ -68,7 +69,12 @@ namespace horizontal_prototype
             if (!notify && social_button.Visibility == Visibility.Visible)
             {
                 social_button.Visibility = Visibility.Hidden;
-                notify_button.Visibility = Visibility.Visible;
+
+                if (!in_social)
+                    notify_button.Visibility = Visibility.Visible;
+                else if (in_social)
+                    social_button.Visibility = Visibility.Visible;
+
                 notify = true;
 
                 if (john_logged_on && !alex_logged_on)
@@ -108,8 +114,8 @@ namespace horizontal_prototype
 
          private void notification_Click(object sender, RoutedEventArgs e)
          {
-             web_browser.Visibility = Visibility.Visible;
-             web_browser.Navigate("http://marvel.com/avengers_movie/");
+             social_browser.Visibility = Visibility.Visible;
+             social_browser.Navigate("http://marvel.com/avengers_movie/");
          }
 
         private void initialize_date_time(object sender, EventArgs e)
@@ -233,7 +239,14 @@ namespace horizontal_prototype
                 Password_form.Visibility = Visibility.Hidden;
                 login_failed_msg.Visibility = Visibility.Hidden;
 
-                social_button.Visibility = Visibility.Visible;
+                if (gotNotification)
+                {
+                    notify_button.Visibility = Visibility.Visible;
+                    gotNotification = false;
+                }
+                else
+                    social_button.Visibility = Visibility.Visible;
+
                 account_button.Visibility = Visibility.Visible;
                 logout_button.Visibility = Visibility.Visible;
             }
@@ -248,7 +261,14 @@ namespace horizontal_prototype
                 Password_form.Visibility = Visibility.Hidden;
                 login_failed_msg.Visibility = Visibility.Hidden;
 
-                social_button.Visibility = Visibility.Visible;
+                if (gotNotification)
+                {
+                    notify_button.Visibility = Visibility.Visible;
+                    gotNotification = false;
+                }
+                else
+                    social_button.Visibility = Visibility.Visible;
+
                 account_button.Visibility = Visibility.Visible;
                 logout_button.Visibility = Visibility.Visible;
             }
@@ -340,13 +360,12 @@ namespace horizontal_prototype
                 social_feed.Visibility = Visibility.Hidden;
                 backSocial_button.Visibility = Visibility.Hidden;
 
-                john_twitter_feed.Visibility = Visibility.Hidden;
-                john_facebook_feed.Visibility = Visibility.Hidden;
+                side_notify.Visibility = Visibility.Hidden;
+                side_facebook.Visibility = Visibility.Hidden;
+                side_twitter.Visibility = Visibility.Hidden;
                 john_notifications_feed.Visibility = Visibility.Hidden;
-
-                alex_twitter_feed.Visibility = Visibility.Hidden;
-                alex_facebook_feed.Visibility = Visibility.Hidden;
                 alex_notifications_feed.Visibility = Visibility.Hidden;
+                social_browser.Visibility = Visibility.Hidden;
 
                 notify = false;
 
@@ -360,13 +379,11 @@ namespace horizontal_prototype
             {
                 social_feed.Visibility = Visibility.Hidden;
                 social_feed_title.Visibility = Visibility.Hidden;
+                separator.Visibility = Visibility.Hidden;
 
-                john_twitter_feed.Visibility = Visibility.Hidden;
-                john_facebook_feed.Visibility = Visibility.Hidden;
+                side_facebook.Visibility = Visibility.Hidden;
+                side_twitter.Visibility = Visibility.Hidden;
                 john_notifications_feed.Visibility = Visibility.Hidden;
-
-                alex_twitter_feed.Visibility = Visibility.Hidden;
-                alex_facebook_feed.Visibility = Visibility.Hidden;
                 alex_notifications_feed.Visibility = Visibility.Hidden;
 
                 feed_open = true;
@@ -531,6 +548,7 @@ namespace horizontal_prototype
 
                 alex_notifications_feed.Children.Add(notification);
                 MessageBox.Show("Recommendation sent!", "", MessageBoxButton.OK);
+                gotNotification = true;
             }
             else if (alex_logged_on && !john_logged_on){
                 Button notification = new Button();
@@ -547,14 +565,15 @@ namespace horizontal_prototype
 
                 john_notifications_feed.Children.Add(notification);
                 MessageBox.Show("Recommendation sent!", "", MessageBoxButton.OK);
+                gotNotification = true;
             }
             else MessageBox.Show("Please log in to send recommendations!", "", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void suits_Click(object sender, RoutedEventArgs e)
         {
-            web_browser.Visibility = Visibility.Visible;
-            web_browser.Navigate("http://www.usanetwork.com/suits");
+            social_browser.Visibility = Visibility.Visible;
+            social_browser.Navigate("http://www.usanetwork.com/suits");
         }
 
         private void suitsFavorite(object sender, RoutedEventArgs e)
@@ -635,6 +654,7 @@ namespace horizontal_prototype
 
                 alex_notifications_feed.Children.Add(notification);
                 MessageBox.Show("Recommendation sent!", "", MessageBoxButton.OK);
+                gotNotification = true;
             }
             else if (alex_logged_on && !john_logged_on)
             {
@@ -652,6 +672,7 @@ namespace horizontal_prototype
 
                 john_notifications_feed.Children.Add(notification);
                 MessageBox.Show("Recommendation sent!", "", MessageBoxButton.OK);
+                gotNotification = true;
             }
             else MessageBox.Show("Please log in to send recommendations!", "", MessageBoxButton.OK, MessageBoxImage.Information);
 
@@ -680,6 +701,12 @@ namespace horizontal_prototype
 
         private void open_feed(object sender, RoutedEventArgs e)
         {
+            if (in_account)
+            {
+                in_social = false;
+                in_account = false;
+            }
+
             if (!in_social)
             {
                 notify_button.Visibility = Visibility.Hidden;
@@ -691,18 +718,15 @@ namespace horizontal_prototype
                 social_feed_title.Visibility = Visibility.Visible;
                 backSocial_button.Visibility = Visibility.Visible;
 
+                separator.Visibility = Visibility.Visible;
+                side_notify.Visibility = Visibility.Visible;
+                side_facebook.Visibility = Visibility.Visible;
+                side_twitter.Visibility = Visibility.Visible;
+
                 if (john_logged_on && !alex_logged_on)
-                {
-                    john_twitter_feed.Visibility = Visibility.Visible;
-                    john_facebook_feed.Visibility = Visibility.Visible;
                     john_notifications_feed.Visibility = Visibility.Visible;
-                }
                 else if (alex_logged_on && !john_logged_on)
-                {
-                    alex_twitter_feed.Visibility = Visibility.Visible;
-                    alex_facebook_feed.Visibility = Visibility.Visible;
                     alex_notifications_feed.Visibility = Visibility.Visible;
-                }
 
                 account_page.Visibility = Visibility.Hidden;
                 account_title.Visibility = Visibility.Hidden;
@@ -717,27 +741,18 @@ namespace horizontal_prototype
             social_feed_title.Visibility = Visibility.Hidden;
             backSocial_button.Visibility = Visibility.Hidden;
 
-            john_twitter_feed.Visibility = Visibility.Hidden;
-            john_facebook_feed.Visibility = Visibility.Hidden;
+            separator.Visibility = Visibility.Hidden;
+            side_notify.Visibility = Visibility.Hidden;
+            side_facebook.Visibility = Visibility.Hidden;
+            side_twitter.Visibility = Visibility.Hidden;
             john_notifications_feed.Visibility = Visibility.Hidden;
-
-            alex_twitter_feed.Visibility = Visibility.Hidden;
-            alex_facebook_feed.Visibility = Visibility.Hidden;
             alex_notifications_feed.Visibility = Visibility.Hidden;
-
-
+            social_browser.Visibility = Visibility.Hidden;
+            
             in_social = false;
 
             if (in_account)
             {
-                john_twitter_feed.Visibility = Visibility.Hidden;
-                john_facebook_feed.Visibility = Visibility.Hidden;
-                john_notifications_feed.Visibility = Visibility.Hidden;
-
-                alex_twitter_feed.Visibility = Visibility.Hidden;
-                alex_facebook_feed.Visibility = Visibility.Hidden;
-                alex_notifications_feed.Visibility = Visibility.Hidden;
-
                 account_page.Visibility = Visibility.Visible;
                 account_title.Visibility = Visibility.Visible;
                 backAccount_button.Visibility = Visibility.Visible;
@@ -746,6 +761,11 @@ namespace horizontal_prototype
 
         private void account_settings(object sender, RoutedEventArgs e)
         {
+            if (in_social)
+            {
+                in_social = false;
+                in_account = false;
+            }
             if (!in_account)
             {
                 in_account = true;
@@ -757,13 +777,12 @@ namespace horizontal_prototype
                 social_feed_title.Visibility = Visibility.Hidden;
                 backSocial_button.Visibility = Visibility.Hidden;
 
-                john_twitter_feed.Visibility = Visibility.Hidden;
-                john_facebook_feed.Visibility = Visibility.Hidden;
+                side_notify.Visibility = Visibility.Hidden;
+                side_facebook.Visibility = Visibility.Hidden;
+                side_twitter.Visibility = Visibility.Hidden;
                 john_notifications_feed.Visibility = Visibility.Hidden;
-
-                alex_twitter_feed.Visibility = Visibility.Hidden;
-                alex_facebook_feed.Visibility = Visibility.Hidden;
                 alex_notifications_feed.Visibility = Visibility.Hidden;
+                social_browser.Visibility = Visibility.Hidden;
             }
             else backAccount(sender, e);
 
@@ -774,6 +793,7 @@ namespace horizontal_prototype
             account_page.Visibility = Visibility.Hidden;
             account_title.Visibility = Visibility.Hidden;
             backAccount_button.Visibility = Visibility.Hidden;
+            separator.Visibility = Visibility.Hidden;
             in_account = false;
 
             if (in_social)
@@ -787,18 +807,14 @@ namespace horizontal_prototype
                 social_feed_title.Visibility = Visibility.Visible;
                 backSocial_button.Visibility = Visibility.Visible;
 
+                side_notify.Visibility = Visibility.Visible;
+                side_facebook.Visibility = Visibility.Visible;
+                side_twitter.Visibility = Visibility.Visible;
+
                 if (john_logged_on && !alex_logged_on)
-                {
-                    john_twitter_feed.Visibility = Visibility.Visible;
-                    john_facebook_feed.Visibility = Visibility.Visible;
                     john_notifications_feed.Visibility = Visibility.Visible;
-                }
                 else if (alex_logged_on && !john_logged_on)
-                {
-                    alex_twitter_feed.Visibility = Visibility.Visible;
-                    alex_facebook_feed.Visibility = Visibility.Visible;
                     alex_notifications_feed.Visibility = Visibility.Visible;
-                }
             }
         }
 
@@ -841,6 +857,7 @@ namespace horizontal_prototype
 
                 alex_notifications_feed.Children.Add(notification);
                 MessageBox.Show("Recommendation sent!", "", MessageBoxButton.OK);
+                gotNotification = true;
             }
             else if (alex_logged_on && !john_logged_on)
             {
@@ -858,14 +875,15 @@ namespace horizontal_prototype
 
                 john_notifications_feed.Children.Add(notification);
                 MessageBox.Show("Recommendation sent!", "", MessageBoxButton.OK);
+                gotNotification = true;
             }
             else MessageBox.Show("Please log in to send recommendations!", "", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void jb_Click(object sender, RoutedEventArgs e)
         {
-            web_browser.Visibility = Visibility.Visible;
-            web_browser.Navigate("https://itunes.apple.com/us/movie/justin-biebers-believe/id806447738");
+            social_browser.Visibility = Visibility.Visible;
+            social_browser.Navigate("https://itunes.apple.com/us/movie/justin-biebers-believe/id806447738");
         }
 
         private void bieberFavorite(object sender, RoutedEventArgs e)
@@ -906,6 +924,35 @@ namespace horizontal_prototype
         private void transformers_favorites_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void sidebar_notify(object sender, RoutedEventArgs e)
+        {
+            social_browser.Visibility = Visibility.Hidden;
+
+            if (john_logged_on)
+                john_notifications_feed.Visibility = Visibility.Visible;
+            else if (alex_logged_on)
+                alex_notifications_feed.Visibility = Visibility.Visible;
+
+        }
+
+        private void sidebar_facebook(object sender, RoutedEventArgs e)
+        {
+            john_notifications_feed.Visibility = Visibility.Hidden;
+            alex_notifications_feed.Visibility = Visibility.Hidden;
+
+            social_browser.Navigate("http://www.facebook.com");
+            social_browser.Visibility = Visibility.Visible;
+        }
+
+        private void sidebar_twitter(object sender, RoutedEventArgs e)
+        {
+            john_notifications_feed.Visibility = Visibility.Hidden;
+            alex_notifications_feed.Visibility = Visibility.Hidden;
+
+            social_browser.Navigate("http://www.twitter.com");
+            social_browser.Visibility = Visibility.Visible;
         }
     }
 }
