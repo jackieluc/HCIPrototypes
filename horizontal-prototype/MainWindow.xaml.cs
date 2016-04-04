@@ -84,8 +84,10 @@ namespace horizontal_prototype
                     {
                         Height = 95,
                         FontSize = 16,
-                        Text = "Alex Wong recommends you to watch Marvel's The Avengers! It is available on DVD/Blu-Ray!",
+                        Text = "Alex Wong recommends you to watch Marvel's The Avengers! Click to watch the official website trailer!",
                         TextAlignment = TextAlignment.Center,
+                        VerticalAlignment = System.Windows.VerticalAlignment.Center,
+                        HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
                         TextWrapping = TextWrapping.Wrap
                     };
 
@@ -100,8 +102,10 @@ namespace horizontal_prototype
                     {
                         Height = 95,
                         FontSize = 16,
-                        Text = "John Smith recommends you to watch Marvel's The Avengers! It is available on DVD/Blu-Ray!",
+                        Text = "John Smith recommends you to watch Marvel's The Avengers! Click to watch the official website trailer!",
                         TextAlignment = TextAlignment.Center,
+                        VerticalAlignment = System.Windows.VerticalAlignment.Center,
+                        HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
                         TextWrapping = TextWrapping.Wrap
                     };
 
@@ -338,7 +342,7 @@ namespace horizontal_prototype
         private void logout_button_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult messageBoxResult = new MessageBoxResult();
-            messageBoxResult = MessageBox.Show("Are you sure you want to log out?", "Logging Out", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            messageBoxResult = MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
 
@@ -360,6 +364,7 @@ namespace horizontal_prototype
                 social_feed.Visibility = Visibility.Hidden;
                 backSocial_button.Visibility = Visibility.Hidden;
 
+                separator.Visibility = Visibility.Hidden;
                 side_notify.Visibility = Visibility.Hidden;
                 side_facebook.Visibility = Visibility.Hidden;
                 side_twitter.Visibility = Visibility.Hidden;
@@ -531,8 +536,10 @@ namespace horizontal_prototype
                 {
                     Height = 95,
                     FontSize = 16,
-                    Text = "John Smith recommends you to watch Suits! It is available on DVD/Blu-Ray!",
+                    Text = "John Smith recommends you to watch Suits! Click to watch the official trailer!",
                     TextAlignment = TextAlignment.Center,
+                    VerticalAlignment = System.Windows.VerticalAlignment.Center,
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
                     TextWrapping = TextWrapping.Wrap
                 };
 
@@ -548,8 +555,10 @@ namespace horizontal_prototype
                 {
                     Height = 95,
                     FontSize = 16,
-                    Text = "Alex recommends you to watch Suits! It is available on DVD/Blu-Ray!",
+                    Text = "Alex recommends you to watch Suits! Click to watch the official trailer!",
                     TextAlignment = TextAlignment.Center,
+                    VerticalAlignment = System.Windows.VerticalAlignment.Center,
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
                     TextWrapping = TextWrapping.Wrap
                 };
 
@@ -635,8 +644,10 @@ namespace horizontal_prototype
                 {
                     Height = 95,
                     FontSize = 16,
-                    Text = "John Smith recommends you to watch Marvel's The Avengers! It is available on DVD/Blu-Ray!",
+                    Text = "John Smith recommends you to watch Marvel's The Avengers! Click to watch the official trailer!",
                     TextAlignment = TextAlignment.Center,
+                    VerticalAlignment = System.Windows.VerticalAlignment.Center,
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
                     TextWrapping = TextWrapping.Wrap
                 };
 
@@ -653,8 +664,10 @@ namespace horizontal_prototype
                 {
                     Height = 95,
                     FontSize = 16,
-                    Text = "Alex Wong recommends you to watch Marvel's The Avengers! It is available on DVD/Blu-Ray!",
+                    Text = "Alex Wong recommends you to watch Marvel's The Avengers! Click to watch the official trailer!!",
                     TextAlignment = TextAlignment.Center,
+                    VerticalAlignment = System.Windows.VerticalAlignment.Center,
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
                     TextWrapping = TextWrapping.Wrap
                 };
 
@@ -762,6 +775,7 @@ namespace horizontal_prototype
                 account_page.Visibility = Visibility.Visible;
                 account_title.Visibility = Visibility.Visible;
                 backAccount_button.Visibility = Visibility.Visible;
+                separator.Visibility = Visibility.Visible;
 
                 social_feed.Visibility = Visibility.Hidden;
                 social_feed_title.Visibility = Visibility.Hidden;
@@ -836,8 +850,10 @@ namespace horizontal_prototype
                 {
                     Height = 95,
                     FontSize = 16,
-                    Text = "John Smith recommends you to listen to Justin Bieber's album titled Believe!",
+                    Text = "John Smith recommends you to listen to Justin Bieber's album titled \"Believe\"! Click to view in iTunes!",
                     TextAlignment = TextAlignment.Center,
+                    VerticalAlignment = System.Windows.VerticalAlignment.Center,
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
                     TextWrapping = TextWrapping.Wrap
                 };
 
@@ -854,8 +870,10 @@ namespace horizontal_prototype
                 {
                     Height = 95,
                     FontSize = 16,
-                    Text = "Alex Wong recommends you to listen to Justin Bieber's album titled Believe!",
+                    Text = "Alex Wong recommends you to listen to Justin Bieber's album titled \"Believe\"! Click to view in iTunes!",
                     TextAlignment = TextAlignment.Center,
+                    VerticalAlignment = System.Windows.VerticalAlignment.Center,
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
                     TextWrapping = TextWrapping.Wrap
                 };
 
