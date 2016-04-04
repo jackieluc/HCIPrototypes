@@ -400,8 +400,6 @@ namespace horizontal_prototype
             avengersSynopisis.Visibility = Visibility.Visible;
             avengersIcon.Visibility = Visibility.Visible;
             playAvengers.Visibility = Visibility.Visible;
-            recommendAvengersImg.Visibility = Visibility.Visible;
-            favoriteAvengersImg.Visibility = Visibility.Visible;
 
             movieList.Visibility = Visibility.Hidden;
             movieListBack.Visibility = Visibility.Hidden;
@@ -447,8 +445,6 @@ namespace horizontal_prototype
             suitsS4Label.Visibility = Visibility.Visible;
             suitsS5Label.Visibility = Visibility.Visible;
             //suitsS5Label.Visibility = Visibility.Hidden;
-            favoriteSuitsImg.Visibility = Visibility.Visible;
-            recommendSuitsImg.Visibility = Visibility.Visible;
 
         }
 
@@ -482,8 +478,6 @@ namespace horizontal_prototype
             bieberMusicList.Visibility = Visibility.Visible;
             bieberIcon.Visibility = Visibility.Visible;
             playAllBieber.Visibility = Visibility.Visible;
-            recommendBieberImg.Visibility = Visibility.Visible;
-            favoriteBieberImg.Visibility = Visibility.Visible;
 
             justinbieber_music.Visibility = Visibility.Hidden;
             deadmau5_music.Visibility = Visibility.Hidden;
@@ -516,8 +510,6 @@ namespace horizontal_prototype
             suitsS3Label.Visibility = Visibility.Hidden;
             suitsS4Label.Visibility = Visibility.Hidden;
             suitsS5Label.Visibility = Visibility.Hidden;
-            favoriteSuitsImg.Visibility = Visibility.Hidden;
-            recommendSuitsImg.Visibility = Visibility.Hidden;
 
             naruto_tvshows.Visibility = Visibility.Visible;
             suits_tvshows.Visibility = Visibility.Visible;
@@ -626,8 +618,6 @@ namespace horizontal_prototype
             avengersSynopisis.Visibility = Visibility.Hidden;
             avengersIcon.Visibility = Visibility.Hidden;
             playAvengers.Visibility = Visibility.Hidden;
-            recommendAvengersImg.Visibility = Visibility.Hidden;
-            favoriteAvengersImg.Visibility = Visibility.Hidden;
 
             movieList.Visibility = Visibility.Visible;
             movieListBack.Visibility = Visibility.Visible;
@@ -828,8 +818,6 @@ namespace horizontal_prototype
             bieberMusicList.Visibility = Visibility.Hidden;
             bieberIcon.Visibility = Visibility.Hidden;
             playAllBieber.Visibility = Visibility.Hidden;
-            recommendBieberImg.Visibility = Visibility.Hidden;
-            favoriteBieberImg.Visibility = Visibility.Hidden;
 
             justinbieber_music.Visibility = Visibility.Visible;
             deadmau5_music.Visibility = Visibility.Visible;
