@@ -1088,22 +1088,25 @@ namespace horizontal_prototype
             IsPlaying(true);
             video_played = true;
             video_playing = true;
-            if (btnPlay.Content.ToString() == "Play")
+            if (btnPlay.Visibility == Visibility.Visible && btnPause.Visibility == Visibility.Hidden)
             {
                 MediaPlayer.Play();
-                btnPlay.Content = "Pause";
+                btnPause.Visibility = Visibility.Visible;
+                btnPlay.Visibility = Visibility.Hidden;
             }
             else
             {
                 MediaPlayer.Pause();
-                btnPlay.Content = "Play";
+                btnPlay.Visibility = Visibility.Visible;
+                btnPause.Visibility = Visibility.Hidden;
             }
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
             MediaPlayer.Pause();
-            btnPlay.Content = "Play";
+            btnPlay.Visibility = Visibility.Visible;
+            btnPause.Visibility = Visibility.Hidden; 
             IsPlaying(false);
             btnPlay.IsEnabled = true;
         }
@@ -1116,6 +1119,7 @@ namespace horizontal_prototype
         private void btnMoveForward_Click(object sender, RoutedEventArgs e)
         {
             MediaPlayer.Position += TimeSpan.FromSeconds(10);
+            btnMoveForward.Visibility = Visibility.Visible;
         }
 
         private void cancel_click(object sender, RoutedEventArgs e)

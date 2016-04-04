@@ -151,6 +151,27 @@
   <ItemGroup>
     <Resource Include="Resources\forward.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\teamsvscivilwarposter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\facebook.png" />
+    <Resource Include="Resources\favouriteimg.png" />
+    <Resource Include="Resources\iconmonstr-arrow-4-240.png" />
+    <Resource Include="Resources\iconmonstr-favorite-10-240.png" />
+    <Resource Include="Resources\iconmonstr-media-control-4-240.png" />
+    <Resource Include="Resources\iconmonstr-thumb-18-240.png" />
+    <Resource Include="Resources\login.png" />
+    <Resource Include="Resources\logout.png" />
+    <Resource Include="Resources\notifications.png" />
+    <Resource Include="Resources\play.png" />
+    <Resource Include="Resources\playall.png" />
+    <Resource Include="Resources\recommend.png" />
+    <Resource Include="Resources\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\pause.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/captainamericacivilwar-tlr2_h720p.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pause.png")]
 
 
