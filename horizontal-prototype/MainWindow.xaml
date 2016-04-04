@@ -17,46 +17,48 @@
             <ImageBrush ImageSource="Resources/bg.jpg"/>
         </Grid.Background>
 
-        <Label x:Name="date_time" Content="00/00/0000 00:00:00 PM" HorizontalAlignment="Left" Margin="77,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Initialized="initialize_date_time" Height="42" Width="268" Grid.Row="1" d:IsHidden="True"/>
+        <Label x:Name="date_time" Content="00/00/0000 00:00:00 PM" HorizontalAlignment="Left" Margin="77,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Initialized="initialize_date_time" Height="42" Width="268" Grid.Row="1"/>
 
-        <Button x:Name="netflix_button" Background="Transparent" HorizontalAlignment="Left" Margin="77,1,0,0" VerticalAlignment="Top" Width="286" Height="110" Click="netflix_Click" Grid.Row="2" d:IsHidden="True">
+        <Button x:Name="netflix_button" Background="Transparent" HorizontalAlignment="Left" Margin="77,1,0,0" VerticalAlignment="Top" Width="286" Height="110" Click="netflix_Click" Grid.Row="2">
             <Image x:Name="netflix_img" Source="Resources/netflix.png"/>
         </Button>
 
-        <Button x:Name="movies_button" Background="Transparent" HorizontalAlignment="Left" Margin="487,1,0,0" VerticalAlignment="Top" Width="286" Height="110" Click="movies_Click" Grid.Row="2" d:IsHidden="True">
+        <Button x:Name="movies_button" Background="Transparent" HorizontalAlignment="Left" Margin="487,1,0,0" VerticalAlignment="Top" Width="286" Height="110" Click="movies_Click" Grid.Row="2">
             <Image x:Name="movies_img" Source="Resources/movies.png"/>
         </Button>
 
-        <Button x:Name="tvshows_button" Background="Transparent" HorizontalAlignment="Left" Margin="911,1,0,0" VerticalAlignment="Top" Width="286" Height="110" Click="tvshows_button_Click" Grid.Row="2" d:IsHidden="True">
+        <Button x:Name="tvshows_button" Background="Transparent" HorizontalAlignment="Left" Margin="911,1,0,0" VerticalAlignment="Top" Width="286" Height="110" Click="tvshows_button_Click" Grid.Row="2">
             <Image x:Name="tvshows_img" Source="Resources/tvshows.png" Stretch="Fill"/>
         </Button>
 
-        <Button x:Name="favourites_button" Background="Transparent" HorizontalAlignment="Left" Margin="223,0,0,0" VerticalAlignment="Top" Width="140" Height="140" Click="favourites_button_Click" Grid.Row="3" d:IsHidden="True">
+        <Button x:Name="favourites_button" Background="Transparent" HorizontalAlignment="Left" Margin="223,0,0,0" VerticalAlignment="Top" Width="140" Height="140" Click="favourites_button_Click" Grid.Row="3">
             <Image x:Name="favourites_img" Source="Resources/favourites.png"/>
         </Button>
 
-        <Button x:Name="music_button" Background="Transparent" HorizontalAlignment="Left" Margin="487,0,0,0" VerticalAlignment="Top" Width="140" Height="140" Click="music_button_Click" Grid.Row="3" d:IsHidden="True">
+        <Button x:Name="music_button" Background="Transparent" HorizontalAlignment="Left" Margin="487,0,0,0" VerticalAlignment="Top" Width="140" Height="140" Click="music_button_Click" Grid.Row="3">
             <Image x:Name="music_img" Source="Resources/music.png"/>
         </Button>
 
-        <Button x:Name="settings_button" Background="Transparent" HorizontalAlignment="Left" Margin="77,0,0,0" VerticalAlignment="Top" Width="140" Height="140" Click="settings_button_Click" Grid.Row="4" d:IsHidden="True">
+        <Button x:Name="settings_button" Background="Transparent" HorizontalAlignment="Left" Margin="77,0,0,0" VerticalAlignment="Top" Width="140" Height="140" Click="settings_button_Click" Grid.Row="4">
             <Image x:Name="settings_img" Source="Resources/settings.png"/>
         </Button>
 
-        <Button x:Name="spotify_button" Background="Transparent" HorizontalAlignment="Left" Margin="633,0,0,0" VerticalAlignment="Top" Width="140" Height="140" Click="spotify_button_Click" Grid.Row="3" d:IsHidden="True">
+        <Button x:Name="spotify_button" Background="Transparent" HorizontalAlignment="Left" Margin="633,0,0,0" VerticalAlignment="Top" Width="140" Height="140" Click="spotify_button_Click" Grid.Row="3">
             <Image x:Name="spotify_img" Source="Resources/spotify.png"/>
         </Button>
 
-        <Button x:Name="youtube_button" Background="Transparent" HorizontalAlignment="Left" Margin="77,0,0,0" VerticalAlignment="Top" Width="140" Height="140" Click="youtube_button_Click" Grid.Row="3" d:IsHidden="True">
+        <Button x:Name="youtube_button" Background="Transparent" HorizontalAlignment="Left" Margin="77,0,0,0" VerticalAlignment="Top" Width="140" Height="140" Click="youtube_button_Click" Grid.Row="3">
             <Image x:Name="youtube_img" Source="Resources/youtube.png" Stretch="UniformToFill"/>
         </Button>
 
-        <Label x:Name="textBlock" HorizontalAlignment="Left" Margin="414,0,0,0" VerticalAlignment="Top" Content="JCR Entertainment" Foreground="White" FontWeight="Bold" Height="39" Width="229" FontSize="24" Grid.Row="1" d:IsHidden="True"/>
-        <Label x:Name="Login" Content="Login:" HorizontalAlignment="Left" Margin="670,2,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" FontSize="16" Height="31" Width="56" Grid.Row="1" d:IsHidden="True"/>
-        <TextBox x:Name="Username_form" HorizontalAlignment="Left" Height="23" Margin="726,8,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="157" TextChanged="Username_form_TextChanged" Grid.Row="1" GotFocus="textbox_clear" d:IsHidden="True"/>
-        <Label x:Name="Password" Content="Password:" HorizontalAlignment="Left" Margin="888,2,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="White" Height="31" Width="86" Grid.Row="1" d:IsHidden="True"/>
-        <PasswordBox x:Name="Password_form" HorizontalAlignment="Left" Height="23" Margin="974,8,0,0" VerticalAlignment="Top" Width="161" Grid.Row="1" d:IsHidden="True"/>
-        <Button x:Name="Login_button" Content="Login" HorizontalAlignment="Left" Margin="1159,8,0,0" VerticalAlignment="Top" Width="75" Click="Login_button_Click" Height="22" Grid.Row="1" d:IsHidden="True"/>
+        <!--<Label x:Name="textBlock" HorizontalAlignment="Left" Margin="414,0,0,0" VerticalAlignment="Top" Content="JCR Entertainment" Foreground="White" FontWeight="Bold" Height="39" Width="229" FontSize="24" Grid.Row="1"/> -->
+        <Label x:Name="Login" Content="Login:" HorizontalAlignment="Left" Margin="670,2,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" FontSize="16" Height="31" Width="56" Grid.Row="1"/>
+        <TextBox x:Name="Username_form" HorizontalAlignment="Left" Height="23" Margin="726,8,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="157" TextChanged="Username_form_TextChanged" Grid.Row="1" GotFocus="textbox_clear"/>
+        <Label x:Name="Password" Content="Password:" HorizontalAlignment="Left" Margin="888,2,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="White" Height="31" Width="86" Grid.Row="1"/>
+        <PasswordBox x:Name="Password_form" HorizontalAlignment="Left" Height="23" Margin="974,8,0,0" VerticalAlignment="Top" Width="161" Grid.Row="1"/>
+        <Button x:Name="Login_button" HorizontalAlignment="Left" Margin="1146,0,0,0" VerticalAlignment="Top" Width="116" Click="Login_button_Click" Height="39" Grid.Row="1" Background="White">
+            <Image x:Name="loginImg" Source="Resources/login.png" Width="81"/>
+        </Button>
         <!--
         <Label x:Name="textBlock" HorizontalAlignment="Left" Margin="414,19,0,0" VerticalAlignment="Top" Content="JCR Entertainment" Foreground="White" FontWeight="Bold" Height="39" Width="229" FontSize="24" Grid.RowSpan="2"/>
         <Label x:Name="Login" Content="Login:" HorizontalAlignment="Left" Margin="670,2,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" FontSize="16" Height="31" Width="56" Grid.Row="1"/>
@@ -260,7 +262,7 @@
             </Button.Background>
         </Button>
 
-        <Rectangle x:Name="suitsBackground" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" Margin="0,-28,0,0" Grid.RowSpan="5" Width="1280" Visibility="Hidden" Height="768">
+        <Rectangle x:Name="suitsBackground" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" Margin="0,-28,0,0" Grid.RowSpan="5" Width="1280" Height="768" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
             </Rectangle.Fill>
@@ -278,13 +280,12 @@
             </Image>
         </Button>
         <TextBox x:Name="suitsTitle" HorizontalAlignment="Left" Height="61" TextWrapping="Wrap" Text="Suits" VerticalAlignment="Top" Width="410" Margin="414,0,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
-        <Button x:Name="recommendSuits" Content="Recommend" ToolTip="Recommend to a friend" ToolTipService.ShowOnDisabled="True" FontSize="20" HorizontalAlignment="Left" Margin="142,128,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Click="suitsRecommend" Background="#FF3D3C3C" BorderBrush="{x:Null}" Foreground="#FF989191" Height="58" Grid.RowSpan="2" Visibility="Hidden"/>
-        <Button x:Name="recommendSuitsImg" ToolTip="Recommend to a friend" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="80,128,0,0" Click="suitsRecommend" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{x:Null}" Height="58" Visibility="Hidden" Grid.Row="2" BorderThickness="0" Grid.RowSpan="2">
-            <Image x:Name="recommendSuitsThumb" Source="Resources/iconmonstr-thumb-18-240.png" RenderTransformOrigin="0.5,4.077"/>
+        <Button x:Name="recommendSuits" ToolTip="Recommend to a friend" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" Margin="80,128,0,0" Grid.Row="2" VerticalAlignment="Top" Width="202" Click="suitsRecommend" Background="White" BorderBrush="{x:Null}" Height="58" Grid.RowSpan="2" Visibility="Hidden">
+            <Image Source="Resources/recommend.png" Visibility="Visible" />
         </Button>
-        <Button x:Name="favoriteSuits" Content="Favorite" ToolTip="Add to favorites" ToolTipService.ShowOnDisabled="True" FontSize="20" HorizontalAlignment="Left" Margin="142,26,0,0" Grid.Row="3" VerticalAlignment="Top" Width="140" Click="suitsFavorite" Background="#FF3D3C3C" BorderBrush="{x:Null}" Foreground="#FF989191" Height="58" Visibility="Hidden"/>
-        <Button x:Name="favoriteSuitsImg" ToolTip="Add to favorites" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="80,26,0,0" Click="suitsFavorite" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{x:Null}" Height="58" Visibility="Hidden" Grid.Row="3" BorderThickness="0">
-            <Image x:Name="favoriteSuitsHeart" Source="Resources/iconmonstr-favorite-10-240.png" RenderTransformOrigin="0.5,4.077"/>
+
+        <Button x:Name="favoriteSuits" ToolTip="Add to favorites" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" Margin="80,26,0,0" Grid.Row="3" VerticalAlignment="Top" Width="202" Click="suitsFavorite" Background="White" BorderBrush="{x:Null}" Height="58" Visibility="Hidden">
+            <Image Source="Resources/favouriteimg.png" />
         </Button>
 
         <TextBlock x:Name="suitsSynopisis" HorizontalAlignment="Left" Margin="330,69,0,0" Grid.Row="2" TextWrapping="Wrap" Text="While running from a drug deal gone bad, Mike Ross, a brilliant young college-dropout, slips into a job interview with one of New York City's best legal closers, Harvey Specter. Tired of cookie-cutter law school grads, Harvey takes a gamble by hiring Mike on the spot after he recognizes his raw talent and photographic memory. Mike and Harvey are a winning team. Even though Mike is a genius, he still has a lot to learn about law. And while Harvey may seem like an emotionless, cold-blooded shark, Mike's sympathy and concern for their cases and clients will help remind Harvey why he went into law in the first place. Mike's other allies in the office include the firm's best paralegal Rachel and Harvey's no-nonsense assistant Donna to help him serve justice. Proving to be an irrepressible duo and invaluable to the practice, Mike and Harvey must keep their secret from everyone including managing partner Jessica and Harvey's arch nemesis Louis, who seems intent on making Mike's life as difficult as possible. " VerticalAlignment="Top" Height="132" Width="761" Foreground="#FF989191" Grid.RowSpan="2" FontWeight="Bold" Visibility="Hidden"/>
@@ -339,38 +340,20 @@
             </Image>
         </Button>
         <TextBox x:Name="avengersTitle" HorizontalAlignment="Left" Height="69" TextWrapping="Wrap" Text="Avengers" VerticalAlignment="Top" Width="522" Margin="414,133.895,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Visibility="Hidden"/>
-        <Button x:Name="recommendAvengers" Content="Recommend" ToolTip="Recommend to a friend" ToolTipService.ShowOnDisabled="True" FontSize="20" HorizontalAlignment="Left" Margin="142,128,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Click="avengersRecommend" Background="#FF3D3C3C" BorderBrush="{x:Null}" Foreground="#FF989191" Height="58" Grid.RowSpan="2" Visibility="Hidden"/>
-        <Button x:Name="recommendAvengersImg" Click="avengersRecommend" ToolTip="Recommend to a friend" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="80,128,0,0" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{x:Null}" Height="58" Visibility="Hidden" Grid.Row="2" BorderThickness="0" Grid.RowSpan="2" >
-            <Image x:Name="recommendAvengersThumb" Source="Resources/iconmonstr-thumb-18-240.png" RenderTransformOrigin="0.5,4.077"/>
+        <Button x:Name="recommendAvengers" ToolTip="Recommend to a friend" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" Margin="80,128,0,0" Grid.Row="2" VerticalAlignment="Top" Width="202" Click="avengersRecommend" Background="White" BorderBrush="{x:Null}"  Height="58" Grid.RowSpan="2" Visibility="Hidden">
+            <Image Source="Resources/recommend.png" />
         </Button>
-        <Button x:Name="favoriteAvengers" Content="Favorite" ToolTip="Add to favorites" ToolTipService.ShowOnDisabled="True" FontSize="20" HorizontalAlignment="Left" Margin="142,26,0,0" Grid.Row="3" VerticalAlignment="Top" Width="140" Click="avengersFavorite" Background="#FF3D3C3C" BorderBrush="{x:Null}" Foreground="#FF989191" Height="58" Visibility="Hidden"/>
-        <Button x:Name="favoriteAvengersImg" Click="avengersFavorite" ToolTip="Add to favorites" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="80,26,0,0" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{x:Null}" Height="58" Visibility="Hidden" Grid.Row="3" BorderThickness="0">
-            <Image x:Name="favoriteAvengersHeart" Source="Resources/iconmonstr-favorite-10-240.png" RenderTransformOrigin="0.5,4.077"/>
+
+        <Button x:Name="favoriteAvengers" ToolTip="Add to favorites" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" Margin="80,26,0,0" Grid.Row="3" VerticalAlignment="Top" Width="202" Click="avengersFavorite" Background="White" BorderBrush="{x:Null}" Height="58" Visibility="Hidden">
+            <Image Source="Resources/favouriteimg.png" />
         </Button>
 
         <TextBlock x:Name="avengersSynopisis" HorizontalAlignment="Left" Margin="467,69,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Nick Fury is the director of S.H.I.E.L.D., an international peace-keeping agency. The agency is a who's who of Marvel Super Heroes, with Iron Man, The Incredible Hulk, Thor, Captain America, Hawkeye and Black Widow. When global security is threatened by Loki and his cohorts, Nick Fury and his team will need all their powers to save the world from disaster. " VerticalAlignment="Top" Height="75" Width="645" Foreground="#FF989191" FontWeight="Bold" Visibility="Hidden"/>
         <Image x:Name="avengersIcon" HorizontalAlignment="Left" Height="206" Margin="307,69,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="141" Source="Resources/newavengersposter.jpg" Visibility="Hidden"/>
-        <Button x:Name="playAvengers" Content="Play Movie" HorizontalAlignment="Left" Margin="467,150,0,0" Grid.Row="2" VerticalAlignment="Top" Width="221" Click="avengersPlay" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="54" FontSize="21.333" Visibility="Hidden"/>
-
-        <Rectangle x:Name="social_feed" HorizontalAlignment="Center" Stroke="White" VerticalAlignment="Center" Margin="0" Visibility="Hidden" Height="768" Width="1280" Grid.RowSpan="5" Grid.ColumnSpan="1">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="Resources/background-dark.jpg"/>
-            </Rectangle.Fill>
-        </Rectangle>
-
-        <Label x:Name="social_feed_title" Content="Social Media" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="229" Margin="533,22,0,0" FontSize="36" Foreground="#FF989191" FontWeight="Bold" Background="{x:Null}" Grid.RowSpan="2" Visibility="Hidden"/>
-        <Button x:Name="backSocial_button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="77,24,0,0" Click="backSocial" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Height="58" Grid.RowSpan="2" Visibility="Hidden">
-            <Image x:Name="backSocialArrow" Source="Resources/iconmonstr-arrow-4-240.png" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="180"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
+        <Button x:Name="playAvengers" HorizontalAlignment="Left" Margin="467,150,0,0" Grid.Row="2" VerticalAlignment="Top" Width="221" Click="avengersPlay" Background="White" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="54" FontSize="21.333" Visibility="Hidden">
+            <Image Source="Resources/play.png" />
         </Button>
+
         <Rectangle x:Name="bieberBackground" HorizontalAlignment="Left" Height="768" Stroke="Black" VerticalAlignment="Top" Width="1280" Margin="0,0,0,0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="5" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
@@ -390,19 +373,41 @@
                 </Image.RenderTransform>
             </Image>
         </Button>
+        
         <TextBox x:Name="bieberTitle" HorizontalAlignment="Left" Height="69" TextWrapping="Wrap" Text="Believe - Justin Bieber" VerticalAlignment="Top" Width="522" Margin="414,133.895,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Visibility="Hidden"/>
-        <Button x:Name="recommendBieber" Content="Recommend" ToolTip="Recommend to a friend" ToolTipService.ShowOnDisabled="True" FontSize="20" HorizontalAlignment="Left" Margin="142,128,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Click="bieberRecommend" Background="#FF3D3C3C" BorderBrush="{x:Null}" Foreground="#FF989191" Height="58" Grid.RowSpan="2" Visibility="Hidden"/>
-        <Button x:Name="recommendBieberImg" Click="bieberRecommend" ToolTip="Recommend to a friend" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="80,128,0,0" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{x:Null}" Height="58" Visibility="Hidden" Grid.Row="2" BorderThickness="0" Grid.RowSpan="2" >
-            <Image x:Name="recommendBieberThumb" Source="Resources/iconmonstr-thumb-18-240.png" RenderTransformOrigin="0.5,4.077"/>
+        <Button x:Name="recommendBieber" ToolTip="Recommend to a friend" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" Margin="80,128,0,0" Grid.Row="2" VerticalAlignment="Top" Width="202" Click="bieberRecommend" Background="White" BorderBrush="{x:Null}" Height="58" Grid.RowSpan="2" Visibility="Hidden">
+            <Image Source="Resources/recommend.png" Visibility="Visible" />
         </Button>
-        <Button x:Name="favoriteBieber" Click="bieberFavorite" Content="Favorite" ToolTip="Add to favorites" ToolTipService.ShowOnDisabled="True" FontSize="20" HorizontalAlignment="Left" Margin="142,26,0,0" Grid.Row="3" VerticalAlignment="Top" Width="140" Background="#FF3D3C3C" BorderBrush="{x:Null}" Foreground="#FF989191" Height="58" Visibility="Hidden"/>
-        <Button x:Name="favoriteBieberImg" Click="bieberFavorite" ToolTip="Add to favorites" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="80,26,0,0" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{x:Null}" Height="58" Visibility="Hidden" Grid.Row="3" BorderThickness="0">
-            <Image x:Name="favoriteBieberHeart" Source="Resources/iconmonstr-favorite-10-240.png" RenderTransformOrigin="0.5,4.077"/>
+
+        <Button x:Name="favoriteBieber" Click="bieberFavorite" ToolTip="Add to favorites" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" Margin="80,26,0,0" Grid.Row="3" VerticalAlignment="Top" Width="202" Background="White" BorderBrush="{x:Null}" Height="58" Visibility="Hidden">
+            <Image Source="Resources/favouriteimg.png" Visibility="Visible" />
         </Button>
+        
         <TextBlock x:Name="bieberMusicList" HorizontalAlignment="Left" Margin="482,69.173,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="325" Width="439" Foreground="#FF989191" FontWeight="Bold" FontSize="16" Grid.RowSpan="3" Visibility="Hidden"><Run Text="&#x9;Song&#x9;&#x9;&#x9;&#x9;&#x9;Time"/><LineBreak/><Run FontSize="12" Text=""/><LineBreak/><Run Text="1.&#x9;All Around The World&#x9;&#x9;&#x9;4:04"/><LineBreak/><Run Text="2.&#x9;Boyfriend&#x9;&#x9;&#x9;&#x9;2:51"/><LineBreak/><Run Text="3.&#x9;As long as You Love Me&#x9;&#x9;&#x9;3:49"/><LineBreak/><Run Text="4.&#x9;Catching Feelings&#x9;&#x9;&#x9;3:54"/><LineBreak/><Run Text="5.&#x9;Take You&#x9;&#x9;&#x9;&#x9;3:40"/><LineBreak/><Run Text="6.&#x9;Right Here&#x9;&#x9;&#x9;&#x9;3:24"/><LineBreak/><Run Text="7.&#x9;Fall&#x9;&#x9;&#x9;&#x9;&#x9;4:08"/><LineBreak/><Run Text="8.&#x9;Die in Your Arms&#x9;&#x9;&#x9;&#x9;3:57"/><LineBreak/><Run Text="9.&#x9;Thought of You&#x9;&#x9;&#x9;&#x9;3:50"/><LineBreak/><Run Text="10.&#x9;Beauty and a Beat&#x9;&#x9;&#x9;3:48"/><LineBreak/><Run Text="11.&#x9;One Love&#x9;&#x9;&#x9;&#x9;3:54"/><LineBreak/><Run Text="12.&#x9;Be Alright&#x9;&#x9;&#x9;&#x9;3:09"/><LineBreak/><Run Text="13.&#x9;Believe&#x9;&#x9;&#x9;&#x9;&#x9;3:42"/></TextBlock>
         <Image x:Name="bieberIcon" HorizontalAlignment="Left" Height="139" Margin="307,69.173,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="141" Source="Resources/Justin Bieber.jpg" Visibility="Hidden"/>
-        <Button x:Name="playAllBieber" Content="Play All" HorizontalAlignment="Left" Margin="311,49.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="135" Click="bieberPlayAll" Background="#FF3D3C3C" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Height="33" Visibility="Hidden"/>
+        <Button x:Name="playAllBieber" HorizontalAlignment="Left" Margin="311,49.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="135" Click="bieberPlayAll" Background="White" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Height="33" Visibility="Hidden">
+            <Image Source="Resources/playall.png" />
+        </Button>
 
+        <Rectangle x:Name="social_feed" HorizontalAlignment="Center" Stroke="White" VerticalAlignment="Center" Margin="0" Height="768" Width="1280" Grid.RowSpan="5" Grid.ColumnSpan="1" Visibility="Hidden">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/background-dark.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Label x:Name="social_feed_title" Content="Social Media" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="229" Margin="533,22,0,0" FontSize="36" Foreground="#FF989191" FontWeight="Bold" Background="{x:Null}" Grid.RowSpan="2" Visibility="Hidden"/>
+        <Button x:Name="backSocial_button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="77,24,0,0" Click="backSocial" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Height="58" Grid.RowSpan="2" Visibility="Hidden">
+            <Image x:Name="backSocialArrow" Source="Resources/iconmonstr-arrow-4-240.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Button>
 
         <Button x:Name="social_button" Background="Transparent" ToolTip="Notifications and Social Media" ToolTipService.ShowOnDisabled="True" Margin="0,24,225,0" VerticalAlignment="Top" Height="58" BorderThickness="0" Click="open_feed" HorizontalAlignment="Right" Width="62" Grid.RowSpan="2" Visibility="Hidden">
             <Image x:Name="social_icon" Source="Resources/iconmonstr-globe-5-240.png" Height="48" Width="53" />
@@ -412,38 +417,39 @@
             <Image x:Name="notify_icon" Source="Resources/notification-globe.png" Height="48" Width="53" />
         </Button>
 
-        <Button x:Name="account_button" Background="Transparent" ToolTip="Account Settings" ToolTipService.ShowOnDisabled="True" Margin="0,24,139,0" VerticalAlignment="Top" Height="58" BorderThickness="0" Click="account_settings" Visibility="Hidden" HorizontalAlignment="Right" Width="62" Grid.RowSpan="2" BorderBrush="{x:Null}">
+        <Button x:Name="account_button" Background="Transparent" ToolTip="Account Settings" ToolTipService.ShowOnDisabled="True" Margin="0,24,139,0" VerticalAlignment="Top" Height="58" BorderThickness="0" Click="account_settings" HorizontalAlignment="Right" Width="62" Grid.RowSpan="2" BorderBrush="{x:Null}" Visibility="Hidden">
             <Image x:Name="account_icon" Source="Resources/accountIcon.png" Height="56" Width="62" RenderTransformOrigin="0.5,0.5" />
         </Button>
 
-        <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Left" Margin="1159,8,0,0" VerticalAlignment="Top" Width="75" Click="logout_button_Click" Height="22" Grid.Row="1" Visibility="Hidden"/>
-
-        <StackPanel x:Name="john_notifications_feed" HorizontalAlignment="Left" Height="641" Margin="877,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4" Background="White" Visibility="Hidden">
-            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FFF03535">Notifications</TextBlock>
-        </StackPanel>
-
-        <StackPanel x:Name="john_twitter_feed" HorizontalAlignment="Left" Height="641" Margin="451,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4" Background="White" Visibility="Hidden">
-            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FF1BD4AA">Twitter</TextBlock>
-        </StackPanel>
-
-        <StackPanel x:Name="john_facebook_feed" HorizontalAlignment="Left" Height="641" Margin="21,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4" Background="White" Visibility="Hidden">
-            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FF3557F0">Facebook</TextBlock>
-        </StackPanel>
-
-        <StackPanel x:Name="alex_notifications_feed" HorizontalAlignment="Left" Height="641" Margin="877,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4" Background="White" Visibility="Hidden">
-            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FFF03535">Notifications</TextBlock>
-        </StackPanel>
-
-        <StackPanel x:Name="alex_twitter_feed" HorizontalAlignment="Left" Height="641" Margin="451,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4" Background="White" Visibility="Hidden">
-            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FF1BD4AA">Twitter</TextBlock>
-        </StackPanel>
-
-        <StackPanel x:Name="alex_facebook_feed" HorizontalAlignment="Left" Height="641" Margin="21,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="4" Background="White" Visibility="Hidden">
-            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FF3557F0">Facebook</TextBlock>
-        </StackPanel>
-
+        <Button x:Name="logout_button" HorizontalAlignment="Left" Margin="1146,0,0,0" VerticalAlignment="Top" Width="116" Click="logout_button_Click" Height="39" Grid.Row="1" Background="White" Visibility="Hidden">
+            <Image x:Name="logoutImg" Source="Resources/logout.png" Width="81"/>
+        </Button>
         <WebBrowser x:Name="web_browser" Margin="0,0,0,0" Cursor="Arrow" Grid.ColumnSpan="1" Grid.RowSpan="5" Visibility="Hidden"/>
 
         <TextBlock x:Name="login_failed_msg" HorizontalAlignment="Left" Margin="723,38,0,0" Grid.Row="1" TextWrapping="Wrap" Text="                  Please log in with correct credentials!" FontWeight="Bold" FontSize="16" Foreground="White" VerticalAlignment="Top" Height="27" Width="406" Background="#FFFF9595" Visibility="Hidden"/>
+
+        <Separator x:Name="separator" Height="100" Margin="0,42,0,0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" Width="1280" Visibility="Hidden"/>
+
+        <Button x:Name="side_notify" Height="58" ToolTip="Notifications" ToolTipService.ShowOnDisabled="True" Click="sidebar_notify" Margin="0,92,1096,153" Grid.Row="1" Grid.RowSpan="2" Visibility="Hidden" Background="White">
+            <Image Source="Resources/notifications.png" Height="55" Width="154" />
+        </Button>
+
+        <Button x:Name="side_facebook" Height="58" ToolTip="Facebook" ToolTipService.ShowOnDisabled="True" Click="sidebar_facebook" Margin="0,23,1096,95" Grid.Row="2" Visibility="Hidden" Background="White">
+            <Image Source="Resources/facebook.png" Height="55" />
+        </Button>
+
+        <Button x:Name="side_twitter" Height="58" ToolTip="Twitter" ToolTipService.ShowOnDisabled="True" Click="sidebar_twitter" Margin="0,82,1096,36" Grid.Row="2" Visibility="Hidden" Background="White" BorderBrush="#FFD6D6D6">
+            <Image Source="Resources/twitter.png" Height="55" HorizontalAlignment="Left" Margin="0" Width="155" />
+        </Button>
+
+        <WebBrowser x:Name="social_browser" Margin="184,92,0,0" Cursor="Arrow" Grid.ColumnSpan="1" Grid.RowSpan="4" Visibility="Hidden" Grid.Row="1"/>
+
+        <StackPanel x:Name="john_notifications_feed" HorizontalAlignment="Left" Height="608" Margin="184,92,0,0" Grid.Row="1" VerticalAlignment="Top" Width="1096" Grid.RowSpan="4" Background="White" Visibility="Hidden">
+            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FFF03535">Notifications</TextBlock>
+        </StackPanel>
+
+        <StackPanel x:Name="alex_notifications_feed" HorizontalAlignment="Left" Height="641" Margin="184,92,0,0" Grid.Row="1" VerticalAlignment="Top" Width="1096" Grid.RowSpan="4" Background="White" Visibility="Hidden">
+            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Background="#FFF03535">Notifications</TextBlock>
+        </StackPanel>
     </Grid>
 </Window>
