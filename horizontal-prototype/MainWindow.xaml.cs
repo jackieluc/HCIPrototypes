@@ -38,10 +38,13 @@ namespace horizontal_prototype
         private Boolean john_logged_on = false;
         private Boolean alex_logged_on = false;
 
+        private Boolean video_played = false;
+        private Boolean video_playing = false;
+
         public MainWindow()
         {
             InitializeComponent();
-
+            IsPlaying(false);
             //initiate real-time timer
             DispatcherTimer timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {
@@ -140,6 +143,7 @@ namespace horizontal_prototype
             movieTitle.Visibility = Visibility.Visible;
             avengers_movies.Visibility = Visibility.Visible;
             transformer_movies.Visibility = Visibility.Visible;
+            civilwar_trailer.Visibility = Visibility.Visible;
         }
 
         private void favourites_button_Click(object sender, RoutedEventArgs e)
@@ -288,6 +292,7 @@ namespace horizontal_prototype
             movieTitle.Visibility = Visibility.Hidden;
             avengers_movies.Visibility = Visibility.Hidden;
             transformer_movies.Visibility = Visibility.Hidden;
+            civilwar_trailer.Visibility = Visibility.Hidden;
         }
 
         private void closeTvList(object sender, RoutedEventArgs e)
@@ -411,6 +416,7 @@ namespace horizontal_prototype
             movieTitle.Visibility = Visibility.Hidden;
             avengers_movies.Visibility = Visibility.Hidden;
             transformer_movies.Visibility = Visibility.Hidden;
+            civilwar_trailer.Visibility = Visibility.Hidden;
         }
 
         private void transformer_movies_Click(object sender, RoutedEventArgs e)
@@ -633,6 +639,7 @@ namespace horizontal_prototype
             movieTitle.Visibility = Visibility.Visible;
             avengers_movies.Visibility = Visibility.Visible;
             transformer_movies.Visibility = Visibility.Visible;
+            civilwar_trailer.Visibility = Visibility.Visible;
         }
 
         private void avengersRecommend(object sender, RoutedEventArgs e)
@@ -959,6 +966,215 @@ namespace horizontal_prototype
 
             social_browser.Navigate("http://www.twitter.com");
             social_browser.Visibility = Visibility.Visible;
+        }
+
+        private void civilwar_click(object sender, RoutedEventArgs e)
+        {
+            civilwarTitle.Visibility = Visibility.Visible;
+            civilwarBackground.Visibility = Visibility.Visible;
+            civilwarBack.Visibility = Visibility.Visible;
+            recommendCivilwar.Visibility = Visibility.Visible;
+            favoriteCivilwar.Visibility = Visibility.Visible;
+            civilwarSynopisis.Visibility = Visibility.Visible;
+            civilwarIcon.Visibility = Visibility.Visible;
+            playCivilwar.Visibility = Visibility.Visible;
+
+            movieList.Visibility = Visibility.Hidden;
+            movieListBack.Visibility = Visibility.Hidden;
+            movieTitle.Visibility = Visibility.Hidden;
+            avengers_movies.Visibility = Visibility.Hidden;
+            transformer_movies.Visibility = Visibility.Hidden;
+            civilwar_trailer.Visibility = Visibility.Hidden;
+        }
+
+        private void backCivilwar(object sender, RoutedEventArgs e)
+        {
+            civilwarTitle.Visibility = Visibility.Hidden;
+            civilwarBackground.Visibility = Visibility.Hidden;
+            civilwarBack.Visibility = Visibility.Hidden;
+            recommendCivilwar.Visibility = Visibility.Hidden;
+            favoriteCivilwar.Visibility = Visibility.Hidden;
+            civilwarSynopisis.Visibility = Visibility.Hidden;
+            civilwarIcon.Visibility = Visibility.Hidden;
+            playCivilwar.Visibility = Visibility.Hidden;
+
+            movieList.Visibility = Visibility.Visible;
+            movieListBack.Visibility = Visibility.Visible;
+            movieTitle.Visibility = Visibility.Visible;
+            avengers_movies.Visibility = Visibility.Visible;
+            transformer_movies.Visibility = Visibility.Visible;
+            civilwar_trailer.Visibility = Visibility.Visible;
+        }
+
+        private void civilwarRecommend(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void civilwarFavorite(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void civilwarPlay(object sender, RoutedEventArgs e)
+        {
+            if (video_played == true)
+            {
+                resumeBackground.Visibility = Visibility.Visible;
+                resumeButton.Visibility = Visibility.Visible;
+                restartButton.Visibility = Visibility.Visible;
+                cancelButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                civilwarTitle.Visibility = Visibility.Hidden;
+                civilwarBackground.Visibility = Visibility.Hidden;
+                civilwarBack.Visibility = Visibility.Hidden;
+                recommendCivilwar.Visibility = Visibility.Hidden;
+                favoriteCivilwar.Visibility = Visibility.Hidden;
+                civilwarSynopisis.Visibility = Visibility.Hidden;
+                civilwarIcon.Visibility = Visibility.Hidden;
+                playCivilwar.Visibility = Visibility.Hidden;
+
+                MediaPlayer.Visibility = Visibility.Visible;
+                civilwarTrailerBack.Visibility = Visibility.Visible;
+                civilwarTrailerBackground.Visibility = Visibility.Visible;
+                btnPlay.Visibility = Visibility.Visible;
+                btnStop.Visibility = Visibility.Visible;
+                btnMoveForward.Visibility = Visibility.Visible;
+                btnMoveBack.Visibility = Visibility.Visible;
+                btnPlay.IsEnabled = true;
+            }
+        }
+
+        private void backCivilwarTrailer(object sender, RoutedEventArgs e)
+        {
+            if (video_playing == true)
+            {
+                MediaPlayer.Pause();
+                video_playing = false;
+                btnPlay.Content = "Play";
+                IsPlaying(false);
+                btnPlay.IsEnabled = true;
+            }
+            MediaPlayer.Visibility = Visibility.Hidden;
+            civilwarTrailerBack.Visibility = Visibility.Hidden;
+            civilwarTrailerBackground.Visibility = Visibility.Hidden;
+            btnPlay.Visibility = Visibility.Hidden;
+            btnStop.Visibility = Visibility.Hidden;
+            btnMoveForward.Visibility = Visibility.Hidden;
+            btnMoveBack.Visibility = Visibility.Hidden;
+
+            civilwarTitle.Visibility = Visibility.Visible;
+            civilwarBackground.Visibility = Visibility.Visible;
+            civilwarBack.Visibility = Visibility.Visible;
+            recommendCivilwar.Visibility = Visibility.Visible;
+            favoriteCivilwar.Visibility = Visibility.Visible;
+            civilwarSynopisis.Visibility = Visibility.Visible;
+            civilwarIcon.Visibility = Visibility.Visible;
+            playCivilwar.Visibility = Visibility.Visible;
+        }
+
+        private void IsPlaying(bool flag)
+        {
+            btnPlay.IsEnabled = flag;
+            btnStop.IsEnabled = flag;
+            btnMoveBack.IsEnabled = flag;
+            btnMoveForward.IsEnabled = flag;
+        }
+
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            IsPlaying(true);
+            video_played = true;
+            video_playing = true;
+            if (btnPlay.Content.ToString() == "Play")
+            {
+                MediaPlayer.Play();
+                btnPlay.Content = "Pause";
+            }
+            else
+            {
+                MediaPlayer.Pause();
+                btnPlay.Content = "Play";
+            }
+        }
+
+        private void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+            MediaPlayer.Pause();
+            btnPlay.Content = "Play";
+            IsPlaying(false);
+            btnPlay.IsEnabled = true;
+        }
+
+        private void btnMoveBack_Click(object sender, RoutedEventArgs e)
+        {
+            MediaPlayer.Position -= TimeSpan.FromSeconds(10);
+        }
+
+        private void btnMoveForward_Click(object sender, RoutedEventArgs e)
+        {
+            MediaPlayer.Position += TimeSpan.FromSeconds(10);
+        }
+
+        private void cancel_click(object sender, RoutedEventArgs e)
+        {
+            resumeBackground.Visibility = Visibility.Hidden;
+            resumeButton.Visibility = Visibility.Hidden;
+            restartButton.Visibility = Visibility.Hidden;
+            cancelButton.Visibility = Visibility.Hidden;
+        }
+
+        private void restart_click(object sender, RoutedEventArgs e)
+        {
+            MediaPlayer.Position = TimeSpan.Zero;
+            civilwarTitle.Visibility = Visibility.Hidden;
+            civilwarBackground.Visibility = Visibility.Hidden;
+            civilwarBack.Visibility = Visibility.Hidden;
+            recommendCivilwar.Visibility = Visibility.Hidden;
+            favoriteCivilwar.Visibility = Visibility.Hidden;
+            civilwarSynopisis.Visibility = Visibility.Hidden;
+            civilwarIcon.Visibility = Visibility.Hidden;
+            playCivilwar.Visibility = Visibility.Hidden;
+            resumeBackground.Visibility = Visibility.Hidden;
+            resumeButton.Visibility = Visibility.Hidden;
+            restartButton.Visibility = Visibility.Hidden;
+            cancelButton.Visibility = Visibility.Hidden;
+
+            MediaPlayer.Visibility = Visibility.Visible;
+            civilwarTrailerBack.Visibility = Visibility.Visible;
+            civilwarTrailerBackground.Visibility = Visibility.Visible;
+            btnPlay.Visibility = Visibility.Visible;
+            btnStop.Visibility = Visibility.Visible;
+            btnMoveForward.Visibility = Visibility.Visible;
+            btnMoveBack.Visibility = Visibility.Visible;
+            btnPlay.IsEnabled = true;
+        }
+
+        private void resume_click(object sender, RoutedEventArgs e)
+        {
+            civilwarTitle.Visibility = Visibility.Hidden;
+            civilwarBackground.Visibility = Visibility.Hidden;
+            civilwarBack.Visibility = Visibility.Hidden;
+            recommendCivilwar.Visibility = Visibility.Hidden;
+            favoriteCivilwar.Visibility = Visibility.Hidden;
+            civilwarSynopisis.Visibility = Visibility.Hidden;
+            civilwarIcon.Visibility = Visibility.Hidden;
+            playCivilwar.Visibility = Visibility.Hidden;
+            resumeBackground.Visibility = Visibility.Hidden;
+            resumeButton.Visibility = Visibility.Hidden;
+            restartButton.Visibility = Visibility.Hidden;
+            cancelButton.Visibility = Visibility.Hidden;
+
+            MediaPlayer.Visibility = Visibility.Visible;
+            civilwarTrailerBack.Visibility = Visibility.Visible;
+            civilwarTrailerBackground.Visibility = Visibility.Visible;
+            btnPlay.Visibility = Visibility.Visible;
+            btnStop.Visibility = Visibility.Visible;
+            btnMoveForward.Visibility = Visibility.Visible;
+            btnMoveBack.Visibility = Visibility.Visible;
+            btnPlay.IsEnabled = true;
         }
     }
 }

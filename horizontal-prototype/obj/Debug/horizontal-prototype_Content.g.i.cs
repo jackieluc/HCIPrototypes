@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/favouriteimg.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/captainamericacivilwar-tlr2_h720p.mp4")]
 
 

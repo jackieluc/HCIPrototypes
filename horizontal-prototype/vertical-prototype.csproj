@@ -136,6 +136,31 @@
     <Resource Include="Resources\suitsS4.jpg" />
     <Resource Include="Resources\suitsS5.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\facebook.png" />
+    <Resource Include="Resources\favouriteimg.png" />
+    <Resource Include="Resources\iconmonstr-arrow-4-240.png" />
+    <Resource Include="Resources\iconmonstr-favorite-10-240.png" />
+    <Resource Include="Resources\iconmonstr-globe-5-240.png" />
+    <Resource Include="Resources\iconmonstr-media-control-4-240.png" />
+    <Resource Include="Resources\iconmonstr-thumb-18-240.png" />
+    <Resource Include="Resources\iconmonstr-warning-3-240.png" />
+    <Resource Include="Resources\login-green.png" />
+    <Resource Include="Resources\login.png" />
+    <Resource Include="Resources\logout.png" />
+    <Resource Include="Resources\notification-globe.png" />
+    <Resource Include="Resources\notifications.png" />
+    <Resource Include="Resources\play.png" />
+    <Resource Include="Resources\playall.png" />
+    <Resource Include="Resources\recommend.png" />
+    <Resource Include="Resources\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\captainamericacivilwar-tlr2_h720p.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\teamsvscivilwarposter.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
