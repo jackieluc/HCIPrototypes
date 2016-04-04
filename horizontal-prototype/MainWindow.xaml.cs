@@ -1053,7 +1053,8 @@ namespace horizontal_prototype
             {
                 MediaPlayer.Pause();
                 video_playing = false;
-                btnPlay.Content = "Play";
+                btnPlay.Visibility = Visibility.Visible;
+                btnPause.Visibility = Visibility.Hidden;
                 IsPlaying(false);
                 btnPlay.IsEnabled = true;
             }
