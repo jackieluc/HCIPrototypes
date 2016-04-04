@@ -145,7 +145,6 @@
     <Resource Include="Resources\iconmonstr-media-control-4-240.png" />
     <Resource Include="Resources\iconmonstr-thumb-18-240.png" />
     <Resource Include="Resources\iconmonstr-warning-3-240.png" />
-    <Resource Include="Resources\login-green.png" />
     <Resource Include="Resources\login.png" />
     <Resource Include="Resources\logout.png" />
     <Resource Include="Resources\notification-globe.png" />
@@ -159,6 +158,9 @@
     <Content Include="Resources\captainamericacivilwar-tlr2_h720p.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\forward.png" />
+    <Resource Include="Resources\rewind.png" />
+    <Resource Include="Resources\stop.png" />
     <Resource Include="Resources\teamsvscivilwarposter.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

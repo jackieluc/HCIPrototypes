@@ -422,16 +422,16 @@
         <MediaElement x:Name="MediaPlayer" HorizontalAlignment="Left" Height="412" Margin="149,88.039,0,0" Grid.Row="1" VerticalAlignment="Top" Width="966" Grid.RowSpan="4" Source="Resources/captainamericacivilwar-tlr2_h720p.mp4" LoadedBehavior="Manual" Visibility="Hidden"/>
 
 
-        <Button x:Name="btnPlay" Click="btnPlay_Click" Margin="503,18,670,134" ToolTip="Play media" ToolTipService.ShowOnDisabled="True" Grid.Row="4" Background="White" Visibility="Hidden">
+        <Button x:Name="btnPlay" Click="btnPlay_Click" Margin="503,18,670,134" ToolTip="Play media" ToolTipService.ShowOnDisabled="True" Grid.Row="4" Background="{x:Null}" Visibility="Hidden">
             <Image Source="Resources/play.png"/>
         </Button>
-        <Button x:Name="btnStop" Click="btnStop_Click" Margin="629,18,544,134" ToolTip="Stop media" ToolTipService.ShowOnDisabled="True" Grid.Row="4" Background="White" Visibility="Hidden">
+        <Button x:Name="btnStop" Click="btnStop_Click" Margin="629,18,544,134" ToolTip="Stop media" ToolTipService.ShowOnDisabled="True" Grid.Row="4" Background="{x:Null}" Visibility="Hidden">
             <Image Source="Resources/stop.png"/>
         </Button>
-        <Button x:Name="btnMoveBack" Click="btnMoveBack_Click" Margin="375,18,798,134" ToolTip="Rewind 10 seconds" ToolTipService.ShowOnDisabled="True" Grid.Row="4" Background="White" Visibility="Hidden">
+        <Button x:Name="btnMoveBack" Click="btnMoveBack_Click" Margin="375,18,798,134" ToolTip="Rewind 10 seconds" ToolTipService.ShowOnDisabled="True" Grid.Row="4" Background="{x:Null}" Visibility="Hidden">
             <Image Source="Resources/rewind.png" OpacityMask="White"/>
         </Button>
-        <Button x:Name="btnMoveForward" Click="btnMoveForward_Click" Margin="762,18,410,134" ToolTip="Skip 10 seconds" ToolTipService.ShowOnDisabled="True" Grid.Row="4" Background="White" Visibility="Hidden">
+        <Button x:Name="btnMoveForward" Click="btnMoveForward_Click" Margin="762,18,410,134" ToolTip="Skip 10 seconds" ToolTipService.ShowOnDisabled="True" Grid.Row="4" Background="{x:Null}" Visibility="Hidden">
             <Image Source="Resources/forward.png"/>
         </Button>
 
