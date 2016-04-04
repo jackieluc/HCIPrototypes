@@ -24,3 +24,5 @@ D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prot
 D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype.g.resources
 D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal_prototype.Properties.Resources.resources
 D:\Documents\GitHub\HCIPrototypes\horizontal-prototype\obj\Debug\vertical-prototype.csproj.GenerateResource.Cache
+\\psf\Dropbox\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\bin\Debug\Resources\captainamericacivilwar-tlr2_h720p.mp4
+\\psf\Dropbox\Notes\CPSC481\GIT Prototypes\HCIPrototypes\horizontal-prototype\obj\Debug\horizontal-prototype_Content.g.cs

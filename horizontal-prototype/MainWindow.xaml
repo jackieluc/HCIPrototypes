@@ -56,8 +56,8 @@
         <TextBox x:Name="Username_form" HorizontalAlignment="Left" Height="23" Margin="726,8,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="157" TextChanged="Username_form_TextChanged" Grid.Row="1" GotFocus="textbox_clear"/>
         <Label x:Name="Password" Content="Password:" HorizontalAlignment="Left" Margin="888,2,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="White" Height="31" Width="86" Grid.Row="1"/>
         <PasswordBox x:Name="Password_form" HorizontalAlignment="Left" Height="23" Margin="974,8,0,0" VerticalAlignment="Top" Width="161" Grid.Row="1"/>
-        <Button x:Name="Login_button" HorizontalAlignment="Left" Margin="1146,0,0,0" VerticalAlignment="Top" Width="116" Click="Login_button_Click" Height="39" Grid.Row="1" Background="White">
-            <Image x:Name="loginImg" Source="Resources/login.png" Width="81"/>
+        <Button x:Name="Login_button" HorizontalAlignment="Left" Margin="1146,0,0,0" VerticalAlignment="Top" Width="116" Click="Login_button_Click" Height="39" Grid.Row="1" Background="{x:Null}">
+            <Image x:Name="loginImg" Source="Resources/login-green.png" Width="81"/>
         </Button>
         <!--
         <Label x:Name="textBlock" HorizontalAlignment="Left" Margin="414,19,0,0" VerticalAlignment="Top" Content="JCR Entertainment" Foreground="White" FontWeight="Bold" Height="39" Width="229" FontSize="24" Grid.RowSpan="2"/>
@@ -67,7 +67,7 @@
         <PasswordBox x:Name="Password_form" Grid.Column="1" HorizontalAlignment="Left" Margin="35.126,7.895,0,0" Grid.Row="1" VerticalAlignment="Top" Width="160" Height="25"/>
         <Button x:Name="Login_button" Content="Login" HorizontalAlignment="Left" Margin="212,8,0,0" VerticalAlignment="Top" Width="75" Click="Login_button_Click" Grid.Column="1" Height="22" Grid.Row="1"/>
 -->
-        <Rectangle x:Name="movieList" HorizontalAlignment="Center" Stroke="White" VerticalAlignment="Center" Margin="0" Visibility="Hidden" Height="768" Width="1280" Grid.RowSpan="5" Grid.ColumnSpan="1">
+        <Rectangle x:Name="movieList" HorizontalAlignment="Center" Stroke="White" VerticalAlignment="Center" Margin="0" Height="768" Width="1280" Grid.RowSpan="5" Grid.ColumnSpan="1" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
             </Rectangle.Fill>
@@ -95,6 +95,11 @@
         <Button x:Name="transformer_movies" Content="" HorizontalAlignment="Left" Margin="330,82,0,0" Grid.Row="2" VerticalAlignment="Top" Width="152" Height="206" Grid.RowSpan="2" Click="transformer_movies_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/transformers-movie-poster-2007.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="civilwar_trailer" Content="" HorizontalAlignment="Left" Margin="554,82.533,0,0" Grid.Row="2" VerticalAlignment="Top" Width="147" Height="205" Grid.RowSpan="2" Click="civilwar_click" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/teamsvscivilwarposter.jpg"/>
             </Button.Background>
         </Button>
 
@@ -354,6 +359,74 @@
             <Image Source="Resources/play.png" />
         </Button>
 
+        <Rectangle x:Name="civilwarBackground" HorizontalAlignment="Left" Height="768" Stroke="Black" VerticalAlignment="Top" Width="1280" Margin="0,0,0,0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="5" Visibility="Hidden">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/background-dark.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="civilwarBack" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="77,24,0,0" Click="backCivilwar" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Height="58" Grid.RowSpan="2" Visibility="Hidden">
+            <Image x:Name="backCivilwarArrow" Source="Resources/iconmonstr-arrow-4-240.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Button>
+        <TextBox x:Name="civilwarTitle" HorizontalAlignment="Left" Height="69" TextWrapping="Wrap" Text="Captain America: Civil War - Trailer" VerticalAlignment="Top" Width="816" Margin="270,0.533,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="2" Visibility="Hidden"/>
+        <Button x:Name="recommendCivilwar" ToolTip="Recommend to a friend" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" Margin="80,128,0,0" Grid.Row="2" VerticalAlignment="Top" Width="202" Click="civilwarRecommend" Background="White" BorderBrush="{x:Null}"  Height="58" Grid.RowSpan="2" Visibility="Hidden">
+            <Image Source="Resources/recommend.png" />
+        </Button>
+
+        <Button x:Name="favoriteCivilwar" ToolTip="Add to favorites" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" Margin="80,26,0,0" Grid.Row="3" VerticalAlignment="Top" Width="202" Click="civilwarFavorite" Background="White" BorderBrush="{x:Null}" Height="58" Visibility="Hidden">
+            <Image Source="Resources/favouriteimg.png" />
+        </Button>
+
+        <TextBlock x:Name="civilwarSynopisis" HorizontalAlignment="Left" Margin="467,68.533,0,0" Grid.Row="2" TextWrapping="Wrap" Text="After another incident involving the Avengers results in collateral damage, political pressure mounts to install a system of accountability, headed by a governing body to oversee and direct the team. The new status quo fractures the Avengers, resulting in two camps, one led by Steve Rogers and his desire for the Avengers to remain free to defend humanity without government interference, and the other following Tony Stark's surprising decision to support government oversight and accountability. " VerticalAlignment="Top" Height="81" Width="662" Foreground="#FF989191" FontWeight="Bold" Visibility="Hidden"/>
+        <Image x:Name="civilwarIcon" HorizontalAlignment="Left" Height="206" Margin="307,69,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="141" Source="Resources/teamsvscivilwarposter.jpg" Visibility="Hidden"/>
+        <Button x:Name="playCivilwar" HorizontalAlignment="Left" Margin="467,155.533,0,0" Grid.Row="2" VerticalAlignment="Top" Width="221" Click="civilwarPlay" Background="White" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Grid.RowSpan="2" Height="54" FontSize="21.333" Visibility="Hidden">
+            <Image Source="Resources/play.png" />
+        </Button>
+
+        <Rectangle x:Name="resumeBackground" HorizontalAlignment="Left" Height="353" Stroke="Black" VerticalAlignment="Top" Width="280" Margin="456,91.533,0,0" Grid.ColumnSpan="1" Grid.Row="2" Grid.RowSpan="3" Visibility="Hidden">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/background-dark.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="resumeButton" Content="Resume" HorizontalAlignment="Left" Margin="467,140.533,0,0" Grid.Row="2" VerticalAlignment="Top" Width="255" Height="45" Grid.RowSpan="2" Click="resume_click" Visibility="Hidden"/>
+        <Button x:Name="restartButton" Content="Restart From Beginning" HorizontalAlignment="Left" Margin="467,50.617,0,0" Grid.Row="3" VerticalAlignment="Top" Width="255" Height="45" Click="restart_click" Visibility="Hidden"/>
+        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="467,139.617,0,0" Grid.Row="3" VerticalAlignment="Top" Width="255" Height="45" Click="cancel_click" Visibility="Hidden"/>
+
+
+
+        <Rectangle x:Name="civilwarTrailerBackground" HorizontalAlignment="Left" Height="768" Stroke="Black" VerticalAlignment="Top" Width="1280" Margin="0,0,0,0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="5" Visibility="Hidden">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/background-dark.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="civilwarTrailerBack" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="77,24,0,0" Click="backCivilwarTrailer" BorderBrush="#FF2E2E2E" Background="#FF3D3C3C" Foreground="#FF989191" Height="58" Grid.RowSpan="2" Visibility="Hidden">
+            <Image x:Name="backCivilwarTrailerArrow" Source="Resources/iconmonstr-arrow-4-240.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Button>
+        <MediaElement x:Name="MediaPlayer" HorizontalAlignment="Left" Height="412" Margin="149,88.039,0,0" Grid.Row="1" VerticalAlignment="Top" Width="966" Grid.RowSpan="4" Source="Resources/captainamericacivilwar-tlr2_h720p.mp4" LoadedBehavior="Manual" Visibility="Hidden"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Center" Margin="534,10.217,507.168,155.356">
+            <Button x:Name="btnPlay" Content="Play" Click="btnPlay_Click" Width="50" Height="25" Margin="5" Visibility="Hidden"/>
+            <Button x:Name="btnStop" Content="Stop" Click="btnStop_Click" Width="50" Height="25" Margin="5" Visibility="Hidden"/>
+            <Button x:Name="btnMoveBack" Content="Back" Click="btnMoveBack_Click" Width="50" Height="25" Margin="5" Visibility="Hidden"/>
+            <Button x:Name="btnMoveForward" Content="Forward" Click="btnMoveForward_Click" Width="50" Height="25" Margin="5" Visibility="Hidden"/>
+        </StackPanel>
+
         <Rectangle x:Name="bieberBackground" HorizontalAlignment="Left" Height="768" Stroke="Black" VerticalAlignment="Top" Width="1280" Margin="0,0,0,0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="5" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Resources/background-dark.jpg"/>
@@ -373,7 +446,7 @@
                 </Image.RenderTransform>
             </Image>
         </Button>
-        
+
         <TextBox x:Name="bieberTitle" HorizontalAlignment="Left" Height="69" TextWrapping="Wrap" Text="Believe - Justin Bieber" VerticalAlignment="Top" Width="522" Margin="414,133.895,0,0" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FF989191" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Visibility="Hidden"/>
         <Button x:Name="recommendBieber" ToolTip="Recommend to a friend" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" Margin="80,128,0,0" Grid.Row="2" VerticalAlignment="Top" Width="202" Click="bieberRecommend" Background="White" BorderBrush="{x:Null}" Height="58" Grid.RowSpan="2" Visibility="Hidden">
             <Image Source="Resources/recommend.png" Visibility="Visible" />
@@ -382,7 +455,7 @@
         <Button x:Name="favoriteBieber" Click="bieberFavorite" ToolTip="Add to favorites" ToolTipService.ShowOnDisabled="True" HorizontalAlignment="Left" Margin="80,26,0,0" Grid.Row="3" VerticalAlignment="Top" Width="202" Background="White" BorderBrush="{x:Null}" Height="58" Visibility="Hidden">
             <Image Source="Resources/favouriteimg.png" Visibility="Visible" />
         </Button>
-        
+
         <TextBlock x:Name="bieberMusicList" HorizontalAlignment="Left" Margin="482,69.173,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="325" Width="439" Foreground="#FF989191" FontWeight="Bold" FontSize="16" Grid.RowSpan="3" Visibility="Hidden"><Run Text="&#x9;Song&#x9;&#x9;&#x9;&#x9;&#x9;Time"/><LineBreak/><Run FontSize="12" Text=""/><LineBreak/><Run Text="1.&#x9;All Around The World&#x9;&#x9;&#x9;4:04"/><LineBreak/><Run Text="2.&#x9;Boyfriend&#x9;&#x9;&#x9;&#x9;2:51"/><LineBreak/><Run Text="3.&#x9;As long as You Love Me&#x9;&#x9;&#x9;3:49"/><LineBreak/><Run Text="4.&#x9;Catching Feelings&#x9;&#x9;&#x9;3:54"/><LineBreak/><Run Text="5.&#x9;Take You&#x9;&#x9;&#x9;&#x9;3:40"/><LineBreak/><Run Text="6.&#x9;Right Here&#x9;&#x9;&#x9;&#x9;3:24"/><LineBreak/><Run Text="7.&#x9;Fall&#x9;&#x9;&#x9;&#x9;&#x9;4:08"/><LineBreak/><Run Text="8.&#x9;Die in Your Arms&#x9;&#x9;&#x9;&#x9;3:57"/><LineBreak/><Run Text="9.&#x9;Thought of You&#x9;&#x9;&#x9;&#x9;3:50"/><LineBreak/><Run Text="10.&#x9;Beauty and a Beat&#x9;&#x9;&#x9;3:48"/><LineBreak/><Run Text="11.&#x9;One Love&#x9;&#x9;&#x9;&#x9;3:54"/><LineBreak/><Run Text="12.&#x9;Be Alright&#x9;&#x9;&#x9;&#x9;3:09"/><LineBreak/><Run Text="13.&#x9;Believe&#x9;&#x9;&#x9;&#x9;&#x9;3:42"/></TextBlock>
         <Image x:Name="bieberIcon" HorizontalAlignment="Left" Height="139" Margin="307,69.173,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="141" Source="Resources/Justin Bieber.jpg" Visibility="Hidden"/>
         <Button x:Name="playAllBieber" HorizontalAlignment="Left" Margin="311,49.283,0,0" Grid.Row="3" VerticalAlignment="Top" Width="135" Click="bieberPlayAll" Background="White" BorderBrush="#FF2E2E2E" Foreground="#FF989191" Height="33" Visibility="Hidden">
