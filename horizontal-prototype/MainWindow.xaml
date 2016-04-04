@@ -56,8 +56,8 @@
         <TextBox x:Name="Username_form" HorizontalAlignment="Left" Height="23" Margin="726,8,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="157" TextChanged="Username_form_TextChanged" Grid.Row="1" GotFocus="textbox_clear"/>
         <Label x:Name="Password" Content="Password:" HorizontalAlignment="Left" Margin="888,2,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="White" Height="31" Width="86" Grid.Row="1"/>
         <PasswordBox x:Name="Password_form" HorizontalAlignment="Left" Height="23" Margin="974,8,0,0" VerticalAlignment="Top" Width="161" Grid.Row="1"/>
-        <Button x:Name="Login_button" HorizontalAlignment="Left" Margin="1146,0,0,0" VerticalAlignment="Top" Width="116" Click="Login_button_Click" Height="39" Grid.Row="1" Background="{x:Null}">
-            <Image x:Name="loginImg" Source="Resources/login-green.png" Width="81"/>
+        <Button x:Name="Login_button" HorizontalAlignment="Left" Margin="1146,0,0,0" VerticalAlignment="Top" Width="116" Click="Login_button_Click" Height="39" Grid.Row="1" Background="White">
+            <Image x:Name="loginImg" Source="Resources/login.png" Width="81"/>
         </Button>
         <!--
         <Label x:Name="textBlock" HorizontalAlignment="Left" Margin="414,19,0,0" VerticalAlignment="Top" Content="JCR Entertainment" Foreground="White" FontWeight="Bold" Height="39" Width="229" FontSize="24" Grid.RowSpan="2"/>
